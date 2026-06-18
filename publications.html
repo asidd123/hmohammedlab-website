@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Publications — Hisham Mohammed Lab | OHSU</title>
+  <meta name="description" content="Publications from the Mohammed Lab and its members — research on epigenetics, single-cell multiomics, and hormone-driven cancers in journals including Nature, Cell Reports, and Nucleic Acids Research.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add("js")</script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html" aria-label="Mohammed Lab home">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+          <defs><linearGradient id="bg-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2dd4bf"/><stop offset="1" stop-color="#a78bfa"/></linearGradient></defs>
+          <rect width="64" height="64" rx="15" fill="#10182f"/>
+          <path d="M22 12c0 10 20 10 20 20s-20 10-20 20" fill="none" stroke="url(#bg-g)" stroke-width="4" stroke-linecap="round"/>
+          <path d="M42 12c0 10-20 10-20 20s20 10 20 20" fill="none" stroke="url(#bg-g)" stroke-width="4" stroke-linecap="round" opacity="0.55"/>
+          <line x1="25" y1="20" x2="39" y2="20" stroke="#2dd4bf" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+          <line x1="25" y1="44" x2="39" y2="44" stroke="#a78bfa" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+        </svg>
+        <span class="brand-name">Mohammed <span>Lab</span></span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <nav aria-label="Primary">
+        <ul class="nav-links" id="primary-menu">
+          <li><a href="research.html">Research</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="publications.html" class="active">Publications</a></li>
+          <li><a class="nav-cta" href="contact.html">Join the Lab</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero hero--sub">
+      <div class="hero-glow hero-glow--teal" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <p class="eyebrow">Publications</p>
+        <h1>Publications</h1>
+        <p class="hero-sub">
+          <span id="pub-count">36</span> papers from the lab and its members — from RIME and scNMT-seq to
+          the cell-state logic of hormone response in cancer.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container container--narrow">
+
+        <div class="pub-tools reveal">
+          <div class="pub-search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="search" id="pub-search" placeholder="Search by title, author, or journal…" aria-label="Search publications">
+          </div>
+        </div>
+
+        <nav class="year-jump reveal" id="year-jump" aria-label="Jump to year"></nav>
+        <div style="height:34px;"></div>
+
+        <div id="pub-list"></div>
+        <noscript>
+          <p>The publication list requires JavaScript. You can also browse our work on
+          <a href="https://scholar.google.com/citations?user=4WJs_ocAAAAJ&amp;hl=en">Google Scholar</a>.</p>
+        </noscript>
+        <p class="pub-empty" id="pub-empty">No publications match your search.</p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" style="margin-top:0;">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">
+            <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+              <defs><linearGradient id="fg-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2dd4bf"/><stop offset="1" stop-color="#a78bfa"/></linearGradient></defs>
+              <rect width="64" height="64" rx="15" fill="#10182f"/>
+              <path d="M22 12c0 10 20 10 20 20s-20 10-20 20" fill="none" stroke="url(#fg-g)" stroke-width="4" stroke-linecap="round"/>
+              <path d="M42 12c0 10-20 10-20 20s20 10 20 20" fill="none" stroke="url(#fg-g)" stroke-width="4" stroke-linecap="round" opacity="0.55"/>
+              <line x1="25" y1="20" x2="39" y2="20" stroke="#2dd4bf" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+              <line x1="25" y1="44" x2="39" y2="44" stroke="#a78bfa" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+            </svg>
+            <span class="brand-name">Mohammed <span>Lab</span></span>
+          </a>
+          <p>Genetic and epigenetic insights into cellular dynamics. CEDAR, Knight Cancer Institute, Oregon Health &amp; Science University.</p>
+        </div>
+        <div class="footer-col">
+          <h2>Explore</h2>
+          <ul>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="contact.html">Join &amp; Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>Connect</h2>
+          <ul>
+            <li><a href="mailto:mohammeh@ohsu.edu">mohammeh@ohsu.edu</a></li>
+            <li><a href="https://scholar.google.com/citations?user=4WJs_ocAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
+            <li><a href="https://orcid.org/0000-0003-0216-9881" target="_blank" rel="noopener">ORCID</a></li>
+            <li><a href="https://www.linkedin.com/in/hisham-mohammed-0a8848a2/" target="_blank" rel="noopener">LinkedIn</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>Visit</h2>
+          <ul>
+            <li>Knight Cancer Research Building</li>
+            <li>2720 S Moody Ave</li>
+            <li>Portland, OR 97201</li>
+            <li><a href="https://www.ohsu.edu/knight-cancer-institute/cedar" target="_blank" rel="noopener">CEDAR at OHSU</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> Hisham Mohammed Lab. All rights reserved.</span>
+        <span>Portland, Oregon</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/publications.js"></script>
+</body>
+</html>
