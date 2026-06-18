@@ -1,0 +1,64 @@
+{
+  "_comment": "Hand-curated corrections layered on top of the Semantic Scholar fetch. 'patches' fix notes/author formatting (co-first/corresponding marks the API doesn't know about) on papers the API does return, matched by normalized title. 'extra' are full manual entries for things the API has no record of (e.g. conference abstracts without a DOI). 'exclude_titles' drops API entries that shouldn't render at all.",
+
+  "patches": [
+    {
+      "match_title": "multi-omics profiling of mouse gastrulation at single-cell resolution",
+      "note": "*Co-first authors",
+      "authors": "Argelaguet R*, Clark S*, **Mohammed H***, Stapel C, Krueger C, Kapourani CA, Xiang Y, Hanna C, Smallwood S, Ibarra-Soria X, Buettner F, Sanguinetti G, Krueger F, Xie W, Rugg-Gunn P, Kelsey G, Dean W, Nichols J, Stegle O, Marioni J, Reik W"
+    },
+    {
+      "match_title": "trps1 regulates estrogen receptor binding and histone acetylation at enhancers",
+      "note": "*Co-first authors",
+      "authors": "**Mohammed H***, Serandour A*, Miremadi A, Mulder K, Carroll J"
+    },
+    {
+      "match_title": "single-cell landscape of transcriptional heterogeneity and cell fate decisions during mouse early gastrulation",
+      "note": "*Co-first authors",
+      "authors": "**Mohammed H***, Hernando-Herraez I*, Savino A*, Scialdone A, Macauley I, Mulas C, Andrews S, Chandra T, Voet T, Srinivas S, Dean W, Nichols J, Marioni J, Reik W"
+    },
+    {
+      "match_title": "rapid immunoprecipitation and mass spectrometry of endogenous proteins",
+      "note": "*Co-corresponding authors",
+      "authors": "**Mohammed H***, Taylor C, Brown G, Papachristou E, Carroll J, D'Santos C*"
+    },
+    {
+      "match_title": "rime proteomics of estrogen and progesterone receptors in breast cancer",
+      "note": "*Corresponding author",
+      "authors": "D'Santos C, Carroll JS, **Mohammed H***"
+    },
+    {
+      "match_title": "the regulatory role of activating transcription factor-2 (atf2) in modulating tamoxifen resistance in estrogen-receptor positive breast cancer",
+      "journal": "Cancer Research"
+    }
+  ],
+
+  "extra": [
+    {
+      "year": 2023,
+      "title": "Multi-omic single-cell approach reveals transcriptional and epigenetic plasticity in breast cancer [abstract]",
+      "authors": "**Mohammed H**",
+      "journal": "Cancer Research (AACR Annual Meeting 2023 Proceedings)",
+      "note": "Abstract nr 91",
+      "url": null
+    }
+  ],
+
+  "name_fixes": {
+    "_comment": "Semantic Scholar's aggregated metadata mangles some recurring collaborators' surnames (missing apostrophes/letters). Keys are the mangled last name as SS returns it (case-insensitive), values are the corrected spelling.",
+    "DSantos": "D'Santos",
+    "Srandour": "Serandour",
+    "Mcfarland": "McFarland",
+    "O'toole": "O'Toole",
+    "Nikoli": "Nikolic",
+    "Co-blentz": "Coblentz"
+  },
+
+  "exclude_titles": [
+    "Abstract P6-04-18: The regulatory role of activating transcription factor-2 (ATF2) in modulating tamoxifen resistance in estrogen-receptor positive breast cancer",
+    "Polymer Modelling Predicts Chromosome Reorganisation in Senescence",
+    "Corrigendum: Progesterone receptor modulates ERα action in breast cancer",
+    "Supplementary figure 6 Asim et al",
+    "Edinburgh Research Explorer p21 (WAF1) is component of a positive feedback loop that maintains the p53 transcriptional program"
+  ]
+}
