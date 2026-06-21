@@ -6,6 +6,18 @@
   if (!window.LabViz) return;
   var L = window.LabViz, NS = "http://www.w3.org/2000/svg";
 
+  var ERPR_ICONS = {
+    flask: '<path d="M9 2h6"/><path d="M10 2v6.2L4.8 17.4A2 2 0 0 0 6.5 20.5h11a2 2 0 0 0 1.7-3.1L14 8.2V2"/><path d="M7.5 15h9"/>',
+    trend: '<polyline points="4 16 10 9 14 13 20 5"/><polyline points="14 5 20 5 20 11"/>',
+    clipboard: '<rect x="6" y="4" width="12" height="17" rx="2"/><path d="M9 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1"/><line x1="9" y1="10" x2="15" y2="10"/><line x1="9" y1="14" x2="15" y2="14"/><line x1="9" y1="18" x2="13" y2="18"/>',
+    heart: '<path d="M12 20.5s-7.5-4.7-9.8-9.4C.6 7.6 2.5 4 6 4c2 0 3.6 1.1 6 3.8C14.4 5.1 16 4 18 4c3.5 0 5.4 3.6 3.8 7.1C19.5 15.8 12 20.5 12 20.5Z"/>'
+  };
+  function erprIcon(name) {
+    if (!ERPR_ICONS[name]) return "";
+    return '<svg class="erpr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" ' +
+      'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + ERPR_ICONS[name] + "</svg>";
+  }
+
   L.register("erpr", function (container, data) {
     var wrap = document.createElement("div"); wrap.className = "erpr";
 
@@ -56,7 +68,7 @@
       var tl = document.createElement("div"); tl.className = "erpr-timeline";
       data.timeline.forEach(function (st) {
         var d = document.createElement("div"); d.className = "erpr-step" + (st.result ? " is-result" : "");
-        var h = '<span class="yr">' + L.esc(st.year) + "</span><h5>" + L.esc(st.title) + "</h5><p>" + L.esc(st.text) + "</p>";
+        var h = erprIcon(st.icon) + '<span class="yr">' + L.esc(st.year) + "</span><h5>" + L.esc(st.title) + "</h5><p>" + L.esc(st.text) + "</p>";
         if (st.stat) h += '<div class="erpr-stat"><span class="v">' + L.esc(st.stat.v) + '</span><span class="l">' + L.esc(st.stat.l) + "</span></div>";
         d.innerHTML = h; tl.appendChild(d);
       });
