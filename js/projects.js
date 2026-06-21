@@ -25,6 +25,33 @@
       ],
       blocks: [
         {
+          kind: "steps",
+          panelTitle: "How RIME works, in four steps",
+          steps: [
+            {
+              icon: "cell",
+              title: "Start with living cells",
+              text: "We begin with cells or tumour tissue, kept as close to their natural state as possible — no engineered tags, no over-expression."
+            },
+            {
+              icon: "snap",
+              title: "Freeze the moment",
+              text: "A brief, gentle chemical treatment locks proteins in place exactly as they were interacting — a snapshot of the cell at work."
+            },
+            {
+              icon: "target",
+              title: "Fish out one protein",
+              text: "An antibody specific to one protein — say, the estrogen receptor — pulls it out, along with everything still attached to it."
+            },
+            {
+              icon: "spectrum",
+              title: "Read out the catch",
+              text: "A mass spectrometer — an instrument that identifies proteins by weighing them — names every protein in that catch."
+            }
+          ],
+          note: "The result is a parts list for that protein's working complex, read directly from real cells. The interactive map below turns that list into something you can explore."
+        },
+        {
           kind: "viz", type: "network", key: "rime-er",
           panelTitle: "RIME interactomes — choose a bait or condition, then highlight a class",
           fallback: '<p class="viz-note">The interactive interactome needs JavaScript. The reported interactors are listed in the paper.</p>'
@@ -164,9 +191,33 @@
       (b.caption ? '<figcaption class="viz-cap">' + b.caption + "</figcaption>" : "") + "</figure></div>";
   }
   function noteBlock(b) { return '<p class="viz-note">' + (b.html || esc(b.text)) + "</p>"; }
+
+  var STEP_ICONS = {
+    cell: '<circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="2.6"/>',
+    snap: '<rect x="3.5" y="3.5" width="17" height="17" rx="3"/><path d="M3.5 9h17M9 3.5v5.5"/>',
+    target: '<circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="0.8" fill="currentColor" stroke="none"/>',
+    spectrum: '<path d="M3 14h2.6l1.8 6 3.4-13 2.4 9.5L14.6 10l1.6 4H21"/>',
+    arrow: '<polyline points="9 5 16 12 9 19"/>'
+  };
+  function stepIcon(name, cls) {
+    if (!STEP_ICONS[name]) return "";
+    return '<svg class="' + cls + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" ' +
+      'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + STEP_ICONS[name] + "</svg>";
+  }
+  function stepsBlock(b) {
+    var items = (b.steps || []).map(function (s, i) {
+      var arrow = i > 0 ? stepIcon("arrow", "rime-step-arrow") : "";
+      return arrow + '<div class="rime-step">' + stepIcon(s.icon, "rime-step-icon") +
+        "<h5>" + esc(s.title) + "</h5><p>" + esc(s.text) + "</p></div>";
+    }).join("");
+    return '<div class="viz-panel">' +
+      (b.panelTitle ? '<div class="viz-panel-title">' + esc(b.panelTitle) + "</div>" : "") +
+      '<div class="rime-steps">' + items + "</div>" +
+      (b.note ? '<p class="viz-note">' + esc(b.note) + "</p>" : "") + "</div>";
+  }
   function renderBlocks(arr) {
     return (arr || []).map(function (b) {
-      return b.kind === "figure" ? figureBlock(b) : b.kind === "note" ? noteBlock(b) : vizBlock(b);
+      return b.kind === "figure" ? figureBlock(b) : b.kind === "note" ? noteBlock(b) : b.kind === "steps" ? stepsBlock(b) : vizBlock(b);
     }).join("");
   }
 
