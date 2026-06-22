@@ -26,30 +26,30 @@
       blocks: [
         {
           kind: "steps",
-          panelTitle: "How RIME works, in four steps",
+          panelTitle: "The RIME method, in four steps",
           steps: [
             {
               icon: "cell",
-              title: "Start with living cells",
-              text: "We begin with cells or tumour tissue, kept as close to their natural state as possible — no engineered tags, no over-expression."
+              title: "Native cells or tissue",
+              text: "The starting material is unmodified cells or primary tumour tissue — no genetic tags, no protein over-expression that could distort normal complex formation."
             },
             {
               icon: "snap",
-              title: "Freeze the moment",
-              text: "A brief, gentle chemical treatment locks proteins in place exactly as they were interacting — a snapshot of the cell at work."
+              title: "Cross-link in situ",
+              text: "A brief formaldehyde cross-linking step covalently stabilizes proteins in their endogenous complexes at the moment of fixation."
             },
             {
               icon: "target",
-              title: "Fish out one protein",
-              text: "An antibody specific to one protein — say, the estrogen receptor — pulls it out, along with everything still attached to it."
+              title: "Immunoprecipitate the target",
+              text: "A high-specificity antibody against the protein of interest — for example, the estrogen receptor — co-isolates it with its bound partners."
             },
             {
               icon: "spectrum",
-              title: "Read out the catch",
-              text: "A mass spectrometer — an instrument that identifies proteins by weighing them — names every protein in that catch."
+              title: "Resolve by mass spectrometry",
+              text: "Tandem mass spectrometry identifies and quantifies every protein recovered in the immunoprecipitate, yielding a defined interactome."
             }
           ],
-          note: "The result is a parts list for that protein's working complex, read directly from real cells. The interactive map below turns that list into something you can explore."
+          note: "The output is a quantitative inventory of a protein's endogenous binding partners, determined directly from cells or tumour tissue. The interactive map below presents that inventory for a panel of baits and conditions."
         },
         {
           kind: "viz", type: "network", key: "rime-er",
