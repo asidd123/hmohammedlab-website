@@ -110,7 +110,7 @@
         t.setAttribute("x", p.x); t.setAttribute("y", p.y - (p.node.novel ? 11 : 9)); t.setAttribute("text-anchor", "middle");
         t.textContent = p.node.id; g.appendChild(t);
         function rst() { c.setAttribute("r", baseR); if (p.node.novel) { c.setAttribute("stroke", "#fff"); c.setAttribute("stroke-width", "1.6"); } else { c.removeAttribute("stroke"); c.removeAttribute("stroke-width"); } }
-        g.addEventListener("mouseenter", function () { c.setAttribute("r", baseR + 3); c.setAttribute("stroke", "#0a0f1e"); c.setAttribute("stroke-width", "1.8"); });
+        g.addEventListener("mouseenter", function () { c.setAttribute("r", baseR + 3); c.setAttribute("stroke", "#1a1a17"); c.setAttribute("stroke-width", "1.8"); });
         g.addEventListener("mousemove", function (ev) {
           var cls = classes.filter(function (cc) { return cc.key === p.cls; })[0];
           L.tip.show("<b>" + L.esc(p.node.id) + "</b>" +

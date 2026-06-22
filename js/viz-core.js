@@ -30,8 +30,8 @@
 
   /* class palette derived from the site's design tokens */
   LabViz.palette = [
-    "#0a6f66", "#7c6cf0", "#f472b6", "#2dd4bf", "#a78bfa",
-    "#e0a33a", "#3a93c4", "#d2685f", "#6aa86a", "#9aa0ad"
+    "#8a2424", "#2f5f8a", "#6b6a20", "#b3791b", "#7a3b69",
+    "#3f7a6b", "#a14e2a", "#55607a", "#8a8362", "#9aa0ad"
   ];
 
   /* ---- shared tooltip singleton ---- */

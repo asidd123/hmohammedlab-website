@@ -8,7 +8,7 @@
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,500;1,8..60,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <script>document.documentElement.classList.add("js")</script>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -18,12 +18,10 @@
     <div class="container nav-inner">
       <a class="brand" href="index.html" aria-label="Mohammed Lab home">
         <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
-          <defs><linearGradient id="bg-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2dd4bf"/><stop offset="1" stop-color="#a78bfa"/></linearGradient></defs>
-          <rect width="64" height="64" rx="15" fill="#10182f"/>
-          <path d="M22 12c0 10 20 10 20 20s-20 10-20 20" fill="none" stroke="url(#bg-g)" stroke-width="4" stroke-linecap="round"/>
-          <path d="M42 12c0 10-20 10-20 20s20 10 20 20" fill="none" stroke="url(#bg-g)" stroke-width="4" stroke-linecap="round" opacity="0.55"/>
-          <line x1="25" y1="20" x2="39" y2="20" stroke="#2dd4bf" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
-          <line x1="25" y1="44" x2="39" y2="44" stroke="#a78bfa" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+          <rect width="64" height="64" fill="#1a1a17"/>
+          <rect x="5" y="5" width="54" height="54" fill="none" stroke="#f2eee3" stroke-width="1.5"/>
+          <text x="32" y="39" font-family="Georgia, 'Times New Roman', serif" font-size="24" font-weight="700" fill="#f2eee3" text-anchor="middle">ML</text>
+          <line x1="16" y1="46" x2="48" y2="46" stroke="#8a2424" stroke-width="2.5"/>
         </svg>
         <span class="brand-name">Mohammed <span>Lab</span></span>
       </a>
@@ -44,9 +42,8 @@
   <main>
 
     <section class="hero hero--sub">
-      <div class="hero-glow hero-glow--violet" aria-hidden="true"></div>
       <div class="container hero-inner">
-        <p class="eyebrow">Join &amp; contact</p>
+        <p class="eyebrow">Correspondence</p>
         <h1>Join the <em>lab</em></h1>
         <p class="hero-sub">
           We are always looking to expand the lab — at all levels. If you're interested in
@@ -69,7 +66,7 @@
             <h2>Find us</h2>
 
             <div class="addr">
-              <div class="addr-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+              <span class="addr-num">01</span>
               <div>
                 <h3>Lab — Knight Cancer Research Building</h3>
                 <p>Dr. Hisham Mohammed<br>2720 S Moody Ave, Portland, OR 97201</p>
@@ -77,7 +74,7 @@
             </div>
 
             <div class="addr">
-              <div class="addr-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16.5 9.4 7.55 4.24"/><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.29 7 12 12 20.71 7"/><line x1="12" y1="22" x2="12" y2="12"/></svg></div>
+              <span class="addr-num">02</span>
               <div>
                 <h3>Shipping address</h3>
                 <p>2730 S Moody Ave, OHSU Dock 61, KCRB 5141.D1, Portland, OR 97201</p>
@@ -85,7 +82,7 @@
             </div>
 
             <div class="addr">
-              <div class="addr-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></div>
+              <span class="addr-num">03</span>
               <div>
                 <h3>Mailing address</h3>
                 <p>2720 S Moody Ave, KR-CEDR, Portland, OR 97201</p>
@@ -105,13 +102,13 @@
               <img src="assets/img/kcrb.jpg" alt="OHSU Knight Cancer Institute logo" loading="lazy" style="object-fit:contain; padding:24px; background:#fff;">
               <figcaption>The lab is part of CEDAR at the OHSU Knight Cancer Institute, on Portland's South Waterfront campus.</figcaption>
             </figure>
-            <div class="contact-card reveal reveal-d2" style="margin-top:26px;">
+            <div class="contact-card reveal reveal-d2" style="margin-top:1px;">
               <h2>Joining the lab</h2>
-              <p style="color:var(--muted); font-size:15px;">
+              <p style="color:var(--muted); font-size:15.5px;">
                 Whether you're a prospective postdoc, graduate student, research assistant, or
                 computational biologist — we'd love to hear from you. Include in your email:
               </p>
-              <ul style="color:var(--muted); font-size:15px; margin:14px 0 0 20px; line-height:2;">
+              <ul style="color:var(--muted); font-size:15.5px; margin:14px 0 0 20px; line-height:2;">
                 <li>Your cover letter</li>
                 <li>Your resume / CV</li>
                 <li>Your interests and/or specialties</li>
@@ -131,12 +128,10 @@
         <div class="footer-brand">
           <a class="brand" href="index.html">
             <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
-              <defs><linearGradient id="fg-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2dd4bf"/><stop offset="1" stop-color="#a78bfa"/></linearGradient></defs>
-              <rect width="64" height="64" rx="15" fill="#10182f"/>
-              <path d="M22 12c0 10 20 10 20 20s-20 10-20 20" fill="none" stroke="url(#fg-g)" stroke-width="4" stroke-linecap="round"/>
-              <path d="M42 12c0 10-20 10-20 20s20 10 20 20" fill="none" stroke="url(#fg-g)" stroke-width="4" stroke-linecap="round" opacity="0.55"/>
-              <line x1="25" y1="20" x2="39" y2="20" stroke="#2dd4bf" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
-              <line x1="25" y1="44" x2="39" y2="44" stroke="#a78bfa" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+              <rect width="64" height="64" fill="#1a1a17"/>
+              <rect x="5" y="5" width="54" height="54" fill="none" stroke="#f2eee3" stroke-width="1.5"/>
+              <text x="32" y="39" font-family="Georgia, 'Times New Roman', serif" font-size="24" font-weight="700" fill="#f2eee3" text-anchor="middle">ML</text>
+              <line x1="16" y1="46" x2="48" y2="46" stroke="#8a2424" stroke-width="2.5"/>
             </svg>
             <span class="brand-name">Mohammed <span>Lab</span></span>
           </a>

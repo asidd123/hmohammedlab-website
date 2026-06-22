@@ -11,9 +11,9 @@
 
   L.data["rime-er"] = {
     classes: [
-      { key: "tf",    label: "Pioneer / transcription factors", color: "#6052d6" },
-      { key: "coact", label: "Coactivators",                    color: "#0a6f66" },
-      { key: "corep", label: "Corepressors",                    color: "#f472b6" },
+      { key: "tf",    label: "Pioneer / transcription factors", color: "#7a3b69" },
+      { key: "coact", label: "Coactivators",                    color: "#8a2424" },
+      { key: "corep", label: "Corepressors",                    color: "#2f5f8a" },
       { key: "chrom", label: "Chromatin remodellers",           color: "#3a93c4" },
       { key: "kin",   label: "Kinases / chaperones",            color: "#e0a33a" }
     ],

@@ -13,7 +13,7 @@
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,500;1,8..60,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <script>document.documentElement.classList.add("js")</script>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -23,12 +23,10 @@
     <div class="container nav-inner">
       <a class="brand" href="index.html" aria-label="Mohammed Lab home">
         <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
-          <defs><linearGradient id="bg-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2dd4bf"/><stop offset="1" stop-color="#a78bfa"/></linearGradient></defs>
-          <rect width="64" height="64" rx="15" fill="#10182f"/>
-          <path d="M22 12c0 10 20 10 20 20s-20 10-20 20" fill="none" stroke="url(#bg-g)" stroke-width="4" stroke-linecap="round"/>
-          <path d="M42 12c0 10-20 10-20 20s20 10 20 20" fill="none" stroke="url(#bg-g)" stroke-width="4" stroke-linecap="round" opacity="0.55"/>
-          <line x1="25" y1="20" x2="39" y2="20" stroke="#2dd4bf" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
-          <line x1="25" y1="44" x2="39" y2="44" stroke="#a78bfa" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+          <rect width="64" height="64" fill="#1a1a17"/>
+          <rect x="5" y="5" width="54" height="54" fill="none" stroke="#f2eee3" stroke-width="1.5"/>
+          <text x="32" y="39" font-family="Georgia, 'Times New Roman', serif" font-size="24" font-weight="700" fill="#f2eee3" text-anchor="middle">ML</text>
+          <line x1="16" y1="46" x2="48" y2="46" stroke="#8a2424" stroke-width="2.5"/>
         </svg>
         <span class="brand-name">Mohammed <span>Lab</span></span>
       </a>
@@ -48,11 +46,8 @@
 
   <main>
 
-    <!-- ============ HERO ============ -->
+    <!-- ============ MASTHEAD ============ -->
     <section class="hero hero--home">
-      <canvas class="hero-canvas" id="helix" aria-hidden="true"></canvas>
-      <div class="hero-glow hero-glow--teal" aria-hidden="true"></div>
-      <div class="hero-glow hero-glow--violet" aria-hidden="true"></div>
       <div class="container hero-inner">
         <p class="eyebrow">OHSU · Knight Cancer Institute · CEDAR</p>
         <h1>Decoding the <em>epigenetic logic</em> of hormone-driven cancers</h1>
@@ -63,7 +58,7 @@
         </p>
         <div class="hero-actions">
           <a class="btn btn--primary" href="research.html">
-            Explore our research
+            Read the research
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
           <a class="btn btn--ghost" href="publications.html">Publications</a>
@@ -71,19 +66,19 @@
       </div>
     </section>
 
-    <!-- ============ STATS ============ -->
-    <section class="stats" aria-label="Lab at a glance">
+    <!-- ============ COLOPHON / AT A GLANCE ============ -->
+    <section class="section section--tight" aria-label="Lab at a glance">
       <div class="container">
-        <div class="stats-line reveal" style="background:var(--card); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow-md); padding:26px 36px; text-align:center; color:var(--muted); font-size:16.5px; line-height:1.7; max-width:940px; margin:0 auto;">
-          Part of <a href="https://www.ohsu.edu/knight-cancer-institute/cedar" target="_blank" rel="noopener">CEDAR</a> at OHSU's Knight Cancer Institute in Portland — a small group studying the epigenetics of hormone-driven cancers, with methods built in the lab: <strong style="color:var(--ink);font-weight:600;">RIME</strong>, <strong style="color:var(--ink);font-weight:600;">scNMT-seq</strong> and <strong style="color:var(--ink);font-weight:600;">TITAN</strong>.
-        </div>
+        <p class="colophon-note reveal">
+          Part of <a href="https://www.ohsu.edu/knight-cancer-institute/cedar" target="_blank" rel="noopener">CEDAR</a> at OHSU's Knight Cancer Institute in Portland — a small group studying the epigenetics of hormone-driven cancers, with methods built in the lab: <strong>RIME</strong>, <strong>scNMT-seq</strong> and <strong>TITAN</strong>.
+        </p>
       </div>
     </section>
 
     <!-- ============ MISSION ============ -->
-    <section class="section">
+    <section class="section" style="padding-top:0;">
       <div class="container container--narrow" style="text-align:center;">
-        <p class="eyebrow reveal" style="justify-content:center;">Our mission</p>
+        <p class="eyebrow reveal" style="display:inline-block;">Mission statement</p>
         <h2 class="section-title reveal reveal-d1" style="max-width:none;">
           To understand the fundamentals of epigenetic and transcriptional regulation
           in cellular dynamics — for early detection and treatment.
@@ -106,7 +101,7 @@
         </div>
         <div class="areas">
           <article class="area-card reveal">
-            <span class="area-num">AREA 01</span>
+            <span class="area-num">Fig. 01</span>
             <h3>Proteomics of transcription factor complexes</h3>
             <p>
               We developed RIME to assay endogenous protein complexes — from cancer to embryonic
@@ -120,7 +115,7 @@
             </p>
           </article>
           <article class="area-card reveal reveal-d1">
-            <span class="area-num">AREA 02</span>
+            <span class="area-num">Fig. 02</span>
             <h3>Single-cell multiomics of hormone response</h3>
             <p>
               Using methods like scNMT-seq, we profile tumor cell state at transcriptional and
@@ -167,7 +162,7 @@
       </div>
     </section>
 
-    <!-- ============ FEATURED PUBLICATIONS ============ -->
+    <!-- ============ SELECTED BIBLIOGRAPHY ============ -->
     <section class="section">
       <div class="container">
         <div class="section-head reveal">
@@ -180,23 +175,23 @@
             <h3>Multi-omics profiling of mouse gastrulation at single-cell resolution</h3>
             <p>Argelaguet*, Clark*, Mohammed* et al. — co-first author</p>
           </a>
-          <a class="fpub reveal reveal-d1" href="https://www.nature.com/articles/nature14583" target="_blank" rel="noopener">
+          <a class="fpub reveal" href="https://www.nature.com/articles/nature14583" target="_blank" rel="noopener">
             <div class="fpub-meta"><span class="fpub-journal">Nature</span><span class="fpub-year">2015</span></div>
             <h3>Progesterone receptor redirects ERα chromatin binding in breast cancer to elicit good clinical outcome</h3>
             <p>Mohammed et al.</p>
           </a>
-          <a class="fpub reveal reveal-d2" href="https://academic.oup.com/nar/article/50/20/11492/6786216" target="_blank" rel="noopener">
+          <a class="fpub reveal" href="https://academic.oup.com/nar/article/50/20/11492/6786216" target="_blank" rel="noopener">
             <div class="fpub-meta"><span class="fpub-journal">Nucleic Acids Research</span><span class="fpub-year">2022</span></div>
             <h3>Estrogen regulates divergent transcriptional and epigenetic cell states in breast cancer</h3>
             <p>Ors, Chitsazan, Doe, Mulqueen et al. — from the lab</p>
           </a>
-          <a class="fpub reveal reveal-d3" href="https://www.nature.com/articles/nprot.2016.020" target="_blank" rel="noopener">
+          <a class="fpub reveal" href="https://www.nature.com/articles/nprot.2016.020" target="_blank" rel="noopener">
             <div class="fpub-meta"><span class="fpub-journal">Nature Protocols</span><span class="fpub-year">2016</span></div>
             <h3>Rapid Immunoprecipitation and Mass Spectrometry of Endogenous Proteins (RIME)</h3>
             <p>Mohammed et al. — RIME</p>
           </a>
         </div>
-        <div style="text-align:center; margin-top:44px;" class="reveal">
+        <div style="margin-top:36px;" class="reveal">
           <a class="btn btn--outline" href="publications.html">View all publications</a>
         </div>
       </div>
@@ -205,9 +200,10 @@
     <!-- ============ TEAM CTA ============ -->
     <section class="section" style="padding-top:0;">
       <div class="container">
-        <div class="photo-strip reveal" style="margin-bottom:26px;">
+        <figure class="photo-strip reveal" style="margin-bottom:10px;">
           <img src="assets/img/lab-group.jpg" alt="The Mohammed Lab team" loading="lazy">
-        </div>
+        </figure>
+        <p class="photo-caption reveal" style="margin-bottom:26px;">The Mohammed Lab, CEDAR — Knight Cancer Research Building, Portland.</p>
         <div class="cta-band reveal">
           <div>
             <h2>The people behind the work</h2>
@@ -215,7 +211,7 @@
           </div>
           <div style="display:flex; gap:14px; flex-wrap:wrap;">
             <a class="btn btn--primary" href="team.html">Meet the team</a>
-            <a class="btn btn--ghost" href="contact.html">Join us</a>
+            <a class="btn btn--ghost" href="contact.html" style="color:var(--paper); border-color:rgba(242,238,227,0.4);">Join us</a>
           </div>
         </div>
       </div>
@@ -230,12 +226,10 @@
         <div class="footer-brand">
           <a class="brand" href="index.html">
             <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
-              <defs><linearGradient id="fg-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2dd4bf"/><stop offset="1" stop-color="#a78bfa"/></linearGradient></defs>
-              <rect width="64" height="64" rx="15" fill="#10182f"/>
-              <path d="M22 12c0 10 20 10 20 20s-20 10-20 20" fill="none" stroke="url(#fg-g)" stroke-width="4" stroke-linecap="round"/>
-              <path d="M42 12c0 10-20 10-20 20s20 10 20 20" fill="none" stroke="url(#fg-g)" stroke-width="4" stroke-linecap="round" opacity="0.55"/>
-              <line x1="25" y1="20" x2="39" y2="20" stroke="#2dd4bf" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
-              <line x1="25" y1="44" x2="39" y2="44" stroke="#a78bfa" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+              <rect width="64" height="64" fill="#1a1a17"/>
+              <rect x="5" y="5" width="54" height="54" fill="none" stroke="#f2eee3" stroke-width="1.5"/>
+              <text x="32" y="39" font-family="Georgia, 'Times New Roman', serif" font-size="24" font-weight="700" fill="#f2eee3" text-anchor="middle">ML</text>
+              <line x1="16" y1="46" x2="48" y2="46" stroke="#8a2424" stroke-width="2.5"/>
             </svg>
             <span class="brand-name">Mohammed <span>Lab</span></span>
           </a>

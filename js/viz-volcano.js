@@ -18,7 +18,7 @@
     var ym = Math.max(2, Math.ceil(Math.max.apply(null, allN)));
     var lfcT = (data.thresholds && data.thresholds.lfc) || 1;
     var nlpT = (data.thresholds && data.thresholds.nlp) || 1.3;
-    var UP = "#0a6f66", DOWN = "#f472b6", NS = "#b9bdc8";
+    var UP = "#8a2424", DOWN = "#2f5f8a", NS = "#b6ae9c";
     function X(l) { return ml + (l + xm) / (2 * xm) * pw; }
     function Y(n) { return mt + (1 - n / ym) * ph; }
     function colOf(g) { return (g.nlp < nlpT || Math.abs(g.lfc) < lfcT) ? NS : (g.lfc > 0 ? UP : DOWN); }
@@ -29,7 +29,7 @@
 
     function draw() {
       ctx.clearRect(0, 0, W, H);
-      ctx.strokeStyle = "#e4e1d8"; ctx.lineWidth = 1;
+      ctx.strokeStyle = "#cdc7b3"; ctx.lineWidth = 1;
       ctx.beginPath(); ctx.moveTo(ml, mt); ctx.lineTo(ml, mt + ph); ctx.lineTo(ml + pw, mt + ph); ctx.stroke();
       ctx.save(); ctx.setLineDash([4, 4]); ctx.strokeStyle = "#cfccc2";
       [X(lfcT), X(-lfcT)].forEach(function (xx) { ctx.beginPath(); ctx.moveTo(xx, mt); ctx.lineTo(xx, mt + ph); ctx.stroke(); });
@@ -38,7 +38,7 @@
       bg.forEach(function (p) { ctx.beginPath(); ctx.arc(X(p[0]), Y(p[1]), 1.6, 0, 6.2832); ctx.fill(); });
       genes.forEach(function (g) { ctx.fillStyle = colOf(g); ctx.globalAlpha = 0.92; ctx.beginPath(); ctx.arc(X(g.lfc), Y(g.nlp), 3.5, 0, 6.2832); ctx.fill(); });
       ctx.globalAlpha = 1;
-      ctx.fillStyle = "#0a0f1e"; ctx.font = "600 10px 'IBM Plex Mono', monospace";
+      ctx.fillStyle = "#1a1a17"; ctx.font = "600 10px 'IBM Plex Mono', monospace";
       (data.topLabels || []).forEach(function (name) {
         var g = genes.filter(function (x) { return x.gene === name; })[0]; if (!g) return;
         ctx.textAlign = g.lfc > 0 ? "left" : "right";

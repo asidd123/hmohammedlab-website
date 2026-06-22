@@ -48,7 +48,7 @@
           var rect = document.createElementNS(NS, "rect");
           rect.setAttribute("x", x - 3); rect.setAttribute("y", base - h);
           rect.setAttribute("width", 6); rect.setAttribute("height", Math.max(1, h)); rect.setAttribute("rx", 2);
-          var col = pk.kind === "gained" ? "#0a6f66" : pk.kind === "lost" ? "#f472b6" : "#7c6cf0";
+          var col = pk.kind === "gained" ? "#8a2424" : pk.kind === "lost" ? "#2f5f8a" : "#51503f";
           var faded = (pk.kind === "lost" && state === "plus") || (pk.kind === "gained" && state === "minus");
           rect.setAttribute("fill", col); rect.setAttribute("opacity", faded ? 0.16 : 0.9);
           svg.appendChild(rect); peaks.push(rect);
