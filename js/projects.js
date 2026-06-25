@@ -252,4 +252,9 @@
   var cleared = PROJECTS.filter(function (p) { return p.cleared !== false; });
   if (!cleared.length) { var sec = document.getElementById("projects"); if (sec) sec.style.display = "none"; return; }
   listEl.innerHTML = cleared.map(cardHTML).join("");
+
+  /* Load the large CosMx dataset asynchronously so it doesn't block the page. */
+  if (window.LabViz && typeof LabViz.loadData === "function") {
+    LabViz.loadData("cosmx-d-bx3", "js/viz-data/cosmx-d-bx3.json");
+  }
 })();
