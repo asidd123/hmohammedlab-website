@@ -110,6 +110,23 @@
   }
   LabViz.mount = mount;
 
+  /* Async data loader — fetch JSON, assign to LabViz.data[key], then retry any
+     placeholders that already fell back to the static image while waiting. */
+  LabViz.loadData = function (key, url) {
+    if (!window.fetch) return;
+    fetch(url)
+      .then(function (r) { return r.json(); })
+      .then(function (json) {
+        LabViz.data[key] = json;
+        var sel = '.viz[data-key="' + key + '"][data-mounted="fallback"]';
+        [].forEach.call(document.querySelectorAll(sel), function (el) {
+          el.removeAttribute("data-mounted");
+          mount(el);
+        });
+      })
+      .catch(function () { /* static fallback stays — no fetch on file://, network error, etc. */ });
+  };
+
   function sweep() {
     var nodes = [].slice.call(document.querySelectorAll(".viz[data-viz]"));
     if (!nodes.length) return;
