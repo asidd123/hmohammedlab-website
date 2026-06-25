@@ -214,3 +214,27 @@
 @media (prefers-reduced-motion: reduce) {
   .viz-net-edge, .viz-net-node circle, .viz-net-label { transition: none; }
 }
+
+/* click-to-activate overlay for heavy lazy-loaded visualizations */
+.viz-activate-overlay {
+  position: absolute; inset: 0; z-index: 2;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(10, 15, 30, 0.32);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.viz-activate-overlay:hover { background: rgba(10, 15, 30, 0.5); }
+.viz-activate-btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 13px 26px; border: none; border-radius: 99px;
+  background: linear-gradient(96deg, var(--teal-bright), var(--violet-bright));
+  color: #fff; font-family: var(--font-mono); font-size: 13px; font-weight: 600;
+  letter-spacing: 0.04em; cursor: pointer; pointer-events: none;
+  box-shadow: 0 4px 20px rgba(10, 15, 30, 0.3);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.viz-activate-overlay:hover .viz-activate-btn {
+  transform: scale(1.04);
+  box-shadow: 0 6px 26px rgba(10, 15, 30, 0.4);
+}

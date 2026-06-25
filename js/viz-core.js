@@ -124,13 +124,37 @@
   }
   LabViz.mount = mount;
 
+  /* For viz elements backed by a lazySrc, show the static fallback with an
+     "Explore interactive" button overlay instead of auto-loading on scroll.
+     All other viz elements (small, already loaded) mount automatically. */
+  function makeActivatable(el) {
+    if (el.getAttribute("data-mounted")) return;
+    var key = el.getAttribute("data-key");
+    if (!key || !LabViz.lazySrc[key]) { mount(el); return; }
+    el.setAttribute("data-mounted", "activatable");
+    var overlay = document.createElement("div");
+    overlay.className = "viz-activate-overlay";
+    var btn = document.createElement("button");
+    btn.className = "viz-activate-btn";
+    btn.type = "button";
+    btn.setAttribute("aria-label", "Launch interactive visualization");
+    btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><polygon points="5 3 19 12 5 21"/></svg>Explore interactive';
+    overlay.appendChild(btn);
+    overlay.addEventListener("click", function () {
+      el.removeChild(overlay);
+      el.removeAttribute("data-mounted");
+      mount(el);
+    });
+    el.appendChild(overlay);
+  }
+
   function sweep() {
     var nodes = [].slice.call(document.querySelectorAll(".viz[data-viz]"));
     if (!nodes.length) return;
     if (!("IntersectionObserver" in window)) { nodes.forEach(mount); return; }
     var io = new IntersectionObserver(function (entries) {
       for (var i = 0; i < entries.length; i++) {
-        if (entries[i].isIntersecting) { io.unobserve(entries[i].target); mount(entries[i].target); }
+        if (entries[i].isIntersecting) { io.unobserve(entries[i].target); makeActivatable(entries[i].target); }
       }
     }, { rootMargin: "140px 0px" });
     nodes.forEach(function (n) { io.observe(n); });
