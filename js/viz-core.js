@@ -17,6 +17,7 @@
   var LabViz = (window.LabViz = window.LabViz || {});
   LabViz.data = LabViz.data || {};
   LabViz.renderers = LabViz.renderers || {};
+  LabViz.lazySrc = LabViz.lazySrc || {};
   LabViz.register = function (type, fn) { LabViz.renderers[type] = fn; };
 
   function mq(q) { return !!(window.matchMedia && window.matchMedia(q).matches); }
@@ -93,7 +94,20 @@
     var fn = LabViz.renderers[type];
     var data = key ? LabViz.data[key] : null;
     var canCanvas = !!(document.createElement("canvas").getContext);
-    if (!fn || !data || !canCanvas) { el.setAttribute("data-mounted", "fallback"); return; }
+    if (!fn || !canCanvas) { el.setAttribute("data-mounted", "fallback"); return; }
+    /* lazy-load data script on first scroll-into-view */
+    if (!data && key && LabViz.lazySrc[key]) {
+      var src = LabViz.lazySrc[key];
+      delete LabViz.lazySrc[key];
+      el.setAttribute("data-mounted", "pending");
+      var s = document.createElement("script");
+      s.src = src;
+      s.onload = function () { el.removeAttribute("data-mounted"); mount(el); };
+      s.onerror = function () { el.setAttribute("data-mounted", "fallback"); };
+      document.head.appendChild(s);
+      return;
+    }
+    if (!data) { el.setAttribute("data-mounted", "fallback"); return; }
     var live = document.createElement("div");
     live.className = "viz-live";
     el.appendChild(live); /* in the DOM first, so renderers can measure width */
@@ -122,6 +136,9 @@
     nodes.forEach(function (n) { io.observe(n); });
   }
 
-  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", sweep);
-  else sweep();
+  /* With defer, readyState is "interactive" (not "loading") when this runs, but
+     DOMContentLoaded still fires after all deferred scripts complete — including
+     projects.js which creates the .viz elements — so wait for it in all cases. */
+  if (document.readyState === "complete") sweep();
+  else document.addEventListener("DOMContentLoaded", sweep);
 })();

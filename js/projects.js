@@ -9,6 +9,9 @@
   var listEl = document.getElementById("project-list");
   if (!listEl) return;
 
+  /* Register large data files to be fetched only when the viz scrolls into view */
+  if (window.LabViz) { LabViz.lazySrc = LabViz.lazySrc || {}; LabViz.lazySrc['cosmx-d-bx3'] = 'js/viz-data/cosmx-d-bx3.js'; }
+
   var esc = function (s) {
     return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
   };
