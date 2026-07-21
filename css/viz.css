@@ -134,6 +134,19 @@
 .viz-gradient .lab { font-family: var(--font-mono); font-size: 11px; color: var(--muted); }
 .viz-gradient .bar { height: 12px; width: 170px; border-radius: 6px; border: 1px solid var(--line); }
 
+/* "How RIME works" plain-language step strip */
+.rime-steps { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr; align-items: start; gap: 0 10px; }
+.rime-step { min-width: 0; }
+.rime-step-icon { display: block; width: 26px; height: 26px; margin-bottom: 10px; color: var(--violet-deep); }
+.rime-step h5 { font-family: var(--font-display); font-size: 14.5px; margin: 0 0 5px; color: var(--ink); }
+.rime-step p { font-size: 12.5px; color: var(--muted); line-height: 1.5; margin: 0; }
+.rime-step-arrow { align-self: center; width: 16px; height: 16px; margin-top: 22px; color: var(--line); flex: none; }
+
+@media (max-width: 640px) {
+  .rime-steps { grid-template-columns: 1fr; gap: 18px 0; }
+  .rime-step-arrow { width: 16px; height: 16px; margin: -4px 0 -4px 6px; transform: rotate(90deg); }
+}
+
 /* ER/PR figure: toggle + schematic + timeline */
 .erpr-toggle { display: inline-flex; border: 1px solid var(--line); border-radius: 99px; overflow: hidden; margin-bottom: 16px; }
 .erpr-toggle button {
@@ -142,16 +155,33 @@
 }
 .erpr-toggle button[aria-pressed="true"] { background: var(--ink); color: #fff; }
 .erpr-schematic svg { width: 100%; height: auto; display: block; }
-.erpr-timeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 22px; }
+.erpr-timeline { display: grid; grid-template-columns: repeat(4, 1fr); align-items: start; gap: 0 14px; margin-top: 22px; }
 .erpr-step { position: relative; padding: 18px 16px 4px; border-top: 2px solid var(--line); }
 .erpr-step::before { content: ""; position: absolute; top: -6px; left: 0; width: 10px; height: 10px; border-radius: 50%; background: var(--grad); }
-.erpr-step.is-result::before { background: var(--teal); box-shadow: 0 0 0 4px rgba(10,111,102,0.14); }
+.erpr-icon { display: block; width: 22px; height: 22px; margin-bottom: 10px; color: var(--violet-deep); }
 .erpr-step .yr { font-family: var(--font-mono); font-size: 11px; color: var(--violet-deep); letter-spacing: 0.08em; }
 .erpr-step h5 { font-family: var(--font-display); font-size: 15px; margin: 3px 0 5px; color: var(--ink); }
 .erpr-step p { font-size: 12.5px; color: var(--muted); line-height: 1.5; }
 .erpr-stat { display: flex; align-items: baseline; gap: 8px; margin-top: 6px; }
 .erpr-stat .v { font-family: var(--font-display); font-size: 22px; font-weight: 600; color: var(--teal); }
 .erpr-stat .l { font-size: 11.5px; color: var(--muted); }
+
+/* result step reads as a distinct, highlighted outcome card */
+.erpr-step.is-result {
+  border-top: none;
+  padding: 16px 16px 18px;
+  margin-top: -6px;
+  background: linear-gradient(180deg, rgba(10,111,102,0.07), rgba(10,111,102,0.02));
+  border: 1.5px solid rgba(10,111,102,0.3);
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(10,111,102,0.1);
+}
+.erpr-step.is-result::before { display: none; }
+.erpr-step.is-result .erpr-icon { color: var(--teal); }
+.erpr-step.is-result .yr { color: var(--teal); }
+.erpr-step.is-result h5 { color: var(--teal); }
+.erpr-step.is-result .erpr-stat { margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(10,111,102,0.18); }
+.erpr-step.is-result .erpr-stat .v { font-size: 30px; }
 
 /* in-card disclosure for extra interactives */
 .project-more { margin-top: 22px; border-top: 1px solid var(--line); padding-top: 6px; }
@@ -177,7 +207,8 @@
 
 @media (max-width: 640px) {
   .project-card { padding: 28px 22px 24px; }
-  .erpr-timeline { grid-template-columns: 1fr 1fr; gap: 14px 0; }
+  .erpr-timeline { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .erpr-step.is-result { grid-column: 1 / -1; margin-top: 4px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

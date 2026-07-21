@@ -1,0 +1,119 @@
+{
+  "_comment": "Hand-curated corrections layered on top of the Semantic Scholar fetch. 'patches' fix notes/author formatting (co-first/corresponding marks the API doesn't know about) on papers the API does return, matched by normalized title. 'extra' are full manual entries for things the API has no record of (e.g. conference abstracts without a DOI, or papers only findable under author ID 2324508637 — see below). 'exclude_titles' drops API entries that shouldn't render at all.",
+  "_comment_2324508637": "Author ID 2324508637 mixes Hisham's real papers with unrelated work by other people sharing the name (a telecom paper, a pediatric-oncology paper) — too unreliable to use as an automatic source, so the genuine ones from it are hand-added to 'extra' below instead.",
+
+  "patches": [
+    {
+      "match_title": "multi-omics profiling of mouse gastrulation at single-cell resolution",
+      "note": "*Co-first authors",
+      "authors": "Argelaguet R*, Clark S*, **Mohammed H***, Stapel C, Krueger C, Kapourani CA, Xiang Y, Hanna C, Smallwood S, Ibarra-Soria X, Buettner F, Sanguinetti G, Krueger F, Xie W, Rugg-Gunn P, Kelsey G, Dean W, Nichols J, Stegle O, Marioni J, Reik W"
+    },
+    {
+      "match_title": "trps1 regulates estrogen receptor binding and histone acetylation at enhancers",
+      "note": "*Co-first authors",
+      "authors": "**Mohammed H***, Serandour A*, Miremadi A, Mulder K, Carroll J"
+    },
+    {
+      "match_title": "single-cell landscape of transcriptional heterogeneity and cell fate decisions during mouse early gastrulation",
+      "note": "*Co-first authors",
+      "authors": "**Mohammed H***, Hernando-Herraez I*, Savino A*, Scialdone A, Macauley I, Mulas C, Andrews S, Chandra T, Voet T, Srinivas S, Dean W, Nichols J, Marioni J, Reik W"
+    },
+    {
+      "match_title": "rapid immunoprecipitation and mass spectrometry of endogenous proteins",
+      "note": "*Co-corresponding authors",
+      "authors": "**Mohammed H***, Taylor C, Brown G, Papachristou E, Carroll J, D'Santos C*"
+    },
+    {
+      "match_title": "rime proteomics of estrogen and progesterone receptors in breast cancer",
+      "note": "*Corresponding author",
+      "authors": "D'Santos C, Carroll JS, **Mohammed H***"
+    },
+    {
+      "match_title": "the regulatory role of activating transcription factor-2 (atf2) in modulating tamoxifen resistance in estrogen-receptor positive breast cancer",
+      "journal": "Cancer Research"
+    },
+    {
+      "match_title": "allele-specific gene regulation, phenotypes, and therapeutic vulnerabilities in estrogen receptor alpha mutant endometrial cancer",
+      "journal": "Molecular Cancer Research",
+      "url": "https://doi.org/10.1158/1541-7786.MCR-22-0848"
+    }
+  ],
+
+  "extra": [
+    {
+      "year": 2023,
+      "title": "Multi-omic single-cell approach reveals transcriptional and epigenetic plasticity in breast cancer [abstract]",
+      "authors": "**Mohammed H**",
+      "journal": "Cancer Research (AACR Annual Meeting 2023 Proceedings)",
+      "note": "Abstract nr 91",
+      "url": "https://doi.org/10.1158/1538-7445.am2023-91"
+    },
+    {
+      "year": 2025,
+      "title": "Progesterone receptor-dependent downregulation of MHC class I promotes tumor immune evasion and growth in breast cancer",
+      "authors": "Tinoco JC, Saunders H, Werner LR, Sun X, Chowanec EI, Heard A, Chalise P, Vahrenkamp JM, Wilson A, Liu C, Lei G, Wei J, **Cros H**, **Mohammed H**, Troester M, Perou C, Markiewicz M, Gertz J, Balko J, Hartman Z, Hagan C",
+      "journal": "Journal for ImmunoTherapy of Cancer",
+      "url": "https://doi.org/10.1136/jitc-2024-010179"
+    },
+    {
+      "year": 2025,
+      "title": "JAK2 signalling to HNRNPA1 represses retrotransposon activity in haematopoietic stem cells",
+      "authors": "Deuel JW, Makarovs A, Goosheh S, Winder G, **Mohammed H**, Carroll JS, Chapman M, Kapadia C, Campbell P, Nangalia J, Laurenti E, Schneider C, Oellerich T, Green AR, Loughran S",
+      "journal": "bioRxiv",
+      "url": "https://doi.org/10.1101/2025.07.07.663405"
+    },
+    {
+      "year": 2025,
+      "title": "CHD8 interacts with BCL11A to induce oncogenic transcription in triple negative breast cancer",
+      "authors": "Waterhouse MP, Lazarus K, Santolla M, Pensa S, Williams E, Siu AJQ, **Mohammed H**, Mohorianu I, Maggiolini M, Carroll JS, Itzhaki LS, Rahman T, Khaled WT",
+      "journal": "EMBO Journal",
+      "url": "https://doi.org/10.1038/s44318-025-00447-8"
+    },
+    {
+      "year": 2024,
+      "title": "Novel FOXM1 inhibitor STL001 sensitizes human cancers to a broad-spectrum of cancer therapies",
+      "authors": "Raghuwanshi S, Zhang X, Arbieva Z, Khan I, **Mohammed H**, Wang Z, Domling A, Camacho C, Gartel A",
+      "journal": "Cell Death Discovery",
+      "url": "https://doi.org/10.1038/s41420-024-01929-0"
+    },
+    {
+      "year": 2021,
+      "title": "Development of 2-(5,6,7-Trifluoro-1H-Indol-3-yl)-quinoline-5-carboxamide as a Potent, Selective, and Orally Available Inhibitor of Human Androgen Receptor Targeting Its Binding Function-3 for the Treatment of Castration-Resistant Prostate Cancer",
+      "authors": "Leblanc E, Ban F, Cavga AD, Lawn S, Huang CCF, Mohan S, Chang MEK, Flory MR, Ghaidi F, Lingadahalli S, Chen G, Yu IPL, Morin H, Lallous N, Gleave ME, **Mohammed H**, Young RN, Rennie PS, Lack NA, Cherkasov A",
+      "journal": "Journal of Medicinal Chemistry",
+      "url": "https://doi.org/10.1021/acs.jmedchem.1c00681"
+    },
+    {
+      "year": 2012,
+      "title": "Inhibition of MT1-MMP activity using functional antibody fragments selected against its hemopexin domain",
+      "authors": "Basu B, Correa de Sampaio P, **Mohammed H**, Fogarasi M, Corrie P, Watkins NA, Smethurst PA, English WR, Ouwehand WH, Murphy G",
+      "journal": "International Journal of Biochemistry & Cell Biology",
+      "url": "https://doi.org/10.1016/j.biocel.2011.11.015"
+    }
+  ],
+
+  "name_fixes": {
+    "_comment": "Semantic Scholar's aggregated metadata mangles some recurring collaborators' surnames (missing apostrophes/letters). Keys are the mangled last name as SS returns it (case-insensitive), values are the corrected spelling.",
+    "DSantos": "D'Santos",
+    "Srandour": "Serandour",
+    "Mcfarland": "McFarland",
+    "O'toole": "O'Toole",
+    "Nikoli": "Nikolic",
+    "Co-blentz": "Coblentz"
+  },
+
+  "exclude_titles": [
+    "Abstract P6-04-18: The regulatory role of activating transcription factor-2 (ATF2) in modulating tamoxifen resistance in estrogen-receptor positive breast cancer",
+    "Polymer Modelling Predicts Chromosome Reorganisation in Senescence",
+    "Corrigendum: Progesterone receptor modulates ERα action in breast cancer",
+    "Supplementary figure 6 Asim et al",
+    "Edinburgh Research Explorer p21 (WAF1) is component of a positive feedback loop that maintains the p53 transcriptional program",
+    "Abstract 91: Multi-omic single-cell approach reveals transcriptional and epigenetic plasticity in breast cancer",
+    "Abstract 5288: Single-cell multiomics reveal divergent transcriptional and epigenetic cell states in breast cancer",
+    "3093 – CHRONIC IL1Β INDUCED STRESS DRIVES EXPANSION OF TET2 DEFICIENT PROGENITORS THROUGH ENHANCED SELF-RENEWAL ABILITY",
+    "3242 – INFLAMMATORY STRESS AS A DRIVER AND INTERVENTION STRATEGY IN RUNX1-FAMILIAL PLATELET DISORDER",
+    "CD74 Signaling Regulates Inflammatory Stress to Drive Defective Hematopoiesis and Fitness Advantage of Progenitors in RUNX1-Familial Platelet Disorder",
+    "Interplay between Inflammatory Microenvironment and RUNX1-Mediated Transcriptomic Changes Drives Defective Hematopoiesis in Familial Platelet Disorder",
+    "The transcriptional and epigenetic reprogramming associated with chronic IL1β-mediated expansion and myeloid priming in TET2 deficient stem and progenitor cells"
+  ]
+}

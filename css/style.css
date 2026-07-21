@@ -1,6 +1,6 @@
 /* ============================================================
    Mohammed Lab — design system
-   Fonts: Fraunces (display) · Inter (body) · IBM Plex Mono (labels)
+   Fonts: Source Serif 4 (display) · Source Sans 3 (body) · IBM Plex Mono (labels)
    ============================================================ */
 
 :root {
@@ -22,8 +22,8 @@
   --radius: 18px;
   --shadow-sm: 0 1px 2px rgba(10, 15, 30, 0.05), 0 2px 10px rgba(10, 15, 30, 0.04);
   --shadow-md: 0 2px 6px rgba(10, 15, 30, 0.06), 0 14px 36px rgba(10, 15, 30, 0.09);
-  --font-display: "Fraunces", Georgia, serif;
-  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: "Source Serif 4", Georgia, serif;
+  --font-body: "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", monospace;
 }
 
@@ -53,6 +53,8 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 /* ---------- typography ---------- */
 
 h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.12; letter-spacing: -0.015em; color: var(--ink); }
+
+em { font-family: var(--font-display); font-style: italic; }
 
 .eyebrow {
   font-family: var(--font-mono);

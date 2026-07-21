@@ -25,6 +25,33 @@
       ],
       blocks: [
         {
+          kind: "steps",
+          panelTitle: "The RIME method, in four steps",
+          steps: [
+            {
+              icon: "cell",
+              title: "Native cells or tissue",
+              text: "The starting material is unmodified cells or primary tumour tissue — no genetic tags, no protein over-expression that could distort normal complex formation."
+            },
+            {
+              icon: "snap",
+              title: "Cross-link in situ",
+              text: "A brief formaldehyde cross-linking step covalently stabilizes proteins in their endogenous complexes at the moment of fixation."
+            },
+            {
+              icon: "target",
+              title: "Immunoprecipitate the target",
+              text: "A high-specificity antibody against the protein of interest — for example, the estrogen receptor — co-isolates it with its bound partners."
+            },
+            {
+              icon: "spectrum",
+              title: "Resolve by mass spectrometry",
+              text: "Tandem mass spectrometry identifies and quantifies every protein recovered in the immunoprecipitate, yielding a defined interactome."
+            }
+          ],
+          note: "The output is a quantitative inventory of a protein's endogenous binding partners, determined directly from cells or tumour tissue. The interactive map below presents that inventory for a panel of baits and conditions."
+        },
+        {
           kind: "viz", type: "network", key: "rime-er",
           panelTitle: "RIME interactomes — choose a bait or condition, then highlight a class",
           fallback: '<p class="viz-note">The interactive interactome needs JavaScript. The reported interactors are listed in the paper.</p>'
@@ -164,9 +191,33 @@
       (b.caption ? '<figcaption class="viz-cap">' + b.caption + "</figcaption>" : "") + "</figure></div>";
   }
   function noteBlock(b) { return '<p class="viz-note">' + (b.html || esc(b.text)) + "</p>"; }
+
+  var STEP_ICONS = {
+    cell: '<circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="2.6"/>',
+    snap: '<rect x="3.5" y="3.5" width="17" height="17" rx="3"/><path d="M3.5 9h17M9 3.5v5.5"/>',
+    target: '<circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="0.8" fill="currentColor" stroke="none"/>',
+    spectrum: '<path d="M3 14h2.6l1.8 6 3.4-13 2.4 9.5L14.6 10l1.6 4H21"/>',
+    arrow: '<polyline points="9 5 16 12 9 19"/>'
+  };
+  function stepIcon(name, cls) {
+    if (!STEP_ICONS[name]) return "";
+    return '<svg class="' + cls + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" ' +
+      'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + STEP_ICONS[name] + "</svg>";
+  }
+  function stepsBlock(b) {
+    var items = (b.steps || []).map(function (s, i) {
+      var arrow = i > 0 ? stepIcon("arrow", "rime-step-arrow") : "";
+      return arrow + '<div class="rime-step">' + stepIcon(s.icon, "rime-step-icon") +
+        "<h5>" + esc(s.title) + "</h5><p>" + esc(s.text) + "</p></div>";
+    }).join("");
+    return '<div class="viz-panel">' +
+      (b.panelTitle ? '<div class="viz-panel-title">' + esc(b.panelTitle) + "</div>" : "") +
+      '<div class="rime-steps">' + items + "</div>" +
+      (b.note ? '<p class="viz-note">' + esc(b.note) + "</p>" : "") + "</div>";
+  }
   function renderBlocks(arr) {
     return (arr || []).map(function (b) {
-      return b.kind === "figure" ? figureBlock(b) : b.kind === "note" ? noteBlock(b) : vizBlock(b);
+      return b.kind === "figure" ? figureBlock(b) : b.kind === "note" ? noteBlock(b) : b.kind === "steps" ? stepsBlock(b) : vizBlock(b);
     }).join("");
   }
 
@@ -201,4 +252,9 @@
   var cleared = PROJECTS.filter(function (p) { return p.cleared !== false; });
   if (!cleared.length) { var sec = document.getElementById("projects"); if (sec) sec.style.display = "none"; return; }
   listEl.innerHTML = cleared.map(cardHTML).join("");
+
+  /* Load the large CosMx dataset asynchronously so it doesn't block the page. */
+  if (window.LabViz && typeof LabViz.loadData === "function") {
+    LabViz.loadData("cosmx-d-bx3", "js/viz-data/cosmx-d-bx3.json");
+  }
 })();

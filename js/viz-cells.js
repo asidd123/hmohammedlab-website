@@ -16,6 +16,7 @@
   }
 
   L.register("cells", function (container, data) {
+    container.classList.add("viz-cells");
     var W = Math.max(320, Math.min(container.clientWidth || 680, 760));
     var H = Math.round(W * (data.height / data.width));
     var sx = W / data.width, sy = H / data.height;
