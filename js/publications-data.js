@@ -33,6 +33,13 @@ const PUBS = [
   },
   {
     year: 2026,
+    title: "Robust and generalizable CNV detection for single-cell sequencing assays.",
+    authors: "Moore TW, **Mohammed H**, Adey AC, Yardmc G",
+    journal: "Nucleic Acids Research",
+    url: "https://doi.org/10.1093/nar/gkag636",
+  },
+  {
+    year: 2026,
     title: "Serial Spatial Transcriptomics Reveal Divergent Routes to Therapy Resistance in Metastatic Breast Cancer",
     authors: "**Doe A**, **Ors A**, **Cros H**, Sevim S, Lee J, Creason A, Zangirolani GM, Rose J, Youm I, Ozmen F, Ozmen T, Dane MA, **Scott W**, Chang M, Chin K, Heiser LM, Stommel JM, Mills GB, **Mohammed H**",
     journal: "Research Square",
@@ -62,7 +69,7 @@ const PUBS = [
   {
     year: 2025,
     title: "Methylation dynamics in the decades preceding acute myeloid leukaemia",
-    authors: "Fonseca AV, Boniface C, Watson CJ, Hackett S, Gabbutt C, Ramos-Yamasaki AD, Tan A, Montoya JL, **Strogantsev R**, Hanssen LLP, Zhang Y, Apostolidou S, Gentry-Maharaj A, Esener SC, Spellman PT, Graham TA, Menon U, **Mohammed H**, Blundell J",
+    authors: "Fonseca AV, Boniface C, Watson CJ, Hackett S, Gabbutt C, Ramos-Yamasaki AD, Tan A, Montoya J, **Strogantsev R**, Hanssen LLP, Zhang Y, Apostolidou S, Gentry-Maharaj A, Esener SC, Spellman PT, Graham TA, Menon U, **Mohammed H**, Blundell J",
     journal: "bioRxiv",
     url: "https://doi.org/10.1101/2025.06.26.661643",
   },
@@ -157,6 +164,13 @@ const PUBS = [
     authors: "Costello J, Danis E, Goodspeed A, **Mohammed H**, Sottnik J, Sikora MJ",
     journal: "Journal of the Endocrine Society",
     url: "https://doi.org/10.1210/jendso/bvac150.1489",
+  },
+  {
+    year: 2022,
+    title: "RF03 | PMON289 KLF4 drives estrogen driven tumor heterogeneity in breast cancer",
+    authors: "**Mohammed H**, **Wen Y**",
+    journal: "Journal of the Endocrine Society",
+    url: "https://doi.org/10.1210/jendso/bvac150.1508",
   },
   {
     year: 2022,
