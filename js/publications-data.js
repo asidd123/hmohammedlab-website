@@ -33,7 +33,7 @@ const PUBS = [
   },
   {
     year: 2026,
-    title: "Robust and generalizable CNV detection for single-cell sequencing assays.",
+    title: "Robust and generalizable CNV detection for single-cell sequencing assays",
     authors: "Moore TW, **Mohammed H**, Adey AC, Yardmc G",
     journal: "Nucleic Acids Research",
     url: "https://doi.org/10.1093/nar/gkag636",
@@ -41,7 +41,7 @@ const PUBS = [
   {
     year: 2026,
     title: "Serial Spatial Transcriptomics Reveal Divergent Routes to Therapy Resistance in Metastatic Breast Cancer",
-    authors: "**Doe A**, **Ors A**, **Cros H**, Sevim S, Lee J, Creason A, Zangirolani GM, Rose J, Youm I, Ozmen F, Ozmen T, Dane MA, **Scott W**, Chang M, Chin K, Heiser LM, Stommel JM, Mills GB, **Mohammed H**",
+    authors: "**Doe A**, **Ors A**, **Cros H**, Sevim S, Lee J, Creason AL, Zangirolani GM, Rose J, Youm I, Ozmen F, Ozmen T, Dane MA, **Scott W**, Chang M, Chin K, Heiser LM, Stommel JM, Mills GB, **Mohammed H**",
     journal: "Research Square",
     url: "https://doi.org/10.21203/rs.3.rs-9365657/v1",
   },
