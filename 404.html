@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page Not Found — Mohammed Lab</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <script>
+    var path = window.location.pathname.toLowerCase().replace(/\/+$/, '');
+    var map = {
+      '/our-team':      '/team.html',
+      '/team':          '/team.html',
+      '/people':        '/team.html',
+      '/members':       '/team.html',
+      '/research':      '/research.html',
+      '/science':       '/research.html',
+      '/publications':  '/publications.html',
+      '/papers':        '/publications.html',
+      '/contact':       '/contact.html',
+      '/join':          '/contact.html',
+      '/join-the-lab':  '/contact.html',
+      '/about':         '/index.html'
+    };
+    var dest = map[path];
+    if (dest) { window.location.replace(dest); }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Source Sans 3', sans-serif; background: #0d1526; color: #e2e8f0; display: flex; align-items: center; justify-content: center; min-height: 100vh; text-align: center; padding: 2rem; }
+    .wrap { max-width: 480px; }
+    .code { font-size: 6rem; font-weight: 700; color: #2dd4bf; line-height: 1; margin-bottom: 1rem; }
+    h1 { font-size: 1.5rem; margin-bottom: 0.75rem; }
+    p { color: #94a3b8; margin-bottom: 2rem; }
+    a.btn { display: inline-block; background: #2dd4bf; color: #0d1526; font-weight: 600; padding: 0.7rem 1.5rem; border-radius: 6px; text-decoration: none; }
+    a.btn:hover { background: #5eead4; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="code">404</div>
+    <h1>Page not found</h1>
+    <p>This page may have moved. Try the homepage.</p>
+    <a class="btn" href="/index.html">Go to homepage</a>
+  </div>
+</body>
+</html>
