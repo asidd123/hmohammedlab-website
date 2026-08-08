@@ -6,6 +6,11 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
+    <loc>https://hmohammedlab.com/index.html</loc>
+    <priority>1.0</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
     <loc>https://hmohammedlab.com/research.html</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
