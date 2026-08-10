@@ -167,13 +167,6 @@ const PUBS = [
   },
   {
     year: 2022,
-    title: "RF03 | PMON289 KLF4 drives estrogen driven tumor heterogeneity in breast cancer",
-    authors: "**Mohammed H**, **Wen Y**",
-    journal: "Journal of the Endocrine Society",
-    url: "https://doi.org/10.1210/jendso/bvac150.1508",
-  },
-  {
-    year: 2022,
     title: "Recurrent mutations in the epigenetic regulator Additional Sex-Combs Like 1 ( ASXL 1 ) are associated with universally poor prognosis in myeloid malignancy",
     authors: "Braun TP, Estabrook J, Darmusey L, Coleman DJ, Schonrock Z, Smith BM, Taherinasab A, Enright T, Coblentz C, Yashar WM, Callahan RL, **Mohammed H**, Druker B, Lusardi A, Maxson JE",
     journal: "",
