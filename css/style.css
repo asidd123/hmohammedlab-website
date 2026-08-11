@@ -690,3 +690,19 @@ em { font-family: var(--font-display); font-style: italic; }
   .js .reveal { opacity: 1; transform: none; transition: none; }
   .area-card, .fpub, .member, .pub, .tech-card, .btn { transition: none; }
 }
+
+/* ---------- photo hero ---------- */
+
+.hero--photo {
+  background-size: cover;
+  background-position: center;
+}
+.hero--photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 15, 30, 0.58);
+  z-index: 1;
+}
+.hero--photo .hero-inner { position: relative; z-index: 2; }
+.hero--photo .hero-glow { display: none; }
