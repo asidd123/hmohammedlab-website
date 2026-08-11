@@ -171,7 +171,7 @@
   border-top: none;
   padding: 16px 16px 18px;
   margin-top: -6px;
-  background: linear-gradient(180deg, rgba(10,111,102,0.07), rgba(10,111,102,0.02));
+  background: rgba(10,111,102,0.05);
   border: 1.5px solid rgba(10,111,102,0.3);
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(10,111,102,0.1);
