@@ -206,8 +206,12 @@ em { font-family: var(--font-display); font-style: italic; }
 .hero--sub h1 { font-size: clamp(36px, 5vw, 58px); }
 
 .hero h1 em {
-  font-style: normal;
-  color: inherit;
+  font-style: italic;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .hero-sub {
