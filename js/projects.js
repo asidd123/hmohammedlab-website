@@ -80,15 +80,20 @@
       ],
       blocks: [
         {
-          kind: "figure", img: "assets/viz/erpr-chipseq.png",
-          alt: "ChIP-seq heatmaps of ER binding with and without progestin, showing ER sites that are lost, retained and gained.",
-          panelTitle: "ER binding redistributes with progesterone (ChIP-seq)",
-          caption: 'ER&alpha; ChIP-seq read density at binding sites, vehicle vs + progestin. Activating PR redirects ER — in T47D ~14,223 sites are gained, 99% overlapping a PR peak. Illustrative heatmap. <span class="viz-src">· Mohammed et al., Nature 2015</span>'
-        },
-        {
-          kind: "viz", type: "volcano", key: "erpr-deg",
-          panelTitle: "The gene program that changes — hover for the gene",
-          fallback: '<p class="viz-note">The interactive volcano needs JavaScript. In brief: the proliferative program (MYC, cyclins) falls and PR-induced genes rise.</p>'
+          kind: "row",
+          blocks: [
+            {
+              kind: "figure", img: "assets/viz/erpr-chipseq.png",
+              alt: "ChIP-seq heatmaps of ER binding with and without progestin, showing ER sites that are lost, retained and gained.",
+              panelTitle: "ER binding redistributes with progesterone (ChIP-seq)",
+              caption: 'ER&alpha; ChIP-seq read density at binding sites, vehicle vs + progestin. Activating PR redirects ER — in T47D ~14,223 sites are gained, 99% overlapping a PR peak. Illustrative heatmap. <span class="viz-src">· Mohammed et al., Nature 2015</span>'
+            },
+            {
+              kind: "viz", type: "volcano", key: "erpr-deg",
+              panelTitle: "The gene program that changes — hover for the gene",
+              fallback: '<p class="viz-note">The interactive volcano needs JavaScript. In brief: the proliferative program (MYC, cyclins) falls and PR-induced genes rise.</p>'
+            }
+          ]
         },
         {
           kind: "viz", type: "erpr", key: "erpr",
@@ -191,6 +196,7 @@
       (b.caption ? '<figcaption class="viz-cap">' + b.caption + "</figcaption>" : "") + "</figure></div>";
   }
   function noteBlock(b) { return '<p class="viz-note">' + (b.html || esc(b.text)) + "</p>"; }
+  function rowBlock(b) { return '<div class="viz-row">' + renderBlocks(b.blocks) + "</div>"; }
 
   var STEP_ICONS = {
     cell: '<circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="2.6"/>',
@@ -217,7 +223,7 @@
   }
   function renderBlocks(arr) {
     return (arr || []).map(function (b) {
-      return b.kind === "figure" ? figureBlock(b) : b.kind === "note" ? noteBlock(b) : b.kind === "steps" ? stepsBlock(b) : vizBlock(b);
+      return b.kind === "figure" ? figureBlock(b) : b.kind === "note" ? noteBlock(b) : b.kind === "steps" ? stepsBlock(b) : b.kind === "row" ? rowBlock(b) : vizBlock(b);
     }).join("");
   }
 

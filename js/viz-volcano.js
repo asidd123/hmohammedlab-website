@@ -24,6 +24,11 @@
     function colOf(g) { return (g.nlp < nlpT || Math.abs(g.lfc) < lfcT) ? NS : (g.lfc > 0 ? UP : DOWN); }
 
     var holder = document.createElement("div"); holder.className = "viz-volcano"; container.appendChild(holder);
+    var legend = document.createElement("div"); legend.className = "viz-legend";
+    legend.innerHTML =
+      '<span class="viz-chip viz-chip--static"><span class="dot" style="background:' + UP + '"></span>up with PR</span>' +
+      '<span class="viz-chip viz-chip--static"><span class="dot" style="background:' + DOWN + '"></span>down with PR</span>';
+    holder.appendChild(legend);
     if (data.caption) container.appendChild(cap(L, data));
     var cv = L.canvas(holder, W, H), ctx = cv.ctx;
 
@@ -49,11 +54,6 @@
       ctx.save(); ctx.translate(15, mt + ph / 2); ctx.rotate(-Math.PI / 2); ctx.textAlign = "center"; ctx.fillText(data.ylabel || "-log10 p", 0, 0); ctx.restore();
       ctx.font = "9px 'IBM Plex Mono', monospace"; ctx.fillStyle = "#8a8f9c"; ctx.textAlign = "center";
       [-xm, 0, xm].forEach(function (t) { ctx.fillText((t > 0 ? "+" : "") + t, X(t), mt + ph + 15); });
-      ctx.textAlign = "left"; ctx.font = "10px Inter, sans-serif";
-      ctx.fillStyle = UP; ctx.beginPath(); ctx.arc(ml + 10, mt + 8, 4, 0, 6.28); ctx.fill();
-      ctx.fillStyle = "#5c6578"; ctx.fillText("up with PR", ml + 18, mt + 11);
-      ctx.fillStyle = DOWN; ctx.beginPath(); ctx.arc(ml + 10, mt + 24, 4, 0, 6.28); ctx.fill();
-      ctx.fillStyle = "#5c6578"; ctx.fillText("down with PR", ml + 18, mt + 27);
     }
     draw();
 
