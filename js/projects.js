@@ -239,13 +239,24 @@
     var more = (p.more && p.more.length)
       ? '<details class="project-more"><summary>' + esc(p.moreLabel || "More from this project") + "</summary>" + renderBlocks(p.more) + "</details>"
       : "";
-    return '<article class="project-card" id="proj-' + esc(p.id) + '">' +
+
+    var blocks = p.blocks || [];
+    var leadFig = blocks[0] && blocks[0].kind === "figure" ? blocks[0] : null;
+    var restBlocks = leadFig ? blocks.slice(1) : blocks;
+
+    var textContent =
       '<div class="project-head"><span class="project-area"><a href="research.html#area-' + areaNum + '">Area ' + areaNum + "</a> · " + areaLabel + "</span>" +
       '<span class="project-status project-status--' + esc(p.status) + '">' + esc(p.statusLabel || p.status) + "</span></div>" +
       "<h3>" + esc(p.title) + "</h3>" +
       (p.lede ? '<p class="project-lede">' + esc(p.lede) + "</p>" : "") +
-      (body ? '<div class="project-body">' + body + "</div>" : "") +
-      renderBlocks(p.blocks) + more + metaRow(p) +
+      (body ? '<div class="project-body">' + body + "</div>" : "");
+
+    var headerHTML = leadFig
+      ? '<div class="project-intro-row"><div class="project-intro-text">' + textContent + '</div><div class="project-intro-fig">' + figureBlock(leadFig) + '</div></div>'
+      : textContent;
+
+    return '<article class="project-card" id="proj-' + esc(p.id) + '">' +
+      headerHTML + renderBlocks(restBlocks) + more + metaRow(p) +
       "</article>";
   }
 

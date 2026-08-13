@@ -43,6 +43,20 @@
   color: var(--violet-deep); margin: 22px 0 4px;
 }
 
+/* side-by-side text + leading figure layout */
+.project-intro-row {
+  display: grid;
+  grid-template-columns: 1fr minmax(220px, 42%);
+  gap: 24px;
+  align-items: start;
+}
+.project-intro-text .project-lede { max-width: none; }
+.project-intro-text .project-body  { max-width: none; }
+.project-intro-fig .viz-panel { margin-top: 0; }
+@media (max-width: 860px) {
+  .project-intro-row { grid-template-columns: 1fr; }
+}
+
 .project-meta { margin-top: 24px; padding-top: 18px; border-top: 1px dashed var(--line); font-size: 14px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 8px 18px; }
 .project-meta b { color: var(--text); font-weight: 600; }
 .project-meta a { font-weight: 500; }

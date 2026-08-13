@@ -17,15 +17,16 @@
 
   L.register("cells", function (container, data) {
     container.classList.add("viz-cells");
-    var W = Math.max(320, Math.min(container.clientWidth || 680, 760));
-    var H = Math.round(W * (data.height / data.width));
-    var sx = W / data.width, sy = H / data.height;
+    var W = Math.max(320, container.clientWidth || 900);
+    var H_natural = Math.round(W * (data.height / data.width));
+    var H = Math.min(H_natural, Math.round(W * 0.58));
+    var sx = W / data.width, sy = W / data.width; /* uniform scale — preserves cell shapes */
     var modes = data.modes, active = modes[0], activeClass = null, stops = data.geneColor;
-    var z = 1, tx = 0, ty = 0;
+    var z = 1, tx = 0, ty = Math.round((H - H_natural) / 2); /* center view vertically */
 
     var cells = data.cells.map(function (c) {
       var pts = [], cxs = 0, cys = 0, n = c.g.length / 2;
-      for (var i = 0; i < c.g.length; i += 2) { var X = c.g[i] * sx, Y = H - c.g[i + 1] * sy; pts.push(X, Y); cxs += X; cys += Y; }
+      for (var i = 0; i < c.g.length; i += 2) { var X = c.g[i] * sx, Y = H_natural - c.g[i + 1] * sy; pts.push(X, Y); cxs += X; cys += Y; }
       return { pts: pts, cx: cxs / n, cy: cys / n, t: c.t, d: c.d, e: c.e };
     });
 
@@ -59,11 +60,10 @@
     function draw() {
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, W, H);
       ctx.setTransform(dpr * z, 0, 0, dpr * z, dpr * tx, dpr * ty);
-      var doStroke = z >= 4;
       for (var i = 0; i < cells.length; i++) {
         var c = cells[i], off = (activeClass != null && active.type === "cat" && classIdx(c) !== activeClass);
         ctx.globalAlpha = off ? 0.1 : 1; pathPoly(ctx, c); ctx.fillStyle = fillFor(c); ctx.fill();
-        if (doStroke && !off) { ctx.lineWidth = 0.5 / z; ctx.strokeStyle = "rgba(255,255,255,0.75)"; ctx.stroke(); }
+        ctx.lineWidth = 1.2 / z; ctx.strokeStyle = "rgba(0,0,0,0.85)"; ctx.stroke();
       }
       ctx.globalAlpha = 1;
     }
@@ -97,10 +97,10 @@
     buildLegend(); draw();
 
     /* zoom + pan */
-    function clampPan() { var cw = W * z, ch = H * z; tx = Math.min(0, Math.max(W - cw, tx)); ty = Math.min(0, Math.max(H - ch, ty)); }
+    function clampPan() { var cw = W * z, ch = H_natural * z; tx = Math.min(0, Math.max(W - cw, tx)); ty = Math.min(0, Math.max(H - ch, ty)); }
     function zoomAt(mx, my, f) { var nz = Math.max(1, Math.min(18, z * f)); tx = mx - (mx - tx) * nz / z; ty = my - (my - ty) * nz / z; z = nz; clampPan(); highlight(null); draw(); }
     base.canvas.addEventListener("wheel", function (ev) { ev.preventDefault(); var r = base.canvas.getBoundingClientRect(); zoomAt(ev.clientX - r.left, ev.clientY - r.top, ev.deltaY < 0 ? 1.18 : 1 / 1.18); }, { passive: false });
-    base.canvas.addEventListener("dblclick", function () { z = 1; tx = 0; ty = 0; highlight(null); draw(); });
+    base.canvas.addEventListener("dblclick", function () { z = 1; tx = 0; ty = Math.round((H - H_natural) / 2); highlight(null); draw(); });
 
     var down = false, lx0 = 0, ly0 = 0, moved = false;
     base.canvas.addEventListener("mousedown", function (ev) { down = true; moved = false; lx0 = ev.clientX; ly0 = ev.clientY; base.canvas.style.cursor = "grabbing"; });
