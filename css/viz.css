@@ -198,12 +198,17 @@
 .erpr-step.is-result .erpr-stat .v { font-size: 30px; }
 
 /* in-card disclosure for extra interactives */
-.project-more { margin-top: 22px; border-top: 1px solid var(--line); padding-top: 6px; }
+.project-more { margin-top: 22px; border-top: 1px solid var(--line); padding-top: 14px; }
 .project-more > summary {
-  list-style: none; cursor: pointer; padding: 12px 0 6px;
-  font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal);
-  display: flex; align-items: center; gap: 8px;
+  list-style: none; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--ink);
+  padding: 8px 16px; border-radius: 99px;
+  border: 1.5px solid var(--teal); background: transparent;
+  transition: background 0.15s, color 0.15s;
 }
+.project-more > summary:hover { background: var(--teal); color: #fff; }
 .project-more > summary::-webkit-details-marker { display: none; }
 .project-more > summary::after { content: "+"; font-size: 15px; }
 .project-more[open] > summary::after { content: "–"; }
