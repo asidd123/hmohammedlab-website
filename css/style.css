@@ -71,6 +71,10 @@ em { font-family: var(--font-display); font-style: italic; }
 .eyebrow::before { content: ""; width: 34px; height: 1.5px; background: var(--grad); flex: none; }
 
 .section-title { font-size: clamp(30px, 4.2vw, 44px); margin-bottom: 16px; }
+.section-title-link { text-decoration: none; color: inherit; }
+.section-title-link:hover .section-title { text-decoration: underline; text-decoration-color: var(--accent, currentColor); }
+.area-card-link { text-decoration: none; color: inherit; }
+.area-card-link:hover h3 { text-decoration: underline; text-decoration-color: var(--accent, currentColor); }
 .section-lede { font-size: 18.5px; color: var(--muted); max-width: 640px; }
 
 /* ---------- nav ---------- */
@@ -601,7 +605,7 @@ em { font-family: var(--font-display); font-style: italic; }
 /* ---------- group photo strip ---------- */
 
 .photo-strip { border-radius: calc(var(--radius) + 6px); overflow: hidden; box-shadow: var(--shadow-md); }
-.photo-strip img { width: 100%; height: 460px; object-fit: cover; }
+.photo-strip img { width: 100%; height: 460px; object-fit: cover; object-position: center 25%; }
 @media (max-width: 720px) { .photo-strip img { height: 280px; } }
 
 /* ---------- contact ---------- */
