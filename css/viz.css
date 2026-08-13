@@ -122,7 +122,7 @@
 .viz-net-node circle { transition: opacity 0.18s, r 0.12s; }
 .viz-net-label { font-family: var(--font-mono); font-size: 9.5px; fill: var(--muted); pointer-events: none; transition: opacity 0.18s; }
 .viz-net-center circle { fill: var(--ink); }
-.viz-net-center text { font-family: var(--font-display); font-size: 13px; fill: #fff; text-anchor: middle; dominant-baseline: middle; font-weight: 600; }
+.viz-net-center text { font-family: var(--font-display); font-size: 15px; fill: #fff; font-weight: 600; }
 .viz-network.dimmed .viz-net-node.off circle { opacity: 0.13; }
 .viz-network.dimmed .viz-net-node.off .viz-net-label { opacity: 0; }
 .viz-network.dimmed .viz-net-edge.off { stroke-opacity: 0.05; }
