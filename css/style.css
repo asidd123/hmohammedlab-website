@@ -459,6 +459,8 @@ em { font-family: var(--font-display); font-style: italic; }
 .bio-toggle:hover { text-decoration: underline; text-underline-offset: 3px; }
 
 .member-links { display: flex; gap: 8px; margin-top: 18px; }
+.alumni-header { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.alumni-header .member-links { margin-top: 0; }
 .member-links a {
   display: grid;
   place-items: center;
