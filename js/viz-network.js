@@ -23,7 +23,7 @@
     /* ---- dataset selector (baits / conditions) ---- */
     if (datasets.length > 1) {
       var sel = document.createElement("div"); sel.className = "viz-select";
-      sel.setAttribute("role", "group"); sel.setAttribute("aria-label", "RIME bait or condition");
+      sel.setAttribute("role", "group"); sel.setAttribute("aria-label", "RIME target");
       datasets.forEach(function (ds) {
         var b = document.createElement("button"); b.type = "button"; b.className = "viz-tab";
         b.textContent = ds.label; b.setAttribute("aria-pressed", ds === active ? "true" : "false");

@@ -21,7 +21,7 @@
       lede: "Most of what a transcription factor does, it does in company. RIME reads the estrogen-receptor complex directly from cells, by mass spectrometry.",
       body: [
         "<strong>RIME</strong> — rapid immunoprecipitation mass spectrometry of endogenous proteins — captures a protein and everything bound to it, directly from cells, without tags or over-expression. Cells are lightly cross-linked, the protein is pulled down with its own antibody, and its partners are identified by mass spectrometry. Run alongside ChIP-seq, it pairs a factor's interactome with where it binds the genome — and it works from primary tumour tissue, not only cell lines.",
-        "We developed RIME while asking what the estrogen-receptor complex actually contains, and used it to identify GREB1 as a chromatin-bound ER co-activator. The maps below show several RIME experiments — ER with and without anti-estrogen, the progesterone receptor, and GREB1 — grouped by what each partner does. Switch the bait or condition above the map."
+        "We developed RIME while asking what the estrogen-receptor complex actually contains, and used it to identify GREB1 as a chromatin-bound ER co-activator. The maps below show several RIME experiments — ER with and without anti-estrogen, the progesterone receptor, and GREB1 — grouped by what each partner does. Switch the target above the map."
       ],
       blocks: [
         {
@@ -49,11 +49,11 @@
               text: "Tandem mass spectrometry identifies and quantifies every protein recovered in the immunoprecipitate, yielding a defined interactome."
             }
           ],
-          note: "The output is a quantitative inventory of a protein's endogenous binding partners, determined directly from cells or tumour tissue. The interactive map below presents that inventory for a panel of baits and conditions."
+          note: "The output is a quantitative inventory of a protein's endogenous binding partners, determined directly from cells or tumour tissue. The interactive map below presents that inventory for a panel of targets and conditions."
         },
         {
           kind: "viz", type: "network", key: "rime-er",
-          panelTitle: "RIME interactomes — choose a bait or condition, then highlight a class",
+          panelTitle: "RIME interactomes — choose a target, then highlight a class",
           fallback: '<p class="viz-note">The interactive interactome needs JavaScript. The reported interactors are listed in the paper.</p>'
         },
         {
