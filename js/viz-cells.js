@@ -71,7 +71,7 @@
       octx.setTransform(dpr, 0, 0, dpr, 0, 0); octx.clearRect(0, 0, W, H);
       if (!c) return;
       octx.setTransform(dpr * z, 0, 0, dpr * z, dpr * tx, dpr * ty);
-      pathPoly(octx, c); octx.lineWidth = 1.6 / z; octx.strokeStyle = "#0a0f1e"; octx.stroke();
+      pathPoly(octx, c); octx.lineWidth = 1.6 / z; octx.strokeStyle = "rgba(255,255,255,0.9)"; octx.stroke();
     }
 
     function buildLegend() {

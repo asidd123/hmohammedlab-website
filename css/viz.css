@@ -125,7 +125,7 @@
 .viz-cells { position: relative; width: 100%; }
 .cells-stack { position: relative; width: 100%; }
 .viz-cells canvas { width: 100%; height: auto; display: block; border-radius: 10px; }
-.viz-cells .cells-base { background: #fbfaf7; cursor: grab; }
+.viz-cells .cells-base { background: #000000; cursor: grab; }
 .viz-hint { font-family: var(--font-mono); font-size: 11px; color: var(--muted); margin: -6px 0 12px; opacity: 0.85; }
 .viz-cells canvas.overlay { position: absolute; inset: 0; pointer-events: none; background: transparent; }
 .viz-select-label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); align-self: center; margin-right: 2px; }
