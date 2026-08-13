@@ -22,7 +22,9 @@
     var H = Math.min(H_natural, Math.round(W * 0.58));
     var sx = W / data.width, sy = W / data.width; /* uniform scale — preserves cell shapes */
     var modes = data.modes, active = modes[0], activeClass = null, stops = data.geneColor;
-    var z = 1, tx = 0, ty = Math.round((H - H_natural) / 2); /* center view vertically */
+    /* z_min fits the whole square biopsy into the shorter landscape canvas */
+    var z_min = H / H_natural;
+    var z = z_min, tx = (W - W * z_min) / 2, ty = 0;
 
     var cells = data.cells.map(function (c) {
       var pts = [], cxs = 0, cys = 0, n = c.g.length / 2;
@@ -97,10 +99,14 @@
     buildLegend(); draw();
 
     /* zoom + pan */
-    function clampPan() { var cw = W * z, ch = H_natural * z; tx = Math.min(0, Math.max(W - cw, tx)); ty = Math.min(0, Math.max(H - ch, ty)); }
-    function zoomAt(mx, my, f) { var nz = Math.max(1, Math.min(18, z * f)); tx = mx - (mx - tx) * nz / z; ty = my - (my - ty) * nz / z; z = nz; clampPan(); highlight(null); draw(); }
+    /* When data is narrower than canvas, center it; when wider, clamp pan */
+    function clampPan() {
+      tx = W * z <= W ? (W - W * z) / 2 : Math.min(0, Math.max(W - W * z, tx));
+      ty = Math.min(0, Math.max(H - H_natural * z, ty));
+    }
+    function zoomAt(mx, my, f) { var nz = Math.max(z_min, Math.min(18, z * f)); tx = mx - (mx - tx) * nz / z; ty = my - (my - ty) * nz / z; z = nz; clampPan(); highlight(null); draw(); }
     base.canvas.addEventListener("wheel", function (ev) { ev.preventDefault(); var r = base.canvas.getBoundingClientRect(); zoomAt(ev.clientX - r.left, ev.clientY - r.top, ev.deltaY < 0 ? 1.18 : 1 / 1.18); }, { passive: false });
-    base.canvas.addEventListener("dblclick", function () { z = 1; tx = 0; ty = Math.round((H - H_natural) / 2); highlight(null); draw(); });
+    base.canvas.addEventListener("dblclick", function () { z = z_min; tx = (W - W * z_min) / 2; ty = 0; highlight(null); draw(); });
 
     var down = false, lx0 = 0, ly0 = 0, moved = false;
     base.canvas.addEventListener("mousedown", function (ev) { down = true; moved = false; lx0 = ev.clientX; ly0 = ev.clientY; base.canvas.style.cursor = "grabbing"; });
