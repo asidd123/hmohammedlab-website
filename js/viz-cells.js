@@ -17,16 +17,18 @@
 
   L.register("cells", function (container, data) {
     container.classList.add("viz-cells");
-    /* Cap at 720px so the square canvas fits on screen; CSS max-width matches */
+    /* Cap at 720px wide; add 80px height (40px margin top+bottom) so edge cells breathe */
     var W = Math.max(320, Math.min(container.clientWidth || 720, 720));
-    var H = W; /* square canvas — shows the entire biopsy at z=1 */
-    var sx = W / data.width, sy = H / data.height;
+    var H = W + 80;
+    var scale = W / data.width; /* uniform — data renders as a W×W square inside W×H canvas */
+    var sx = scale, sy = scale;
+    var yOff = (H - W) / 2; /* vertical offset to center the data */
     var modes = data.modes, active = modes[0], activeClass = null, stops = data.geneColor;
     var z = 1, tx = 0, ty = 0;
 
     var cells = data.cells.map(function (c) {
       var pts = [], cxs = 0, cys = 0, n = c.g.length / 2;
-      for (var i = 0; i < c.g.length; i += 2) { var X = c.g[i] * sx, Y = H - c.g[i + 1] * sy; pts.push(X, Y); cxs += X; cys += Y; }
+      for (var i = 0; i < c.g.length; i += 2) { var X = c.g[i] * sx, Y = H - yOff - c.g[i + 1] * sy; pts.push(X, Y); cxs += X; cys += Y; }
       return { pts: pts, cx: cxs / n, cy: cys / n, t: c.t, d: c.d, e: c.e };
     });
 
