@@ -124,10 +124,7 @@
 
       var cg = document.createElementNS(NS, "g"); cg.setAttribute("class", "viz-net-center");
       var cc = document.createElementNS(NS, "circle"); cc.setAttribute("cx", cx); cc.setAttribute("cy", cy); cc.setAttribute("r", 27); cg.appendChild(cc);
-      var ct = document.createElementNS(NS, "text");
-      ct.setAttribute("x", cx); ct.setAttribute("y", cy);
-      ct.setAttribute("text-anchor", "middle"); ct.setAttribute("dominant-baseline", "central");
-      ct.setAttribute("textLength", "42"); ct.setAttribute("lengthAdjust", "spacingAndGlyphs");
+      var ct = document.createElementNS(NS, "text"); ct.setAttribute("x", cx); ct.setAttribute("y", cy);
       ct.textContent = ds.center ? ds.center.id : "ER"; cg.appendChild(ct);
       svg.appendChild(cg);
 
