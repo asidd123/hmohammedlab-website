@@ -17,8 +17,8 @@
 
   L.register("cells", function (container, data) {
     container.classList.add("viz-cells");
-    /* Cap at 580px so the square canvas fits on screen; CSS max-width matches */
-    var W = Math.max(320, Math.min(container.clientWidth || 580, 580));
+    /* Cap at 720px so the square canvas fits on screen; CSS max-width matches */
+    var W = Math.max(320, Math.min(container.clientWidth || 720, 720));
     var H = W; /* square canvas — shows the entire biopsy at z=1 */
     var sx = W / data.width, sy = H / data.height;
     var modes = data.modes, active = modes[0], activeClass = null, stops = data.geneColor;
