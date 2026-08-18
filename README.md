@@ -1,4 +1,4 @@
-# Hisham Mohammed Lab — Website
+# Hisham Mohammed Lab: Website
 
 A modern, fast, dependency-free static website for the Mohammed Lab
 (CEDAR, Knight Cancer Institute, OHSU). Redesigned from the original
@@ -7,18 +7,18 @@ WordPress site at [hmohammedlab.com](https://hmohammedlab.com/).
 ## Structure
 
 ```
-index.html          Home — hero, stats, mission, research areas, featured papers
-research.html       Research — primary areas + technologies (RIME, scNMT-seq, TITAN)
-team.html           Team — current members + alumni
-publications.html   Publications — searchable, grouped by year (data in js/publications.js)
-contact.html        Join & Contact — addresses, email, recruiting info
+index.html          Home: hero, stats, mission, research areas, featured papers
+research.html       Research: primary areas + technologies (RIME, scNMT-seq, TITAN)
+team.html           Team: current members + alumni
+publications.html   Publications: searchable, grouped by year (data in js/publications.js)
+contact.html        Join & Contact: addresses, email, recruiting info
 css/style.css       All styling (design tokens at the top)
 js/main.js          Nav, scroll animations, hero DNA helix
 js/publications.js  Publication data + list renderer
 assets/             Images (team photos in assets/img/team/)
 ```
 
-No build step, no frameworks — plain HTML/CSS/JS. Works from any static host.
+No build step, no frameworks: plain HTML/CSS/JS. Works from any static host.
 
 ## Preview locally
 

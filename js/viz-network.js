@@ -1,4 +1,4 @@
-/* Mohammed Lab — interactome network renderer (Concept 1, RIME).
+/* Mohammed Lab: interactome network renderer (Concept 1, RIME).
    Supports a gallery of datasets (baits / conditions): a selector switches the active
    RIME experiment; a precomputed radial layout (no physics, no animation) draws it.
    Hover a node for its role; click a class chip to highlight that functional class. */

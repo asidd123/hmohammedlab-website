@@ -1,4 +1,4 @@
-/* Mohammed Lab — click-to-expand lightbox for static research figures.
+/* Mohammed Lab: click-to-expand lightbox for static research figures.
    Delegated on document so it works for cards projects.js renders after load.
    Targets only the non-interactive figure images (figure.viz / .viz-fallback);
    the canvas/svg interactives are untouched. */

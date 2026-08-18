@@ -1,4 +1,4 @@
-/* Mohammed Lab — shared behavior: nav, reveal-on-scroll */
+/* Mohammed Lab shared behavior: nav, reveal-on-scroll */
 
 (function () {
   "use strict";

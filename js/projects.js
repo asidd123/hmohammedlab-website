@@ -1,4 +1,4 @@
-/* Mohammed Lab — current-work project cards (research.html #project-list).
+/* Mohammed Lab: current-work project cards (research.html #project-list).
    Mirrors the js/publications.js pattern: a hand-maintained data array + a client-side
    renderer, loaded via <script> (works from file://). The array is the source of truth
    for WHAT shows; the separately-cleared js/viz-data/* modules carry the interactive
@@ -20,8 +20,8 @@
       title: "RIME: reading endogenous protein complexes",
       lede: "Most of what a transcription factor does, it does in company. RIME reads the estrogen-receptor complex directly from cells, by mass spectrometry.",
       body: [
-        "<strong>RIME</strong> — rapid immunoprecipitation mass spectrometry of endogenous proteins — captures a protein and everything bound to it, directly from cells, without tags or over-expression. Cells are lightly cross-linked, the protein is pulled down with its own antibody, and its partners are identified by mass spectrometry. Run alongside ChIP-seq, it pairs a factor's interactome with where it binds the genome — and it works from primary tumour tissue, not only cell lines.",
-        "We developed RIME while asking what the estrogen-receptor complex actually contains, and used it to identify GREB1 as a chromatin-bound ER co-activator. The maps below show several RIME experiments — ER with and without anti-estrogen, the progesterone receptor, and GREB1 — grouped by what each partner does. Switch the target above the map."
+        "<strong>RIME</strong> (rapid immunoprecipitation mass spectrometry of endogenous proteins) captures a protein and everything bound to it, directly from cells, without tags or over-expression. Cells are lightly cross-linked, the protein is pulled down with its own antibody, and its partners are identified by mass spectrometry. Run alongside ChIP-seq, it pairs a factor's interactome with where it binds the genome, and it works from primary tumour tissue, not only cell lines.",
+        "We developed RIME while asking what the estrogen-receptor complex actually contains, and used it to identify GREB1 as a chromatin-bound ER co-activator. The maps below show several RIME experiments (ER with and without anti-estrogen, the progesterone receptor, and GREB1) grouped by what each partner does. Switch the target above the map."
       ],
       blocks: [
         {
@@ -31,7 +31,7 @@
             {
               icon: "cell",
               title: "Native cells or tissue",
-              text: "The starting material is unmodified cells or primary tumour tissue — no genetic tags, no protein over-expression that could distort normal complex formation."
+              text: "The starting material is unmodified cells or primary tumour tissue: no genetic tags, no protein over-expression that could distort normal complex formation."
             },
             {
               icon: "snap",
@@ -41,7 +41,7 @@
             {
               icon: "target",
               title: "Immunoprecipitate the target",
-              text: "A high-specificity antibody against the protein of interest — for example, the estrogen receptor — co-isolates it with its bound partners."
+              text: "A high-specificity antibody against the protein of interest (for example, the estrogen receptor) co-isolates it with its bound partners."
             },
             {
               icon: "spectrum",
@@ -53,12 +53,12 @@
         },
         {
           kind: "viz", type: "network", key: "rime-er",
-          panelTitle: "RIME interactomes — choose a target, then highlight a class",
+          panelTitle: "RIME interactomes: choose a target, then highlight a class",
           fallback: '<p class="viz-note">The interactive interactome needs JavaScript. The reported interactors are listed in the paper.</p>'
         },
         {
           kind: "note",
-          html: '<strong>Working with us.</strong> RIME is also offered commercially as a service (for example by <a href="https://www.activemotif.com/catalog/1077/rime" target="_blank" rel="noopener">Active Motif</a>). Our role is different: we collaborate — helping labs design the experiment, choose and validate antibodies, set the method up in their own hands, and read it against the matched binding data. If RIME fits a question you are working on, <a href="contact.html">get in touch</a>.'
+          html: '<strong>Working with us.</strong> RIME is also offered commercially as a service (for example by <a href="https://www.activemotif.com/catalog/1077/rime" target="_blank" rel="noopener">Active Motif</a>). Our role is different: we collaborate, helping labs design the experiment, choose and validate antibodies, set the method up in their own hands, and read it against the matched binding data. If RIME fits a question you are working on, <a href="contact.html">get in touch</a>.'
         }
       ],
       leads: [{ name: "Hisham Mohammed", anchor: "hisham" }],
@@ -73,7 +73,7 @@
       id: "erpr-pioneer", area: 1, status: "published", statusLabel: "Published",
       cleared: true,
       title: "Progesterone reprograms the estrogen receptor",
-      lede: "Activating the progesterone receptor changes where ER binds the genome — a mechanism that helped motivate a clinical trial.",
+      lede: "Activating the progesterone receptor changes where ER binds the genome, a mechanism that helped motivate a clinical trial.",
       body: [
         "Estrogen receptor does not act alone. We found that activating the progesterone receptor redirects <em>where</em> ER binds across the genome, shifting it toward a program associated with a more favourable outcome.",
         "That mechanism helped motivate the PIONEER window-of-opportunity trial, which added a progesterone-receptor agonist to standard endocrine therapy in early ER+ breast cancer and recently reported a clinical benefit. We describe the scientific lineage here; the trial itself was led by the Carroll group and collaborators."
@@ -86,11 +86,11 @@
               kind: "figure", img: "assets/viz/erpr-chipseq.png",
               alt: "ChIP-seq heatmaps of ER binding with and without progestin, showing ER sites that are lost, retained and gained.",
               panelTitle: "ER binding redistributes with progesterone (ChIP-seq)",
-              caption: 'ER&alpha; ChIP-seq read density at binding sites, vehicle vs + progestin. Activating PR redirects ER — in T47D ~14,223 sites are gained, 99% overlapping a PR peak. Illustrative heatmap. <span class="viz-src">· Mohammed et al., Nature 2015</span>'
+              caption: 'ER&alpha; ChIP-seq read density at binding sites, vehicle vs + progestin. Activating PR redirects ER: in T47D ~14,223 sites are gained, 99% overlapping a PR peak. Illustrative heatmap. <span class="viz-src">· Mohammed et al., Nature 2015</span>'
             },
             {
               kind: "viz", type: "volcano", key: "erpr-deg",
-              panelTitle: "The gene program that changes — hover for the gene",
+              panelTitle: "The gene program that changes: hover for the gene",
               fallback: '<p class="viz-note">The interactive volcano needs JavaScript. In brief: the proliferative program (MYC, cyclins) falls and PR-induced genes rise.</p>'
             }
           ]
@@ -105,7 +105,7 @@
       methods: [{ label: "RIME", anchor: "tech-rime" }],
       refs: [
         { label: "Nature 2015", url: "https://www.nature.com/articles/nature14583" },
-        { label: "PIONEER — Nature Cancer 2026", url: "https://www.nature.com/articles/s43018-025-01087-x" }
+        { label: "PIONEER, Nature Cancer 2026", url: "https://www.nature.com/articles/s43018-025-01087-x" }
       ]
     },
 
@@ -115,20 +115,20 @@
       title: "Tracking metastatic breast cancer as it evolves",
       lede: "Serial spatial transcriptomics across a patient's treatment course, to see how resistance is organised in tissue.",
       body: [
-        "Metastatic tumours survive treatment by changing — and those changes are organised in space. With OHSU's SMMART program, we profiled <strong>345,000 cells across ten serial biopsies</strong> from four patients, following each tumour through its treatment course over as long as three and a half years.",
-        "Combining topic modelling of cell states (TITAN) with spatial tissue domains (STAGATE) and copy-number ground truth, we find tumours reach resistance by different routes — losing luminal identity, locking on estrogen signalling, or, as in the patient shown here, partitioning into spatially separate, drug-refractory invasive nests. The map below is that patient's final biopsy, drawn from real cell shapes — colour it by cell type, by spatial domain (the estrogen-receptor–positive core grading out to invasive nests), or by a gene, and hover any cell."
+        "Metastatic tumours survive treatment by changing, and those changes are organised in space. With OHSU's SMMART program, we profiled <strong>345,000 cells across ten serial biopsies</strong> from four patients, following each tumour through its treatment course over as long as three and a half years.",
+        "Combining topic modelling of cell states (TITAN) with spatial tissue domains (STAGATE) and copy-number ground truth, we find tumours reach resistance by different routes: losing luminal identity, locking on estrogen signalling, or, as in the patient shown here, partitioning into spatially separate, drug-refractory invasive nests. The map below is that patient's final biopsy, drawn from real cell shapes: colour it by cell type, by spatial domain (the estrogen-receptor–positive core grading out to invasive nests), or by a gene, and hover any cell."
       ],
       blocks: [
         {
           kind: "figure", img: "assets/viz/spatial-concept.png",
           alt: "Schematic: serial biopsies of a metastatic ER+ patient during therapy feed single-cell spatial mapping and clonal-evolution analysis.",
-          panelTitle: "The idea — serial spatial tracking of tumour evolution",
+          panelTitle: "The idea: serial spatial tracking of tumour evolution",
           caption: "Serial biopsies through a patient&rsquo;s treatment, profiled cell-by-cell in space, to follow how the tumour evolves."
         },
         {
           kind: "viz", type: "cells", key: "cosmx-d-bx3",
-          panelTitle: "Patient D, final biopsy (Bx3, liver) — real cell shapes",
-          fallback: '<figure><img src="assets/viz/cosmx-d-bx3-fallback.png" alt="Spatial map of cells in Patient D\'s final biopsy, showing the cancer core and separate invasive nests." loading="lazy"><figcaption class="viz-cap">Patient D, final biopsy — spatial cell map (static fallback).</figcaption></figure>'
+          panelTitle: "Patient D, final biopsy (Bx3, liver): real cell shapes",
+          fallback: '<figure><img src="assets/viz/cosmx-d-bx3-fallback.png" alt="Spatial map of cells in Patient D\'s final biopsy, showing the cancer core and separate invasive nests." loading="lazy"><figcaption class="viz-cap">Patient D, final biopsy: spatial cell map (static fallback).</figcaption></figure>'
         }
       ],
       leads: [
@@ -144,9 +144,9 @@
       id: "nmt-epigenetics", area: 2, status: "preprint", statusLabel: "In preparation",
       cleared: true,
       title: "Single-cell epigenetics of breast cancer",
-      lede: "Reading DNA methylation, chromatin accessibility and transcription from the same single cell — and now in spatial tissue.",
+      lede: "Reading DNA methylation, chromatin accessibility and transcription from the same single cell, and now in spatial tissue.",
       body: [
-        "<strong>scNMT-seq</strong> reads three layers of regulation — the transcriptome, DNA methylation and chromatin accessibility — from one single cell. Reading methylation this deeply lets us treat a cell's epigenome as both a record of its ancestry and a driver of its current state; the approach was demonstrated at depth in single-cell multi-omics of development (Argelaguet et al., Nature 2019).",
+        "<strong>scNMT-seq</strong> reads three layers of regulation, the transcriptome, DNA methylation and chromatin accessibility, from one single cell. Reading methylation this deeply lets us treat a cell's epigenome as both a record of its ancestry and a driver of its current state; the approach was demonstrated at depth in single-cell multi-omics of development (Argelaguet et al., Nature 2019).",
         "We are extending it to breast tumours and into spatial tissue. The figures below show per-clone DNA methylation across the genome in one sample, and spatial DNA methylation in a tumour section."
       ],
       blocks: [
@@ -167,7 +167,7 @@
         },
         {
           kind: "note",
-          html: 'A single human cell carries roughly <strong>30 million CpG sites</strong>. A planned view will let you open one cell of a given type and see its methylation at that scale — built first on a small pilot so it stays responsive.'
+          html: 'A single human cell carries roughly <strong>30 million CpG sites</strong>. A planned view will let you open one cell of a given type and see its methylation at that scale, built first on a small pilot so it stays responsive.'
         }
       ],
       leads: [
@@ -177,7 +177,7 @@
       ],
       methods: [{ label: "scNMT-seq", anchor: "tech-scnmt" }],
       refs: [
-        { label: "scNMT-seq — Nat Commun 2018", url: "https://www.nature.com/articles/s41467-018-03149-4" },
+        { label: "scNMT-seq, Nat Commun 2018", url: "https://www.nature.com/articles/s41467-018-03149-4" },
         { label: "Argelaguet et al., Nature 2019", url: "https://www.nature.com/articles/s41586-019-1825-8" }
       ]
     }

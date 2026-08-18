@@ -1,4 +1,4 @@
-/* Mohammed Lab — spatial scatter renderer (Concept 3, CosMx Patient D Bx3).
+/* Mohammed Lab: spatial scatter renderer (Concept 3, CosMx Patient D Bx3).
    Canvas point-cloud of real cell centroids colored by class; hover reveals the
    class; click a legend chip to isolate it. Capped + de-identified pilot data. */
 (function () {

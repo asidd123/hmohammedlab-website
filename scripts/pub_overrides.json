@@ -1,6 +1,6 @@
 {
-  "_comment": "Hand-curated corrections layered on top of the Semantic Scholar fetch. 'patches' fix notes/author formatting (co-first/corresponding marks the API doesn't know about) on papers the API does return, matched by normalized title. 'extra' are full manual entries for things the API has no record of (e.g. conference abstracts without a DOI, or papers only findable under author ID 2324508637 — see below). 'exclude_titles' drops API entries that shouldn't render at all.",
-  "_comment_2324508637": "Author ID 2324508637 mixes Hisham's real papers with unrelated work by other people sharing the name (a telecom paper, a pediatric-oncology paper) — too unreliable to use as an automatic source, so the genuine ones from it are hand-added to 'extra' below instead.",
+  "_comment": "Hand-curated corrections layered on top of the Semantic Scholar fetch. 'patches' fix notes/author formatting (co-first/corresponding marks the API doesn't know about) on papers the API does return, matched by normalized title. 'extra' are full manual entries for things the API has no record of (e.g. conference abstracts without a DOI, or papers only findable under author ID 2324508637, see below). 'exclude_titles' drops API entries that shouldn't render at all.",
+  "_comment_2324508637": "Author ID 2324508637 mixes Hisham's real papers with unrelated work by other people sharing the name (a telecom paper, a pediatric-oncology paper), too unreliable to use as an automatic source, so the genuine ones from it are hand-added to 'extra' below instead.",
 
   "patches": [
     {

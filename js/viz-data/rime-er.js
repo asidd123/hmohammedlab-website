@@ -1,8 +1,8 @@
-/* Mohammed Lab — RIME interactomes (Concept 1).
-   A small, curated, illustrative gallery of endogenous RIME experiments — different baits
-   and conditions — drawn from the lab's RIME work (Mohammed et al., Cell Reports 2013;
+/* Mohammed Lab: RIME interactomes (Concept 1).
+   A small, curated, illustrative gallery of endogenous RIME experiments (different baits
+   and conditions) drawn from the lab's RIME work (Mohammed et al., Cell Reports 2013;
    Nature 2015). Functional classes are shared; each dataset is one bait/condition. Not the
-   full mass-spectrometry hit lists — enough to convey what RIME reveals. */
+   full mass-spectrometry hit lists, just enough to convey what RIME reveals. */
 (function () {
   var L = (window.LabViz = window.LabViz || {}); L.data = L.data || {};
 
@@ -22,7 +22,7 @@
       {
         key: "er-estrogen", label: "ER · estrogen",
         center: { id: "ER", label: "Estrogen receptor (ESR1)" },
-        caption: "ER with estrogen — the receptor assembles its activating complex: pioneer factors, p160 coactivators (SRC-1/2/3), p300/CBP and GREB1.",
+        caption: "When ER binds estrogen, the receptor assembles its activating complex: pioneer factors, p160 coactivators (SRC-1/2/3), p300/CBP and GREB1.",
         source: CR2013,
         nodes: [
           { id: "FOXA1", name: "Forkhead box A1", cls: "tf", role: "Pioneer factor; opens chromatin for ER" },
@@ -55,7 +55,7 @@
       {
         key: "er-anti", label: "ER · anti-estrogen",
         center: { id: "ER", label: "Estrogen receptor (ESR1)" },
-        caption: "ER with an anti-estrogen (e.g. tamoxifen) — coactivators fall away and ER instead recruits corepressors (NCoR/SMRT, RIP140) and the NuRD complex: the switch that silences its targets.",
+        caption: "ER with an anti-estrogen (e.g. tamoxifen): coactivators fall away and ER instead recruits corepressors (NCoR/SMRT, RIP140) and the NuRD complex, the switch that silences its targets.",
         source: CR2013,
         nodes: [
           { id: "FOXA1", name: "Forkhead box A1", cls: "tf", role: "Pioneer factor still marking ER sites" },
@@ -80,7 +80,7 @@
       {
         key: "pr", label: "PR · progesterone",
         center: { id: "PR", label: "Progesterone receptor (PGR)" },
-        caption: "Progesterone receptor co-purifies ER itself (ESR1) along with shared pioneer factors and coactivators — the molecular basis for PR redirecting ER across the genome (Nature 2015).",
+        caption: "Progesterone receptor co-purifies ER itself (ESR1) along with shared pioneer factors and coactivators, the molecular basis for PR redirecting ER across the genome (Nature 2015).",
         source: NAT2015,
         nodes: [
           { id: "ESR1", name: "Estrogen receptor", cls: "tf", role: "The crosstalk partner pulled down by PR", novel: true },
@@ -105,7 +105,7 @@
       {
         key: "greb1", label: "GREB1",
         center: { id: "GREB1", label: "GREB1" },
-        caption: "Reciprocally, pulling on GREB1 co-purifies ER and shared coactivators — confirming GREB1 sits inside the ER complex rather than alongside it.",
+        caption: "Reciprocally, pulling on GREB1 co-purifies ER and shared coactivators, confirming GREB1 sits inside the ER complex rather than alongside it.",
         source: CR2013,
         nodes: [
           { id: "ESR1", name: "Estrogen receptor", cls: "tf", role: "Pulled down by GREB1", novel: true },

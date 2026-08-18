@@ -1,4 +1,4 @@
-/* Mohammed Lab — spatial cell-polygon renderer (Concept 3, CosMx Patient D Bx3).
+/* Mohammed Lab: spatial cell-polygon renderer (Concept 3, CosMx Patient D Bx3).
    Whole-biopsy view drawn from real cell-segmentation polygons. Defaults to fit; scroll to
    zoom and drag to pan into the cell shapes. A "colour by" selector switches between cell type,
    spatial domain, and individual genes; hover a cell for its details. */
@@ -20,7 +20,7 @@
     /* Cap at 720px wide; add 80px height (40px margin top+bottom) so edge cells breathe */
     var W = Math.max(320, Math.min(container.clientWidth || 720, 720));
     var H = W + 80;
-    var scale = W / data.width; /* uniform — data renders as a W×W square inside W×H canvas */
+    var scale = W / data.width; /* uniform: data renders as a W×W square inside W×H canvas */
     var sx = scale, sy = scale;
     var yOff = (H - W) / 2; /* vertical offset to center the data */
     var modes = data.modes, active = modes[0], activeClass = null, stops = data.geneColor;

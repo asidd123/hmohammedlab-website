@@ -1,4 +1,4 @@
-/* Mohammed Lab — volcano renderer (Concept 2, ER/PR RNA).
+/* Mohammed Lab: volcano renderer (Concept 2, ER/PR RNA).
    Canvas scatter of differential expression: x = log2 fold-change, y = -log10 p.
    A faint background cloud gives the volcano its shape; named genes are coloured by
    direction and are hoverable; a few top genes are labelled directly. */

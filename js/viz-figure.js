@@ -1,4 +1,4 @@
-/* Mohammed Lab — ER/PR figure renderer (Concept 2).
+/* Mohammed Lab: ER/PR figure renderer (Concept 2).
    Renders an optional schematic toggle (only if data.schematic is present) and/or a
    bench-to-trial timeline ending on the PIONEER result. */
 (function () {
@@ -39,7 +39,7 @@
       var lab = document.createElementNS(NS, "text");
       lab.setAttribute("x", 20); lab.setAttribute("y", base + 18);
       lab.setAttribute("font-family", "IBM Plex Mono, monospace"); lab.setAttribute("font-size", "10"); lab.setAttribute("fill", "#5c6578");
-      lab.textContent = "schematic — ER binding sites along chromatin"; svg.appendChild(lab);
+      lab.textContent = "schematic: ER binding sites along chromatin"; svg.appendChild(lab);
       var peaks = [];
       var render = function () {
         peaks.forEach(function (p) { svg.removeChild(p); }); peaks = [];

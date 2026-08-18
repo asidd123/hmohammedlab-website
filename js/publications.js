@@ -1,4 +1,4 @@
-/* Mohammed Lab — publication list renderer.
+/* Mohammed Lab: publication list renderer.
    Publication data (PUBS) lives in js/publications-data.js, auto-generated
    by scripts/update_publications.py. Lab-member names are wrapped in
    ** ** and rendered bold. */

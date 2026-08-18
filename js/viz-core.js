@@ -1,4 +1,4 @@
-/* Mohammed Lab — viz runtime.
+/* Mohammed Lab: viz runtime.
    Shared, dependency-free engine for the research-page interactives.
 
    Contract:
@@ -10,7 +10,7 @@
         </div>
    - On scroll-into-view, the runtime mounts the matching renderer into a fresh .viz-live node
      and hides the fallback. FAIL-CLOSED: missing renderer/data, no <canvas>, a thrown renderer,
-     or reduced-capability environments leave the static fallback in place — the page is never blank
+     or reduced-capability environments leave the static fallback in place, so the page is never blank
      or broken, only quieter. Works identically from file:// and from a server (no fetch). */
 (function () {
   "use strict";
@@ -110,7 +110,7 @@
   }
   LabViz.mount = mount;
 
-  /* Async data loader — fetch JSON, assign to LabViz.data[key], then retry any
+  /* Async data loader: fetch JSON, assign to LabViz.data[key], then retry any
      placeholders that already fell back to the static image while waiting. */
   LabViz.loadData = function (key, url) {
     if (!window.fetch) return;
@@ -124,7 +124,7 @@
           mount(el);
         });
       })
-      .catch(function () { /* static fallback stays — no fetch on file://, network error, etc. */ });
+      .catch(function () { /* static fallback stays: no fetch on file://, network error, etc. */ });
   };
 
   function sweep() {

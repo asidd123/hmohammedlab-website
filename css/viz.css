@@ -1,5 +1,5 @@
 /* ============================================================
-   Mohammed Lab — project cards + interactive visualizations
+   Mohammed Lab: project cards + interactive visualizations
    Extends css/style.css (tokens, fonts). No new dependencies.
    ============================================================ */
 
@@ -102,7 +102,7 @@ figure.viz img:hover, .viz-fallback img:hover { opacity: 0.9; }
   font-size: 12px; color: var(--muted); font-style: italic; margin-top: 6px;
 }
 
-/* dataset selector — network baits / conditions */
+/* dataset selector: network baits / conditions */
 .viz-select { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
 .viz-tab {
   font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.02em; font-weight: 600;

@@ -1,8 +1,8 @@
-# Local-only — do NOT deploy these with the site
-# tools/ — offline, read-only data export + bake scripts (touch raw lab data)
+# Local-only: do NOT deploy these with the site
+# tools/: offline, read-only data export + bake scripts (touch raw lab data)
 tools/
-# PLAN.md — internal working plan
+# PLAN.md: internal working plan
 PLAN.md
-# HANDOFF.md — internal cross-machine handoff doc
+# HANDOFF.md: internal cross-machine handoff doc
 HANDOFF.md
 .DS_Store
