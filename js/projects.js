@@ -157,14 +157,16 @@
           caption: 'DNA methylation per inferred clone (pseudobulk), sample FB3. An interactive, scrollable genome browser is in progress. <span class="viz-src">· Manuscript in preparation</span>'
         }
       ],
-      moreLabel: "More: spatial methylation & single-cell scale",
-      more: [
+      introExtra: [
         {
           kind: "figure", img: "assets/viz/idc6-spatial-meth.png",
           alt: "Spatial DNA methylation across an IDC tumour section, IDC6, with one panel per clone.",
           panelTitle: "Spatial DNA methylation (IDC6)",
           caption: 'DNA methylation mapped across an invasive ductal carcinoma section (IDC6), by clone. <span class="viz-src">· Manuscript in preparation</span>'
-        },
+        }
+      ],
+      moreLabel: "More: single-cell scale",
+      more: [
         {
           kind: "note",
           html: 'A single human cell carries roughly <strong>30 million CpG sites</strong>. A planned view will let you open one cell of a given type and see its methylation at that scale, built first on a small pilot so it stays responsive.'
@@ -255,7 +257,8 @@
       '<span class="project-status project-status--' + esc(p.status) + '">' + esc(p.statusLabel || p.status) + "</span></div>" +
       "<h3>" + esc(p.title) + "</h3>" +
       (p.lede ? '<p class="project-lede">' + esc(p.lede) + "</p>" : "") +
-      (body ? '<div class="project-body">' + body + "</div>" : "");
+      (body ? '<div class="project-body">' + body + "</div>" : "") +
+      (p.introExtra ? renderBlocks(p.introExtra) : "");
 
     var headerHTML = leadFig
       ? '<div class="project-intro-row"><div class="project-intro-text">' + textContent + '</div><div class="project-intro-fig">' + figureBlock(leadFig) + '</div></div>'
