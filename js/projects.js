@@ -155,6 +155,10 @@
           alt: "Per-clone DNA methylation tracks across the genome for sample FB3.",
           panelTitle: "Per-clone methylation across the genome (sample FB3)",
           caption: 'DNA methylation per inferred clone (pseudobulk), sample FB3. An interactive, scrollable genome browser is in progress. <span class="viz-src">· Manuscript in preparation</span>'
+        },
+        {
+          kind: "note",
+          html: 'A single human cell carries roughly <strong>30 million CpG sites</strong>. A planned view will let you open one cell of a given type and see its methylation at that scale, built first on a small pilot so it stays responsive.'
         }
       ],
       introExtra: [
@@ -163,13 +167,6 @@
           alt: "Spatial DNA methylation across an IDC tumour section, IDC6, with one panel per clone.",
           panelTitle: "Spatial DNA methylation (IDC6)",
           caption: 'DNA methylation mapped across an invasive ductal carcinoma section (IDC6), by clone. <span class="viz-src">· Manuscript in preparation</span>'
-        }
-      ],
-      moreLabel: "More: single-cell scale",
-      more: [
-        {
-          kind: "note",
-          html: 'A single human cell carries roughly <strong>30 million CpG sites</strong>. A planned view will let you open one cell of a given type and see its methylation at that scale, built first on a small pilot so it stays responsive.'
         }
       ],
       leads: [
