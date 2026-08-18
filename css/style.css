@@ -460,8 +460,22 @@ em { font-family: var(--font-display); font-style: italic; }
 .bio-toggle:hover { text-decoration: underline; text-underline-offset: 3px; }
 
 .member-links { display: flex; gap: 8px; margin-top: 18px; }
-.alumni-header { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
-.alumni-header .member-links { margin-top: 0; }
+
+.alumni-list { display: flex; flex-direction: column; }
+.alumni-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+.alumni-row:first-child { padding-top: 0; }
+.alumni-row:last-child { border-bottom: none; }
+.alumni-row .member-name { margin-bottom: 0; }
+.alumni-row .member-links { margin-top: 0; }
+
 .member-links a {
   display: grid;
   place-items: center;
@@ -475,7 +489,6 @@ em { font-family: var(--font-display); font-style: italic; }
 .member-links a:hover { color: var(--teal); border-color: var(--teal); background: rgba(13, 148, 136, 0.06); transform: translateY(-2px); }
 .member-links svg { width: 16px; height: 16px; }
 
-.alumni-note { font-size: 14px; color: var(--muted); font-style: italic; margin-top: -34px; margin-bottom: 46px; }
 
 /* ---------- publications page ---------- */
 
