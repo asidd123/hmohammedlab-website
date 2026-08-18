@@ -29,10 +29,6 @@
       "authors": "D'Santos C, Carroll JS, **Mohammed H***"
     },
     {
-      "match_title": "the regulatory role of activating transcription factor-2 (atf2) in modulating tamoxifen resistance in estrogen-receptor positive breast cancer",
-      "journal": "Cancer Research"
-    },
-    {
       "match_title": "allele-specific gene regulation, phenotypes, and therapeutic vulnerabilities in estrogen receptor alpha mutant endometrial cancer",
       "journal": "Molecular Cancer Research",
       "url": "https://doi.org/10.1158/1541-7786.MCR-22-0848"
@@ -89,6 +85,13 @@
       "authors": "Basu B, Correa de Sampaio P, **Mohammed H**, Fogarasi M, Corrie P, Watkins NA, Smethurst PA, English WR, Ouwehand WH, Murphy G",
       "journal": "International Journal of Biochemistry & Cell Biology",
       "url": "https://doi.org/10.1016/j.biocel.2011.11.015"
+    },
+    {
+      "year": 2020,
+      "title": "Activating transcription factor-2 (ATF2) is a key determinant of resistance to endocrine treatment in an in vitro model of breast cancer",
+      "authors": "Giannoudis A, Malki MI, Rudraraju B, **Mohammed H**, Menon S, Liloglou T, Ali S, Carroll JS, Palmieri C",
+      "journal": "Breast Cancer Research",
+      "url": "https://doi.org/10.1186/s13058-020-01359-7"
     }
   ],
 
@@ -114,6 +117,22 @@
     "3242 – INFLAMMATORY STRESS AS A DRIVER AND INTERVENTION STRATEGY IN RUNX1-FAMILIAL PLATELET DISORDER",
     "CD74 Signaling Regulates Inflammatory Stress to Drive Defective Hematopoiesis and Fitness Advantage of Progenitors in RUNX1-Familial Platelet Disorder",
     "Interplay between Inflammatory Microenvironment and RUNX1-Mediated Transcriptomic Changes Drives Defective Hematopoiesis in Familial Platelet Disorder",
-    "The transcriptional and epigenetic reprogramming associated with chronic IL1β-mediated expansion and myeloid priming in TET2 deficient stem and progenitor cells"
+    "The transcriptional and epigenetic reprogramming associated with chronic IL1β-mediated expansion and myeloid priming in TET2 deficient stem and progenitor cells",
+    "The regulatory role of activating transcription factor-2 (ATF2) in modulating tamoxifen resistance in estrogen-receptor positive breast cancer",
+    "Abstract 5012: Multiomic profiling reveals ligand and cell specific regulatory programs of LXR selective modulation in myeloid immune cells",
+    "Abstract 5377: Prediction of relapse risk in favorable outcome AML from DNA methylation data.",
+    "Abstract 696: In vivo clonal lineage tracing using methylation barcodes in the protocadherin gene cluster.",
+    "Abstract B017: Detection of aberrant DNA methylation profiles in saliva samples as a potential screening method for Barrett's Esophagus and esophageal adenocarcinoma",
+    "OR07-2 Endocrine Response And Resistance Is Driven By Novel Transcriptional Co-Regulator Activity In Invasive Lobular Carcinoma Of The Breast",
+    "3024 – GERMLINE RUNX1 MUTATIONS -MEDIATED CHANGES COOPERATES WITH INFLAMMATORY MICROENVIRONMENT TO DRIVE DEFECTIVE HEMATOPOIESIS IN FAMILIAL PLATELET DISORDER",
+    "AR chromatin binding is reprogrammed in the absence of FOXA1 in ER- breast cancers",
+    "Abstract B16: Response and resistance to BET bromodomain inhibitors in triple-negative breast cancer",
+    "Abstract LB-003: Androgen-regulated proteome reveals a therapeutically relevant androgen receptor coactivator target in prostate cancer",
+    "Abstract B133: Regulation of the androgen receptor function by a metabolic kinase in prostate cancer.",
+    "Recurrent mutations in the epigenetic regulator Additional Sex-Combs Like 1 ( ASXL 1 ) are associated with universally poor prognosis in myeloid malignancy",
+    "The blueprint of primate preimplantation development",
+    "ASXL1 Directs Neutrophilic Differentiation via Modulation of MYC and RNA Polymerase II",
+    "A novel role for the HLH protein Inhibitor of Differentiation 4 (ID4) in the DNA damage response in basal-like breast cancer",
+    "Bcl11a Marks Mammary Progenitor Cells and Promotes Early Cellular Changes Associated with TNBC by Recruiting Chd8"
   ]
 }
