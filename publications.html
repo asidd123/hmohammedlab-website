@@ -56,11 +56,25 @@
         <div class="pub-tools reveal">
           <div class="pub-search">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-            <input type="search" id="pub-search" placeholder="Search by title, author, or journal…" aria-label="Search publications">
+            <input type="search" id="pub-search" placeholder="Search by title, author, journal, or technology…" aria-label="Search publications">
+          </div>
+          <div class="pub-filter" id="pub-filter">
+            <button type="button" class="pub-filter-btn" id="pub-filter-btn" aria-expanded="false" aria-controls="pub-filter-panel">
+              <svg class="pub-filter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="7" y1="12" x2="17" y2="12"/><line x1="10" y1="17" x2="14" y2="17"/></svg>
+              <span>Technology &amp; topic</span>
+              <span class="pub-filter-badge" id="pub-filter-badge" hidden></span>
+              <svg class="pub-filter-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="pub-filter-panel" id="pub-filter-panel" role="group" aria-label="Filter publications by technology or research area" hidden></div>
           </div>
         </div>
 
-        <nav class="year-jump reveal" id="year-jump" aria-label="Jump to year"></nav>
+        <div class="pub-active" id="pub-active" hidden></div>
+
+        <div class="pub-bar reveal">
+          <nav class="year-jump" id="year-jump" aria-label="Jump to year"></nav>
+          <p class="pub-result-count" id="pub-result-count" aria-live="polite"></p>
+        </div>
         <div style="height:34px;"></div>
 
         <div id="pub-list"></div>
@@ -130,6 +144,7 @@
   <script src="js/main.js"></script>
   <script src="js/email-obfuscate.js"></script>
   <script src="js/publications-data.js"></script>
+  <script src="js/publications-tags.js"></script>
   <script src="js/publications.js"></script>
 </body>
 </html>

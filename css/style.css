@@ -496,8 +496,8 @@ em { font-family: var(--font-display); font-style: italic; }
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 16px;
-  margin-bottom: 46px;
+  gap: 14px;
+  margin-bottom: 26px;
 }
 .pub-search {
   flex: 1;
@@ -528,6 +528,190 @@ em { font-family: var(--font-display); font-style: italic; }
 }
 .pub-search input:focus { border-color: var(--teal); box-shadow: 0 0 0 3.5px rgba(13, 148, 136, 0.14); }
 
+/* technology / research-area filter dropdown */
+.pub-filter { position: relative; flex: 0 0 auto; }
+.pub-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font: inherit;
+  font-size: 14.5px;
+  font-weight: 550;
+  color: var(--text);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 99px;
+  padding: 13px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: border-color 0.16s, color 0.16s, box-shadow 0.16s;
+}
+.pub-filter-btn:hover { border-color: var(--teal); color: var(--teal); }
+.pub-filter-btn.is-open { border-color: var(--teal); box-shadow: 0 0 0 3.5px rgba(13, 148, 136, 0.14); }
+.pub-filter-icon { width: 16px; height: 16px; color: var(--muted); }
+.pub-filter-btn:hover .pub-filter-icon, .pub-filter-btn.is-open .pub-filter-icon { color: var(--teal); }
+.pub-filter-caret { width: 15px; height: 15px; color: var(--muted); transition: transform 0.18s; }
+.pub-filter-btn.is-open .pub-filter-caret { transform: rotate(180deg); }
+.pub-filter-badge {
+  display: inline-grid;
+  place-items: center;
+  min-width: 19px;
+  height: 19px;
+  padding: 0 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  color: #fff;
+  background: var(--teal);
+  border-radius: 99px;
+}
+
+.pub-filter-panel {
+  position: absolute;
+  z-index: 40;
+  top: calc(100% + 10px);
+  right: 0;
+  width: min(540px, calc(100vw - 40px));
+  max-height: min(64vh, 460px);
+  overflow-y: auto;
+  text-align: left;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  padding: 6px 22px 20px;
+}
+.pub-panel-head {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  background: var(--card);
+  padding: 16px 0 4px;
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.pub-panel-reset {
+  font: inherit;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--teal);
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.pub-panel-reset:hover { text-decoration: underline; }
+
+.pub-filter-group { margin-top: 16px; }
+.pub-filter-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 9px;
+}
+.pub-filter-tags { display: flex; flex-wrap: wrap; gap: 7px; }
+.pub-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 99px;
+  padding: 6px 13px;
+  cursor: pointer;
+  transition: color 0.16s, border-color 0.16s, background 0.16s;
+}
+.pub-chip:hover { color: var(--teal); border-color: var(--teal); }
+.pub-chip-n {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--muted);
+  background: rgba(10, 15, 30, 0.05);
+  border-radius: 99px;
+  padding: 1px 6px;
+}
+.pub-chip.is-on {
+  color: #fff;
+  background: var(--teal);
+  border-color: var(--teal);
+}
+.pub-chip.is-on .pub-chip-n { color: #fff; background: rgba(255, 255, 255, 0.22); }
+.pub-chip.is-muted:not(.is-on) { opacity: 0.4; }
+
+/* active filters, shown while the panel is closed */
+.pub-active {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 26px;
+}
+.pub-active-label {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.pub-active-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  color: #fff;
+  background: var(--teal);
+  border: 1px solid var(--teal);
+  border-radius: 99px;
+  padding: 5px 12px;
+  cursor: pointer;
+}
+.pub-active-chip .pub-x { width: 11px; height: 11px; opacity: 0.75; }
+.pub-active-chip:hover .pub-x { opacity: 1; }
+.pub-active-clear {
+  font: inherit;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--muted);
+  background: none;
+  border: 0;
+  padding: 0 4px;
+  cursor: pointer;
+}
+.pub-active-clear:hover { color: var(--teal); text-decoration: underline; }
+
+.pub-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.pub-result-count { font-family: var(--font-mono); font-size: 12px; color: var(--muted); }
+
+@media (max-width: 620px) {
+  .pub-filter { flex: 1 1 100%; }
+  .pub-filter-btn { width: 100%; justify-content: center; }
+  .pub-filter-panel { left: 0; right: 0; width: auto; }
+}
+
 .year-jump { display: flex; flex-wrap: wrap; gap: 7px; }
 .year-jump a {
   font-family: var(--font-mono);
@@ -542,6 +726,7 @@ em { font-family: var(--font-display); font-style: italic; }
   transition: all 0.16s;
 }
 .year-jump a:hover { color: var(--teal); border-color: var(--teal); }
+.year-jump a.is-empty { opacity: 0.3; pointer-events: none; }
 
 .pub-year-group { margin-bottom: 54px; }
 .pub-year-head {
@@ -585,7 +770,25 @@ em { font-family: var(--font-display); font-style: italic; }
 }
 .pub-link svg { width: 13px; height: 13px; }
 
+.pub-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+.pub-tag {
+  font: inherit;
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--muted);
+  background: rgba(10, 15, 30, 0.035);
+  border: 1px solid transparent;
+  border-radius: 99px;
+  padding: 3px 10px;
+  cursor: pointer;
+  transition: color 0.16s, background 0.16s, border-color 0.16s;
+}
+.pub-tag:hover { color: var(--teal); border-color: rgba(13, 148, 136, 0.4); }
+.pub-tag.is-on { color: var(--teal); background: rgba(13, 148, 136, 0.1); border-color: rgba(13, 148, 136, 0.4); }
+
 .pub-empty { text-align: center; color: var(--muted); padding: 60px 0; font-size: 16px; display: none; }
+
+[hidden] { display: none !important; }
 
 /* ---------- CTA band ---------- */
 

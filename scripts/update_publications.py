@@ -30,6 +30,7 @@ ROOT = Path(__file__).resolve().parent.parent
 ROSTER_PATH = ROOT / "scripts" / "lab_roster.json"
 OVERRIDES_PATH = ROOT / "scripts" / "pub_overrides.json"
 OUTPUT_PATH = ROOT / "js" / "publications-data.js"
+TAGS_PATH = ROOT / "js" / "publications-tags.js"
 
 
 def fetch_json(url, retries=5):
@@ -195,6 +196,40 @@ def render_js(entries):
     return "\n".join(lines)
 
 
+def report_untagged(entries):
+    """js/publications-tags.js is hand-curated and this script never edits it,
+    so flag new papers that would fall through to its keyword heuristics."""
+    if not TAGS_PATH.exists():
+        return
+    src = TAGS_PATH.read_text()
+    try:
+        block = src.split("const PUB_TAGS_BY_TITLE = {", 1)[1].split("\n};", 1)[0]
+    except IndexError:
+        return
+    tagged = {
+        normalize_title(json.loads('"%s"' % m))
+        for m in re.findall(r'\n  "((?:[^"\\]|\\.)*)":', block)
+    }
+    def is_abstract(e):
+        # Mirrors isAbstract() in js/publications.js; these never render.
+        title, note = e["title"], e.get("note") or ""
+        return bool(
+            re.match(r"\s*abstract\b", title, re.I)
+            or re.search(r"\[abstract\]", title, re.I)
+            or re.match(r"\s*abstract\b", note, re.I)
+        )
+
+    missing = [
+        e["title"]
+        for e in entries
+        if not is_abstract(e) and normalize_title(e["title"]) not in tagged
+    ]
+    if missing:
+        print(f"\n{len(missing)} publication(s) have no curated tag in {TAGS_PATH.name}:")
+        for t in missing:
+            print(f"  - {t}")
+
+
 def main():
     roster = load_roster()
     overrides = load_overrides()
@@ -203,6 +238,7 @@ def main():
     entries = build_entries(papers, roster, overrides)
     OUTPUT_PATH.write_text(render_js(entries))
     print(f"Wrote {len(entries)} publications to {OUTPUT_PATH}")
+    report_untagged(entries)
 
 
 if __name__ == "__main__":
