@@ -80,22 +80,6 @@
       ],
       blocks: [
         {
-          kind: "row",
-          blocks: [
-            {
-              kind: "figure", img: "assets/viz/erpr-chipseq.png",
-              alt: "ChIP-seq heatmaps of ER binding with and without progestin, showing ER sites that are lost, retained and gained.",
-              panelTitle: "ER binding redistributes with progesterone (ChIP-seq)",
-              caption: 'ER&alpha; ChIP-seq read density at binding sites, vehicle vs + progestin. Activating PR redirects ER: in T47D ~14,223 sites are gained, 99% overlapping a PR peak. Illustrative heatmap. <span class="viz-src">· Mohammed et al., Nature 2015</span>'
-            },
-            {
-              kind: "viz", type: "volcano", key: "erpr-deg",
-              panelTitle: "The gene program that changes: hover for the gene",
-              fallback: '<p class="viz-note">The interactive volcano needs JavaScript. In brief: the proliferative program (MYC, cyclins) falls and PR-induced genes rise.</p>'
-            }
-          ]
-        },
-        {
           kind: "viz", type: "erpr", key: "erpr",
           panelTitle: "From bench to trial",
           fallback: '<p class="viz-note">Mechanism (Nature 2015) &rarr; the PIONEER trial &rarr; clinical benefit (Nature Cancer 2026).</p>'
@@ -147,26 +131,12 @@
       lede: "Reading DNA methylation, chromatin accessibility and transcription from the same single cell, and now in spatial tissue.",
       body: [
         "<strong>scNMT-seq</strong> reads three layers of regulation, the transcriptome, DNA methylation and chromatin accessibility, from one single cell. Reading methylation this deeply lets us treat a cell's epigenome as both a record of its ancestry and a driver of its current state; the approach was demonstrated at depth in single-cell multi-omics of development (Argelaguet et al., Nature 2019).",
-        "We are extending it to breast tumours and into spatial tissue. The figures below show per-clone DNA methylation across the genome in one sample, and spatial DNA methylation in a tumour section."
+        "We are extending it to breast tumours and into spatial tissue."
       ],
       blocks: [
         {
-          kind: "figure", img: "assets/viz/fb3-tracks-fallback.png",
-          alt: "Per-clone DNA methylation tracks across the genome for sample FB3.",
-          panelTitle: "Per-clone methylation across the genome (sample FB3)",
-          caption: 'DNA methylation per inferred clone (pseudobulk), sample FB3. An interactive, scrollable genome browser is in progress. <span class="viz-src">· Manuscript in preparation</span>'
-        },
-        {
           kind: "note",
           html: 'A single human cell carries roughly <strong>30 million CpG sites</strong>. A planned view will let you open one cell of a given type and see its methylation at that scale, built first on a small pilot so it stays responsive.'
-        }
-      ],
-      introExtra: [
-        {
-          kind: "figure", img: "assets/viz/idc6-spatial-meth.png",
-          alt: "Spatial DNA methylation across an IDC tumour section, IDC6, with one panel per clone.",
-          panelTitle: "Spatial DNA methylation (IDC6)",
-          caption: 'DNA methylation mapped across an invasive ductal carcinoma section (IDC6), by clone. <span class="viz-src">· Manuscript in preparation</span>'
         }
       ],
       leads: [
