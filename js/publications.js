@@ -78,8 +78,24 @@
     return PUB_TAG_DEFS.map((t) => t.id).filter((id) => ids.indexOf(id) !== -1);
   }
 
+  /* ----- authorship role: lab-led vs. collaboration -----
+     "Lab-led" = Hisham is first author, last author, or explicitly marked
+     (by the paper's own asterisk footnote) as co-first / corresponding
+     author. Everything else is a collaboration he contributed to but
+     didn't drive. Derived from the authors string already in the data,
+     so it stays correct as new papers are auto-imported. */
+  function authorshipFor(p) {
+    const entries = p.authors.split(/,\s*/).map((s) => s.trim());
+    const idx = entries.findIndex((e) => e.replace(/\*/g, "").trim() === "Mohammed H");
+    if (idx === -1) return "collab";
+    if (idx === 0 || idx === entries.length - 1) return "led";
+    const trailingStars = (entries[idx].match(/\*+$/) || [""])[0];
+    return trailingStars.length >= 3 ? "led" : "collab";
+  }
+
   papers.forEach((p) => {
     p._tags = tagsFor(p);
+    p._authorship = authorshipFor(p);
     p._search = (
       p.title + " " + p.authors + " " + p.journal + " " + p.year + " " +
       p._tags.map((id) => tagLabel[id]).join(" ")
@@ -104,9 +120,9 @@
     const title = p.url
       ? `<a href="${p.url}" target="_blank" rel="noopener">${esc(p.title)}</a>`
       : esc(p.title);
-    return `<article class="pub" data-tags="${p._tags.join(" ")}" data-search="${esc(
-      p._search
-    )}">
+    return `<article class="pub" data-tags="${p._tags.join(" ")}" data-authorship="${
+      p._authorship
+    }" data-search="${esc(p._search)}">
       <h3 class="pub-title">${title}</h3>
       <p class="pub-authors">${boldNames(p.authors)}</p>
       <div class="pub-foot">
@@ -175,6 +191,24 @@
   const chips = panelEl ? [...panelEl.querySelectorAll(".pub-chip")] : [];
   const clearEl = document.getElementById("pub-clear");
 
+  /* ----- authorship-role control ----- */
+
+  const authEl = document.getElementById("pub-authorship");
+  const authBtns = authEl ? [...authEl.querySelectorAll(".pub-auth-btn")] : [];
+  let authorship = "all";
+
+  authBtns.forEach((btn) =>
+    btn.addEventListener("click", () => {
+      authorship = btn.dataset.authorship;
+      authBtns.forEach((b) => {
+        const on = b === btn;
+        b.classList.toggle("is-on", on);
+        b.setAttribute("aria-pressed", on ? "true" : "false");
+      });
+      apply();
+    })
+  );
+
   /* ----- open / close ----- */
 
   function setOpen(open) {
@@ -210,7 +244,8 @@
       const elTags = el.dataset.tags ? el.dataset.tags.split(" ") : [];
       const tagHit =
         !active.size || elTags.some((id) => active.has(id));
-      const hit = searchHit && tagHit;
+      const authHit = authorship === "all" || el.dataset.authorship === authorship;
+      const hit = searchHit && tagHit && authHit;
       el.hidden = !hit;
       if (hit) shown++;
     });
@@ -239,6 +274,18 @@
 
     listEl.querySelectorAll(".pub-tag").forEach((t) => {
       t.classList.toggle("is-on", active.has(t.dataset.tag));
+    });
+
+    /* Authorship-button counts reflect the current search box only, same
+       reasoning as the tag chip counts above. */
+    authBtns.forEach((btn) => {
+      const nEl = btn.querySelector(".pub-auth-n");
+      if (!nEl) return;
+      const id = btn.dataset.authorship;
+      const n = papers.filter(
+        (p) => p._authorship === id && (!q || p._search.includes(q))
+      ).length;
+      nEl.textContent = n;
     });
 
     /* Collapsed state still has to show what's on, so mirror the active tags
