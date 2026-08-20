@@ -18,6 +18,7 @@
   --violet-deep: #6052d6;
   --violet-bright: #a78bfa;
   --rose: #f472b6;
+  --rose-deep: #be185d;
   --grad: var(--teal-bright);
   --radius: 18px;
   --shadow-sm: 0 1px 2px rgba(10, 15, 30, 0.05), 0 2px 10px rgba(10, 15, 30, 0.04);
@@ -304,41 +305,61 @@ em { font-family: var(--font-display); font-style: italic; }
 .section--dark .eyebrow { color: var(--teal-bright); }
 .section--dark .section-lede { color: rgba(255, 255, 255, 0.6); }
 
-/* ---------- research area cards ---------- */
+/* ---------- research pillars ---------- */
 
-.areas { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
-@media (max-width: 820px) { .areas { grid-template-columns: 1fr; } }
+.pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+@media (max-width: 900px) { .pillars { grid-template-columns: 1fr; } }
 
-.area-card {
+.pillar-card {
   position: relative;
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 38px 36px;
+  padding: 34px 30px;
   box-shadow: var(--shadow-sm);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   overflow: hidden;
 }
-.area-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
-.area-card::before {
+.pillar-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+.pillar-card::before {
   content: "";
   position: absolute;
-  inset: 0 auto 0 0;
-  width: 4px;
-  background: var(--grad);
+  top: -60px;
+  right: -60px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--pillar-accent, var(--teal-bright)) 0%, transparent 70%);
+  opacity: 0.14;
+  pointer-events: none;
 }
-.area-num {
-  font-family: var(--font-mono);
-  font-size: 13px;
-  letter-spacing: 0.18em;
-  color: var(--violet-deep);
-  margin-bottom: 16px;
-  display: block;
+.pillar-card-link { display: block; text-decoration: none; color: inherit; }
+.pillar-card-link:hover h3 { text-decoration: underline; text-decoration-color: var(--pillar-accent, currentColor); text-underline-offset: 4px; }
+
+.pillar-card--teal   { --pillar-accent: var(--teal-bright); }
+.pillar-card--violet { --pillar-accent: var(--violet-bright); }
+.pillar-card--rose   { --pillar-accent: var(--rose); }
+
+.pillar-icon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+  background: rgba(0, 0, 0, 0.06);
 }
-.area-card h3 { font-size: 24px; margin-bottom: 14px; }
-.area-card p { color: var(--muted); font-size: 15.5px; }
-.area-refs { margin-top: 22px; padding-top: 18px; border-top: 1px dashed var(--line); font-size: 14px; color: var(--muted); }
-.area-refs a { font-weight: 500; }
+.pillar-card--teal .pillar-icon { color: var(--teal); background: rgba(10, 111, 102, 0.13); }
+.pillar-card--violet .pillar-icon { color: var(--violet-deep); background: rgba(96, 82, 214, 0.13); }
+.pillar-card--rose .pillar-icon { color: var(--rose-deep); background: rgba(190, 24, 93, 0.13); }
+.pillar-icon svg { width: 25px; height: 25px; }
+
+.pillar-card h3 { position: relative; font-size: 21px; line-height: 1.3; margin-bottom: 12px; }
+.pillar-card p { position: relative; color: var(--muted); font-size: 15px; }
+.pillar-refs { position: relative; margin-top: 20px; padding-top: 16px; border-top: 1px dashed var(--line); font-size: 13.5px; color: var(--muted); }
+.pillar-refs a { font-weight: 500; }
 
 /* ---------- technology cards ---------- */
 
@@ -950,7 +971,7 @@ em { font-family: var(--font-display); font-style: italic; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .js .reveal { opacity: 1; transform: none; transition: none; }
-  .area-card, .fpub, .member, .pub, .tech-card, .btn { transition: none; }
+  .pillar-card, .fpub, .member, .pub, .tech-card, .btn { transition: none; }
 }
 
 /* ---------- photo hero ---------- */
