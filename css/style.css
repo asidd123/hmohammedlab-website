@@ -521,7 +521,7 @@ em { font-family: var(--font-display); font-style: italic; }
   margin-bottom: 26px;
 }
 .pub-search {
-  flex: 1;
+  flex: 1 1 100%;
   min-width: 240px;
   position: relative;
 }
@@ -769,7 +769,7 @@ em { font-family: var(--font-display); font-style: italic; }
   .pub-filter { flex: 1 1 100%; }
   .pub-filter-btn { width: 100%; justify-content: center; }
   .pub-filter-panel { left: 0; right: 0; width: auto; }
-  .pub-authorship { flex: 1 1 100%; justify-content: center; }
+  .pub-authorship { flex: 1 1 100%; justify-content: center; flex-wrap: wrap; row-gap: 4px; }
 }
 
 .year-jump { display: flex; flex-wrap: wrap; gap: 7px; }
