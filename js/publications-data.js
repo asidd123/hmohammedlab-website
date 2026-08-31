@@ -83,7 +83,7 @@ const PUBS = [
   {
     year: 2023,
     title: "Allele-specific gene regulation, phenotypes, and therapeutic vulnerabilities in estrogen receptor alpha mutant endometrial cancer",
-    authors: "Blanchard Z, Rush CM, Arnesen S, Vahrenkamp JM, Rodriguez AC, Jarboe E, Brown CT, Chang MEK, Flory MR, **Mohammed H**, Modzelewska K, Lum D, Gertz J",
+    authors: "Blanchard Z, Rush CM, Arnesen S, Vahrenkamp JM, Rodriguez AC, Jarboe EA, Brown CT, Chang MEK, Flory MR, **Mohammed H**, Modzelewska K, Lum D, Gertz J",
     journal: "Molecular Cancer Research",
     url: "https://doi.org/10.1158/1541-7786.MCR-22-0848",
   },
@@ -247,7 +247,7 @@ const PUBS = [
   {
     year: 2017,
     title: "Embryonic transcription factor SOX9 drives breast cancer endocrine resistance",
-    authors: "Jeselsohn R, Cornwell MG, Pun M, Buchwalter G, Nguyen M, Bango C, Huang Y, Kuang Y, Paweletz C, Fu X, Nardone A, Angelis CD, Detre S, Dodson A, **Mohammed H**, Carroll J, Bowden M, Rao PK, Long HW, Li F, Dowsett M, Schiff R, Brown MA",
+    authors: "Jeselsohn R, Cornwell MG, Pun M, Buchwalter G, Nguyen M, Bango C, Huang Y, Kuang Y, Paweletz C, Fu X, Nardone A, Angelis CD, Detre S, Dodson A, **Mohammed H**, Carroll J, Bowden M, Rao P, Long HW, Li F, Dowsett M, Schiff R, Brown MA",
     journal: "Proceedings of the National Academy of Sciences of the United States of America",
     url: "https://doi.org/10.1073/pnas.1620993114",
   },
@@ -269,14 +269,14 @@ const PUBS = [
   {
     year: 2016,
     title: "Response and resistance to BET bromodomain inhibitors in triple negative breast cancer",
-    authors: "Shu S, Lin CY, He H, Witwicki R, Tabassum D, Roberts JM, Janiszewska M, Huh S, Liang Y, Ryan J, Doherty E, **Mohammed H**, Guo H, Stover D, Ekram MB, Peluffo G, Brown JD, D'Santos C, Krop I, Dillon D, Mckeown MR, Ott CJ, Qi J, Ni M, Rao PK, Duarte M, Wu S, Chiang C, Anders L, Young R, Winer E, Letai A, Barry W, Carroll J, Long HW, Brown MA, Liu X, Meyer CA, Bradner J, Polyak K",
+    authors: "Shu S, Lin CY, He H, Witwicki R, Tabassum D, Roberts JM, Janiszewska M, Huh S, Liang Y, Ryan J, Doherty E, **Mohammed H**, Guo H, Stover D, Ekram MB, Peluffo G, Brown JD, D'Santos C, Krop I, Dillon D, Mckeown MR, Ott CJ, Qi J, Ni M, Rao P, Duarte M, Wu S, Chiang C, Anders L, Young R, Winer E, Letai A, Barry W, Carroll J, Long HW, Brown MA, Liu X, Meyer CA, Bradner J, Polyak K",
     journal: "Nature",
     url: "https://doi.org/10.1038/nature16508",
   },
   {
     year: 2016,
     title: "Topoisomerase II beta interacts with cohesin and CTCF at topological domain borders",
-    authors: "Uuskla-Reimand L, Hou H, Samavarchi-Tehrani P, Rudan MV, Liang M, Medina-Rivera A, **Mohammed H**, Schmidt D, Schwalie P, Young EJ, Reimand J, Hadjur S, Gingras A, Wilson M",
+    authors: "Uuskla-Reimand L, Hou H, Samavarchi-Tehrani P, Rudan MV, Liang M, Medina-Rivera A, **Mohammed H**, Schmidt D, Schwalie P, Young EJ, Reimand J, Hadjur S, Gingras A, Wilson MD",
     journal: "Genome Biology",
     url: "https://doi.org/10.1186/s13059-016-1043-8",
   },
