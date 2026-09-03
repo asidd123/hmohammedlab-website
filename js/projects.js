@@ -58,7 +58,7 @@
         },
         {
           kind: "note",
-          html: '<strong>Working with us.</strong> RIME is also offered commercially as a service (for example by <a href="https://www.activemotif.com/catalog/1077/rime" target="_blank" rel="noopener">Active Motif</a>). Our role is different: we collaborate, helping labs design the experiment, choose and validate antibodies, set the method up in their own hands, and read it against the matched binding data. If RIME fits a question you are working on, <a href="contact.html">get in touch</a>.'
+          html: '<a href="contact.html">Reach out</a> if you have questions about RIME or are interested in working with us.'
         }
       ],
       leads: [{ name: "Hisham Mohammed", anchor: "hisham" }],
@@ -198,8 +198,6 @@
 
   function metaRow(p) {
     var parts = [];
-    if (p.leads && p.leads.length) parts.push("<span><b>" + (p.leads.length > 1 ? "Leads" : "Lead") + "</b> " +
-      p.leads.map(function (l) { return l.anchor ? '<a href="team.html#' + esc(l.anchor) + '">' + esc(l.name) + "</a>" : esc(l.name); }).join(", ") + "</span>");
     if (p.methods && p.methods.length) parts.push("<span><b>Methods</b> " +
       p.methods.map(function (m) { return m.anchor ? '<a href="research.html#' + esc(m.anchor) + '">' + esc(m.label) + "</a>" : esc(m.label); }).join(", ") + "</span>");
     if (p.refs && p.refs.length) parts.push("<span><b>Related</b> " +
