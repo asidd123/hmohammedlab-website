@@ -41,7 +41,7 @@ const PUBS = [
   {
     year: 2025,
     title: "Methylation dynamics in the decades preceding acute myeloid leukaemia",
-    authors: "Fonseca AV, Boniface C, Watson CJ, Hackett S, Gabbutt C, Ramos-Yamasaki AD, Tan A, Montoya J, **Strogantsev R**, Hanssen LLP, Zhang Y, Apostolidou S, Gentry-Maharaj A, Esener SC, Spellman PT, Graham TA, Menon U, **Mohammed H**, Blundell J",
+    authors: "Fonseca AV, Boniface C, Watson CJ, Hackett S, Gabbutt C, Ramos-Yamasaki AD, Tan A, Montoya J, **Strogantsev R**, Hanssen LLP, Zhang Y, Apostolidou S, Gentry-Maharaj A, Esener SC, Spellman P, Graham TA, Menon U, **Mohammed H**, Blundell J",
     journal: "bioRxiv",
     url: "https://doi.org/10.1101/2025.06.26.661643",
   },
@@ -90,7 +90,7 @@ const PUBS = [
   {
     year: 2023,
     title: "Clonal hematopoiesis related TET2 loss-of-function impedes IL1β-mediated epigenetic reprogramming in hematopoietic stem and progenitor cells",
-    authors: "McClatchy J, **Strogantsev R**, Wolfe E, Lin HY, Mohammadhosseini M, Davis B, Eden C, Goldman D, Fleming W, Conley P, Wu G, Cimmino L, **Mohammed H**, Agarwal A, Article",
+    authors: "McClatchy J, **Strogantsev R**, Wolfe E, Lin HY, Mohammadhosseini M, Davis B, Eden C, Goldman D, Fleming W, Conley P, Wu G, Cimmino L, **Mohammed H**, Agarwal A",
     journal: "Nature Communications",
     url: "https://doi.org/10.1038/s41467-023-43697-y",
   },
@@ -112,7 +112,7 @@ const PUBS = [
   {
     year: 2022,
     title: "A Distinct Chromatin State Drives Therapeutic Resistance in Invasive Lobular Breast Cancer",
-    authors: "Nardone A, Qiu X, Feiglin A, Fu X, Spisk S, Feit A, Feit GC, Xie Y, Font-Tello A, Guarducci C, Hermida-Prado F, Syamala S, Lim K, Pun M, Cornwell MG, Liu W, **Ors A**, **Mohammed H**, Brock J, Freedman M, Schiff R, Winer E, Long HW, Filho OM, Jeselsohn R",
+    authors: "Nardone A, Qiu X, Spisk S, Nagy Z, Feiglin A, Feit A, Feit GC, Xie Y, Font-Tello A, Guarducci C, Hermida-Prado F, Syamala S, Lim K, Gomez MM, Pun M, Cornwell MG, Liu W, **Ors A**, **Mohammed H**, Cejas P, Brock J, Freedman M, Winer E, Fu X, Schiff R, Long HW, Metzger O, Jeselsohn R",
     journal: "bioRxiv",
     url: "https://doi.org/10.1101/2022.03.29.486217",
   },
@@ -131,6 +131,20 @@ const PUBS = [
     url: "https://doi.org/10.1093/nar/gkac908",
   },
   {
+    year: 2022,
+    title: "Low HER2 enables dedifferentiation and transformation of normal breast epithelial cells via 1 chromatin opening 2",
+    authors: "Hayat A, Carter E, King H, **Ors A**, **Doe A**, Teijeiro S, Charrot S, Godinho, Cutillas P, **Mohammed H**, Grose R",
+    journal: "",
+    url: null,
+  },
+  {
+    year: 2022,
+    title: "Steroid Hormones and Receptors",
+    authors: "**Mohammed H**, **Wen Y**",
+    journal: "",
+    url: null,
+  },
+  {
     year: 2021,
     title: "Development of 2-(5,6,7-Trifluoro-1H-Indol-3-yl)-quinoline-5-carboxamide as a Potent, Selective, and Orally Available Inhibitor of Human Androgen Receptor Targeting Its Binding Function-3 for the Treatment of Castration-Resistant Prostate Cancer",
     authors: "Leblanc E, Ban F, Cavga AD, Lawn S, Huang CCF, Mohan S, Chang MEK, Flory MR, Ghaidi F, Lingadahalli S, Chen G, Yu IPL, Morin H, Lallous N, Gleave ME, **Mohammed H**, Young RN, Rennie PS, Lack NA, Cherkasov A",
@@ -140,7 +154,7 @@ const PUBS = [
   {
     year: 2021,
     title: "Development of an Androgen Receptor Inhibitor Targeting the N-Terminal Domain of Androgen Receptor for Treatment of Castration Resistant Prostate Cancer",
-    authors: "Ban F, Leblanc E, Cavga AD, Huang C, Flory MR, Zhang F, Chang MEK, Morin H, Lallous N, Singh K, Gleave M, **Mohammed H**, Rennie P, Lack N, Cherkasov A",
+    authors: "Ban F, Leblanc E, Cavga AD, Huang CF, Flory MR, Zhang F, Chang MEK, Morin H, Lallous N, Singh K, Gleave M, **Mohammed H**, Rennie P, Lack N, Cherkasov A",
     journal: "Cancers",
     url: "https://doi.org/10.3390/cancers13143488",
   },
@@ -240,14 +254,14 @@ const PUBS = [
   {
     year: 2017,
     title: "A non-catalytic role of TET3 promotes open chromatin and enhances global transcription",
-    authors: "Krueger C, Peat JR, Eckersley-Maslin M, Hore T, **Mohammed H**, Andrews S, Dean W, Reik W",
+    authors: "Krueger C, Peat JR, Eckersley-Maslin M, Hore TA, **Mohammed H**, Andrews S, Dean W, Reik W",
     journal: "bioRxiv",
     url: "https://doi.org/10.1101/177626",
   },
   {
     year: 2017,
     title: "Embryonic transcription factor SOX9 drives breast cancer endocrine resistance",
-    authors: "Jeselsohn R, Cornwell MG, Pun M, Buchwalter G, Nguyen M, Bango C, Huang Y, Kuang Y, Paweletz C, Fu X, Nardone A, Angelis CD, Detre S, Dodson A, **Mohammed H**, Carroll J, Bowden M, Rao P, Long HW, Li F, Dowsett M, Schiff R, Brown MA",
+    authors: "Jeselsohn R, Cornwell MG, Pun M, Buchwalter G, Nguyen M, Bango C, Huang Y, Kuang Y, Paweletz C, Fu X, Nardone A, Angelis CD, Detre S, Dodson A, **Mohammed H**, Carroll J, Bowden M, Rao PK, Long HW, Li F, Dowsett M, Schiff R, Brown MA",
     journal: "Proceedings of the National Academy of Sciences of the United States of America",
     url: "https://doi.org/10.1073/pnas.1620993114",
   },
@@ -269,7 +283,7 @@ const PUBS = [
   {
     year: 2016,
     title: "Response and resistance to BET bromodomain inhibitors in triple negative breast cancer",
-    authors: "Shu S, Lin CY, He H, Witwicki R, Tabassum D, Roberts JM, Janiszewska M, Huh S, Liang Y, Ryan J, Doherty E, **Mohammed H**, Guo H, Stover D, Ekram MB, Peluffo G, Brown JD, D'Santos C, Krop I, Dillon D, Mckeown MR, Ott CJ, Qi J, Ni M, Rao P, Duarte M, Wu S, Chiang C, Anders L, Young R, Winer E, Letai A, Barry W, Carroll J, Long HW, Brown MA, Liu X, Meyer CA, Bradner J, Polyak K",
+    authors: "Shu S, Lin CY, He H, Witwicki R, Tabassum D, Roberts JM, Janiszewska M, Huh S, Liang Y, Ryan J, Doherty E, **Mohammed H**, Guo H, Stover D, Ekram MB, Peluffo G, Brown JD, D'Santos C, Krop I, Dillon D, Mckeown MR, Ott CJ, Qi J, Ni M, Rao PK, Duarte M, Wu S, Chiang C, Anders L, Young R, Winer E, Letai A, Barry W, Carroll J, Long HW, Brown MA, Liu X, Meyer CA, Bradner J, Polyak K",
     journal: "Nature",
     url: "https://doi.org/10.1038/nature16508",
   },
@@ -347,7 +361,7 @@ const PUBS = [
   {
     year: 2011,
     title: "p21WAF1 is component of a positive feedback loop that maintains the p53 transcriptional program",
-    authors: "Pang LY, Scott M, Hayward RL, **Mohammed H**, Whitelaw CBA, Smith GC, Hupp TR",
+    authors: "Pang LY, Scott M, Hayward RL, **Mohammed H**, Whitelaw CBA, Smith GCM, Hupp TR",
     journal: "Cell Cycle",
     url: "https://doi.org/10.4161/cc.10.6.15012",
   },
