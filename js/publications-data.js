@@ -41,7 +41,7 @@ const PUBS = [
   {
     year: 2025,
     title: "Methylation dynamics in the decades preceding acute myeloid leukaemia",
-    authors: "Fonseca AV, Boniface C, Watson CJ, Hackett S, Gabbutt C, Ramos-Yamasaki AD, Tan A, Montoya J, **Strogantsev R**, Hanssen LLP, Zhang Y, Apostolidou S, Gentry-Maharaj A, Esener SC, Spellman P, Graham TA, Menon U, **Mohammed H**, Blundell J",
+    authors: "Fonseca AV, Boniface C, Watson CJ, Hackett S, Gabbutt C, Ramos-Yamasaki AD, Tan A, Montoya J, **Strogantsev R**, Hanssen L, Zhang Y, Apostolidou S, Gentry-Maharaj A, Esener SC, Spellman P, Graham TA, Menon U, **Mohammed H**, Blundell J",
     journal: "bioRxiv",
     url: "https://doi.org/10.1101/2025.06.26.661643",
   },
@@ -90,7 +90,7 @@ const PUBS = [
   {
     year: 2023,
     title: "Clonal hematopoiesis related TET2 loss-of-function impedes IL1β-mediated epigenetic reprogramming in hematopoietic stem and progenitor cells",
-    authors: "McClatchy J, **Strogantsev R**, Wolfe E, Lin HY, Mohammadhosseini M, Davis B, Eden C, Goldman D, Fleming W, Conley P, Wu G, Cimmino L, **Mohammed H**, Agarwal A",
+    authors: "McClatchy J, **Strogantsev R**, Wolfe E, Lin HY, Mohammadhosseini M, Davis B, Eden C, Goldman D, Fleming WH, Conley P, Wu G, Cimmino L, **Mohammed H**, Agarwal A",
     journal: "Nature Communications",
     url: "https://doi.org/10.1038/s41467-023-43697-y",
   },
@@ -175,7 +175,7 @@ const PUBS = [
   {
     year: 2020,
     title: "Proteogenomic analysis of Inhibitor of Differentiation 4 (ID4) in basal-like breast cancer",
-    authors: "Baker LA, Holliday H, Roden D, Krisp C, Wu SZ, Junankar S, Serandour AA, **Mohammed H**, Nair R, Sankaranarayanan G, Law AMK, McFarland A, Simpson P, Lakhani S, Dodson E, Selinger C, Anderson L, Samimi G, Hacker N, Lim E, Ormandy C, Naylor MJ, Simpson K, Nikolic I, O'Toole S, Kaplan W, Cowley M, Carroll J, Molloy M, Swarbrick A",
+    authors: "Baker LA, Holliday H, Roden D, Krisp C, Wu SZ, Junankar S, Serandour AA, **Mohammed H**, Nair R, Sankaranarayanan G, Law AMK, McFarland A, Simpson P, Lakhani S, Dodson E, Selinger C, Anderson L, Samimi G, Hacker N, Lim E, Ormandy C, Naylor MJ, Simpson K, Nikolic I, OToole S, Kaplan W, Cowley M, Carroll J, Molloy M, Swarbrick A",
     journal: "Breast Cancer Research",
     url: "https://doi.org/10.1186/s13058-020-01306-6",
   },
@@ -197,7 +197,7 @@ const PUBS = [
   {
     year: 2019,
     title: "Single cell multi-omics profiling reveals a hierarchical epigenetic landscape during mammalian germ layer specification",
-    authors: "Argelaguet R, **Mohammed H**, Clark SJ, Stapel C, Krueger C, Kapourani C, Xiang Y, Hanna C, Smallwood SA, IbarraSoria X, Buettner F, Sanguinetti G, Krueger F, Xie W, RuggGunn P, Kelsey G, Dean W, Nichols J, Stegle O, Marioni J, Reik W",
+    authors: "Argelaguet R, **Mohammed H**, Clark SJ, Stapel LC, Krueger C, Kapourani C, Xiang Y, Hanna C, Smallwood SA, Ibarra-Soria X, Buettner F, Sanguinetti G, Krueger F, Xie W, Rugg-Gunn P, Kelsey G, Dean W, Nichols J, Stegle O, Marioni J, Reik W",
     journal: "bioRxiv",
     url: "https://doi.org/10.1101/519207",
   },
@@ -254,14 +254,14 @@ const PUBS = [
   {
     year: 2017,
     title: "A non-catalytic role of TET3 promotes open chromatin and enhances global transcription",
-    authors: "Krueger C, Peat JR, Eckersley-Maslin M, Hore TA, **Mohammed H**, Andrews S, Dean W, Reik W",
+    authors: "Krueger C, Peat JR, Eckersley-Maslin M, Hore T, **Mohammed H**, Andrews S, Dean W, Reik W",
     journal: "bioRxiv",
     url: "https://doi.org/10.1101/177626",
   },
   {
     year: 2017,
     title: "Embryonic transcription factor SOX9 drives breast cancer endocrine resistance",
-    authors: "Jeselsohn R, Cornwell MG, Pun M, Buchwalter G, Nguyen M, Bango C, Huang Y, Kuang Y, Paweletz C, Fu X, Nardone A, Angelis CD, Detre S, Dodson A, **Mohammed H**, Carroll J, Bowden M, Rao PK, Long HW, Li F, Dowsett M, Schiff R, Brown MA",
+    authors: "Jeselsohn R, Cornwell MG, Pun M, Buchwalter G, Nguyen M, Bango C, Huang Y, Kuang Y, Paweletz C, Fu X, Nardone A, Angelis CD, Detre S, Dodson A, **Mohammed H**, Carroll J, Bowden M, Rao P, Long HW, Li F, Dowsett M, Schiff R, Brown MA",
     journal: "Proceedings of the National Academy of Sciences of the United States of America",
     url: "https://doi.org/10.1073/pnas.1620993114",
   },
@@ -283,7 +283,7 @@ const PUBS = [
   {
     year: 2016,
     title: "Response and resistance to BET bromodomain inhibitors in triple negative breast cancer",
-    authors: "Shu S, Lin CY, He H, Witwicki R, Tabassum D, Roberts JM, Janiszewska M, Huh S, Liang Y, Ryan J, Doherty E, **Mohammed H**, Guo H, Stover D, Ekram MB, Peluffo G, Brown JD, D'Santos C, Krop I, Dillon D, Mckeown MR, Ott CJ, Qi J, Ni M, Rao PK, Duarte M, Wu S, Chiang C, Anders L, Young R, Winer E, Letai A, Barry W, Carroll J, Long HW, Brown MA, Liu X, Meyer CA, Bradner J, Polyak K",
+    authors: "Shu S, Lin CY, He H, Witwicki R, Tabassum D, Roberts JM, Janiszewska M, Huh S, Liang Y, Ryan J, Doherty E, **Mohammed H**, Guo H, Stover D, Ekram MB, Peluffo G, Brown JD, D'Santos C, Krop I, Dillon D, McKeown M, Ott C, Qi J, Ni M, Rao P, Duarte M, Wu S, Chiang C, Anders L, Young R, Winer E, Letai A, Barry W, Carroll J, Long HW, Brown MA, Liu X, Meyer CA, Bradner J, Polyak K",
     journal: "Nature",
     url: "https://doi.org/10.1038/nature16508",
   },
@@ -311,7 +311,7 @@ const PUBS = [
   {
     year: 2015,
     title: "Progesterone receptor modulates estrogen receptor-α action in breast cancer",
-    authors: "**Mohammed H**, Russell I, Stark R, Rueda O, Hickey TE, Tarulli G, Serandour AA, Birrell S, Bruna A, Saadi A, Menon S, Hadfield J, Pugh M, Raj GV, Brown GD, D'Santos C, Robinson JLL, Silva GO, Launchbury R, Perou CM, Stingl J, Caldas C, Tilley W, Carroll JS",
+    authors: "**Mohammed H**, Russell I, Stark R, Rueda O, Hickey TE, Tarulli G, Serandour AAA, Birrell SN, Bruna A, Saadi A, Menon S, Hadfield J, Pugh M, Raj G, Brown GD, D'Santos C, Robinson JLL, Silva GO, Launchbury R, Perou C, Stingl J, Caldas C, Tilley W, Carroll J",
     journal: "Nature",
     url: "https://doi.org/10.1038/nature14583",
   },
@@ -347,7 +347,7 @@ const PUBS = [
   {
     year: 2013,
     title: "Endogenous purification reveals GREB1 as a key Estrogen Receptor regulatory factor",
-    authors: "**Mohammed H**, D'Santos C, Serandour AA, Ali H, Brown GD, Atkins AR, Rueda O, Holmes KA, Theodorou V, Robinson JLL, Zwart W, Saadi A, Ross-Innes C, Chin S, Menon S, Stingl J, Palmieri C, Caldas C, Carroll J",
+    authors: "**Mohammed H**, D'Santos C, Serandour AA, Ali HR, Brown GD, Atkins AR, Rueda OM, Holmes KA, Theodorou V, Robinson JLL, Zwart W, Saadi A, Ross-Innes C, Chin S, Menon S, Stingl J, Palmieri C, Caldas C, Carroll J",
     journal: "Cell Reports",
     url: "https://doi.org/10.1016/j.celrep.2013.01.010",
   },
@@ -361,7 +361,7 @@ const PUBS = [
   {
     year: 2011,
     title: "p21WAF1 is component of a positive feedback loop that maintains the p53 transcriptional program",
-    authors: "Pang LY, Scott M, Hayward RL, **Mohammed H**, Whitelaw CBA, Smith GCM, Hupp TR",
+    authors: "Pang LY, Scott MT, Hayward RL, **Mohammed H**, Whitelaw C, Smith GCM, Hupp TR",
     journal: "Cell Cycle",
     url: "https://doi.org/10.4161/cc.10.6.15012",
   },
