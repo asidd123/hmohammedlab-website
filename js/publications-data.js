@@ -41,7 +41,7 @@ const PUBS = [
   {
     year: 2025,
     title: "Methylation dynamics in the decades preceding acute myeloid leukaemia",
-    authors: "Fonseca AV, Boniface C, Watson CJ, Hackett S, Gabbutt C, Ramos-Yamasaki AD, Tan A, Montoya J, **Strogantsev R**, Hanssen L, Zhang Y, Apostolidou S, Gentry-Maharaj A, Esener SC, Spellman P, Graham TA, Menon U, **Mohammed H**, Blundell J",
+    authors: "Fonseca AV, Boniface C, Watson CJ, Hackett S, Gabbutt C, Ramos-Yamasaki AD, Tan A, Montoya J, **Strogantsev R**, Hanssen L, Zhang Y, Apostolidou S, Gentry-Maharaj A, Esener S, Spellman P, Graham TA, Menon U, **Mohammed H**, Blundell J",
     journal: "bioRxiv",
     url: "https://doi.org/10.1101/2025.06.26.661643",
   },
@@ -83,7 +83,7 @@ const PUBS = [
   {
     year: 2023,
     title: "Allele-specific gene regulation, phenotypes, and therapeutic vulnerabilities in estrogen receptor alpha mutant endometrial cancer",
-    authors: "Blanchard Z, Rush CM, Arnesen S, Vahrenkamp JM, Rodriguez AC, Jarboe EA, Brown CT, Chang MEK, Flory MR, **Mohammed H**, Modzelewska K, Lum D, Gertz J",
+    authors: "Blanchard Z, Rush CM, Arnesen S, Vahrenkamp JM, Rodriguez AC, Jarboe EA, Brown CT, Chang MEK, Flory M, **Mohammed H**, Modzelewska K, Lum D, Gertz J",
     journal: "Molecular Cancer Research",
     url: "https://doi.org/10.1158/1541-7786.MCR-22-0848",
   },
@@ -138,13 +138,6 @@ const PUBS = [
     url: null,
   },
   {
-    year: 2022,
-    title: "Steroid Hormones and Receptors",
-    authors: "**Mohammed H**, **Wen Y**",
-    journal: "",
-    url: null,
-  },
-  {
     year: 2021,
     title: "Development of 2-(5,6,7-Trifluoro-1H-Indol-3-yl)-quinoline-5-carboxamide as a Potent, Selective, and Orally Available Inhibitor of Human Androgen Receptor Targeting Its Binding Function-3 for the Treatment of Castration-Resistant Prostate Cancer",
     authors: "Leblanc E, Ban F, Cavga AD, Lawn S, Huang CCF, Mohan S, Chang MEK, Flory MR, Ghaidi F, Lingadahalli S, Chen G, Yu IPL, Morin H, Lallous N, Gleave ME, **Mohammed H**, Young RN, Rennie PS, Lack NA, Cherkasov A",
@@ -154,7 +147,7 @@ const PUBS = [
   {
     year: 2021,
     title: "Development of an Androgen Receptor Inhibitor Targeting the N-Terminal Domain of Androgen Receptor for Treatment of Castration Resistant Prostate Cancer",
-    authors: "Ban F, Leblanc E, Cavga AD, Huang CF, Flory MR, Zhang F, Chang MEK, Morin H, Lallous N, Singh K, Gleave M, **Mohammed H**, Rennie P, Lack N, Cherkasov A",
+    authors: "Ban F, Leblanc E, Cavga AD, Huang CF, Flory M, Zhang F, Chang MEK, Morin H, Lallous N, Singh K, Gleave M, **Mohammed H**, Rennie P, Lack N, Cherkasov A",
     journal: "Cancers",
     url: "https://doi.org/10.3390/cancers13143488",
   },
@@ -197,7 +190,7 @@ const PUBS = [
   {
     year: 2019,
     title: "Single cell multi-omics profiling reveals a hierarchical epigenetic landscape during mammalian germ layer specification",
-    authors: "Argelaguet R, **Mohammed H**, Clark SJ, Stapel LC, Krueger C, Kapourani C, Xiang Y, Hanna C, Smallwood SA, Ibarra-Soria X, Buettner F, Sanguinetti G, Krueger F, Xie W, Rugg-Gunn P, Kelsey G, Dean W, Nichols J, Stegle O, Marioni J, Reik W",
+    authors: "Argelaguet R, **Mohammed H**, Clark SJ, Stapel LC, Krueger C, Kapourani C, Xiang Y, Hanna C, Smallwood S, Ibarra-Soria X, Buettner F, Sanguinetti G, Krueger F, Xie W, Rugg-Gunn P, Kelsey G, Dean W, Nichols J, Stegle O, Marioni J, Reik W",
     journal: "bioRxiv",
     url: "https://doi.org/10.1101/519207",
   },
@@ -225,7 +218,7 @@ const PUBS = [
   {
     year: 2018,
     title: "Genome-Scale Oscillations in DNA Methylation during Exit from Pluripotency",
-    authors: "Rulands S, Lee HJ, Clark SJ, Angermueller C, Smallwood SA, Krueger F, **Mohammed H**, Dean W, Nichols J, Rugg-Gunn P, Kelsey G, Stegle O, Simons B, Reik W",
+    authors: "Rulands S, Lee HJ, Clark SJ, Angermueller C, Smallwood S, Krueger F, **Mohammed H**, Dean W, Nichols J, Rugg-Gunn P, Kelsey G, Stegle O, Simons B, Reik W",
     journal: "bioRxiv",
     url: "https://doi.org/10.1016/j.cels.2018.06.012",
   },
@@ -290,7 +283,7 @@ const PUBS = [
   {
     year: 2016,
     title: "Topoisomerase II beta interacts with cohesin and CTCF at topological domain borders",
-    authors: "Uuskla-Reimand L, Hou H, Samavarchi-Tehrani P, Rudan MV, Liang M, Medina-Rivera A, **Mohammed H**, Schmidt D, Schwalie P, Young EJ, Reimand J, Hadjur S, Gingras A, Wilson MD",
+    authors: "Uuskla-Reimand L, Hou H, Samavarchi-Tehrani P, Rudan MV, Liang M, Medina-Rivera A, **Mohammed H**, Schmidt D, Schwalie P, Young EJ, Reimand J, Hadjur S, Gingras A, Wilson M",
     journal: "Genome Biology",
     url: "https://doi.org/10.1186/s13059-016-1043-8",
   },
@@ -304,7 +297,7 @@ const PUBS = [
   {
     year: 2015,
     title: "Fgf and Esrrb integrate epigenetic and transcriptional networks that regulate self-renewal of trophoblast stem cells",
-    authors: "Latos P, Gonalves Â, Oxley D, **Mohammed H**, Turro E, Hemberger M",
+    authors: "Latos P, Goncalves A, Oxley D, **Mohammed H**, Turro E, Hemberger M",
     journal: "Nature Communications",
     url: "https://doi.org/10.1038/ncomms8776",
   },
@@ -347,7 +340,7 @@ const PUBS = [
   {
     year: 2013,
     title: "Endogenous purification reveals GREB1 as a key Estrogen Receptor regulatory factor",
-    authors: "**Mohammed H**, D'Santos C, Serandour AA, Ali HR, Brown GD, Atkins AR, Rueda OM, Holmes KA, Theodorou V, Robinson JLL, Zwart W, Saadi A, Ross-Innes C, Chin S, Menon S, Stingl J, Palmieri C, Caldas C, Carroll J",
+    authors: "**Mohammed H**, D'Santos C, Serandour AA, Ali HR, Brown GD, Atkins AR, Rueda O, Holmes KA, Theodorou V, Robinson JLL, Zwart W, Saadi A, Ross-Innes C, Chin S, Menon S, Stingl J, Palmieri C, Caldas C, Carroll J",
     journal: "Cell Reports",
     url: "https://doi.org/10.1016/j.celrep.2013.01.010",
   },
