@@ -20,8 +20,8 @@
       title: "RIME: reading endogenous protein complexes",
       lede: "Most of what a transcription factor does, it does in company. RIME reads the estrogen-receptor complex directly from cells, by mass spectrometry.",
       body: [
-        "<strong>RIME</strong> (rapid immunoprecipitation mass spectrometry of endogenous proteins) captures a protein and everything bound to it, directly from cells, without tags or over-expression. Cells are lightly cross-linked, the protein is pulled down with its own antibody, and its partners are identified by mass spectrometry. Run alongside ChIP-seq, it pairs a factor's interactome with where it binds the genome, and it works from primary tumour tissue, not only cell lines.",
-        "We developed RIME while asking what the estrogen-receptor complex actually contains, and used it to identify GREB1 as a chromatin-bound ER co-activator. The maps below show several RIME experiments (ER with and without anti-estrogen, the progesterone receptor, and GREB1) grouped by what each partner does. Switch the target above the map."
+        "<strong>RIME</strong> captures a protein and everything bound to it, straight from cells or tumour tissue &mdash; no tags, no over-expression. Paired with ChIP-seq, it links a factor's partners to where it binds the genome.",
+        "We built it to ask what the estrogen-receptor complex contains, and used it to identify <strong>GREB1</strong> as a chromatin-bound ER co-activator. Explore RIME maps for ER (&plusmn; anti-estrogen), PR, and GREB1 below."
       ],
       blocks: [
         {
@@ -31,25 +31,25 @@
             {
               icon: "cell",
               title: "Native cells or tissue",
-              text: "The starting material is unmodified cells or primary tumour tissue: no genetic tags, no protein over-expression that could distort normal complex formation."
+              text: "Unmodified cells or primary tumour tissue — no tags, no over-expression."
             },
             {
               icon: "snap",
               title: "Cross-link in situ",
-              text: "A brief formaldehyde cross-linking step covalently stabilizes proteins in their endogenous complexes at the moment of fixation."
+              text: "A brief fixation step locks proteins into their native complexes."
             },
             {
               icon: "target",
               title: "Immunoprecipitate the target",
-              text: "A high-specificity antibody against the protein of interest (for example, the estrogen receptor) co-isolates it with its bound partners."
+              text: "An antibody pulls down the target protein with everything bound to it."
             },
             {
               icon: "spectrum",
               title: "Resolve by mass spectrometry",
-              text: "Tandem mass spectrometry identifies and quantifies every protein recovered in the immunoprecipitate, yielding a defined interactome."
+              text: "Mass spectrometry identifies and quantifies every protein recovered."
             }
           ],
-          note: "The output is a quantitative inventory of a protein's endogenous binding partners, determined directly from cells or tumour tissue. The interactive map below presents that inventory for a panel of targets and conditions."
+          note: "The result: a defined map of a protein’s endogenous partners, straight from cells or tissue."
         },
         {
           kind: "viz", type: "network", key: "rime-er",
@@ -75,8 +75,8 @@
       title: "Progesterone reprograms the estrogen receptor",
       lede: "Activating the progesterone receptor changes where ER binds the genome, a mechanism that helped motivate a clinical trial.",
       body: [
-        "Estrogen receptor does not act alone. We found that activating the progesterone receptor redirects <em>where</em> ER binds across the genome, shifting it toward a program associated with a more favourable outcome.",
-        "That mechanism helped motivate the PIONEER window-of-opportunity trial, which added a progesterone-receptor agonist to standard endocrine therapy in early ER+ breast cancer and recently reported a clinical benefit. We describe the scientific lineage here; the trial itself was led by the Carroll group and collaborators."
+        "Estrogen receptor doesn't act alone: activating the progesterone receptor redirects <em>where</em> ER binds the genome, toward a program tied to better outcomes.",
+        "That mechanism helped motivate the PIONEER trial &mdash; adding a PR agonist to standard therapy in early ER+ breast cancer, led by the Carroll group &mdash; which recently reported clinical benefit."
       ],
       blocks: [
         {
@@ -99,8 +99,8 @@
       title: "Tracking metastatic breast cancer as it evolves",
       lede: "Serial spatial transcriptomics across a patient's treatment course, to see how resistance is organised in tissue.",
       body: [
-        "Metastatic tumours survive treatment by changing, and those changes are organised in space. With OHSU's SMMART program, we profiled <strong>345,000 cells across ten serial biopsies</strong> from four patients, following each tumour through its treatment course over as long as three and a half years.",
-        "Combining topic modelling of cell states (TITAN) with spatial tissue domains (STAGATE) and copy-number ground truth, we find tumours reach resistance by different routes: losing luminal identity, locking on estrogen signalling, or, as in the patient shown here, partitioning into spatially separate, drug-refractory invasive nests. The map below is that patient's final biopsy, drawn from real cell shapes: colour it by cell type, by spatial domain (the estrogen-receptor–positive core grading out to invasive nests), or by a gene, and hover any cell."
+        "Metastatic tumours survive treatment by changing &mdash; and those changes are organised in space. With OHSU's SMMART program, we profiled <strong>345,000 cells across ten serial biopsies</strong> from four patients, tracked over up to three and a half years of treatment.",
+        "Tumours reach resistance by different routes: losing luminal identity, doubling down on estrogen signalling, or, as here, splitting into drug-refractory invasive nests. Explore this patient's final biopsy below &mdash; colour by cell type, spatial domain, or gene, and hover any cell."
       ],
       blocks: [
         {
@@ -130,13 +130,13 @@
       title: "Single-cell epigenetics of breast cancer",
       lede: "Reading DNA methylation, chromatin accessibility and transcription from the same single cell, and now in spatial tissue.",
       body: [
-        "<strong>scNMT-seq</strong> reads three layers of regulation, the transcriptome, DNA methylation and chromatin accessibility, from one single cell. Reading methylation this deeply lets us treat a cell's epigenome as both a record of its ancestry and a driver of its current state; the approach was demonstrated at depth in single-cell multi-omics of development (Argelaguet et al., Nature 2019).",
-        "We are extending it to breast tumours and into spatial tissue."
+        "<strong>scNMT-seq</strong> reads three layers of regulation &mdash; transcriptome, DNA methylation, and chromatin accessibility &mdash; from one single cell, treating its epigenome as both ancestry and current state.",
+        "We're extending it to breast tumours and spatial tissue."
       ],
       blocks: [
         {
           kind: "note",
-          html: 'A single human cell carries roughly <strong>30 million CpG sites</strong>. A planned view will let you open one cell of a given type and see its methylation at that scale, built first on a small pilot so it stays responsive.'
+          html: 'A single cell carries roughly <strong>30 million CpG sites</strong>. We&rsquo;re building a view to explore one cell&rsquo;s methylation at that scale.'
         }
       ],
       leads: [

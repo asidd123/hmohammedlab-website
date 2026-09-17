@@ -4,14 +4,14 @@
    ============================================================ */
 
 /* ---------- project list / cards ---------- */
-.projects { display: grid; grid-template-columns: 1fr; gap: 28px; }
+.projects { display: grid; grid-template-columns: 1fr; gap: 22px; }
 
 .project-card {
   position: relative;
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 38px 38px 30px;
+  padding: 30px 32px 24px;
   box-shadow: var(--shadow-sm);
   scroll-margin-top: 96px;
 }
@@ -32,10 +32,10 @@
 .project-status--published { color: var(--teal); border-color: rgba(10, 111, 102, 0.32); background: rgba(10, 111, 102, 0.06); }
 .project-status--preprint { color: var(--violet-deep); border-color: rgba(96, 82, 214, 0.28); background: rgba(124, 108, 240, 0.06); }
 
-.project-card h3 { font-size: 23px; line-height: 1.18; margin-bottom: 12px; }
+.project-card h3 { font-size: 23px; line-height: 1.18; margin-bottom: 10px; }
 .project-lede { color: var(--muted); font-size: 16px; }
-.project-body { font-size: 15.5px; color: var(--text); margin-top: 14px; }
-.project-body p { margin-top: 12px; }
+.project-body { font-size: 15.5px; color: var(--text); margin-top: 10px; }
+.project-body p { margin-top: 8px; }
 .project-body p:first-child { margin-top: 0; }
 .project-body strong { color: var(--ink); font-weight: 600; }
 .project-body h4 {
@@ -69,21 +69,21 @@
   .viz-row { grid-template-columns: 1fr; }
 }
 
-.project-meta { margin-top: 24px; padding-top: 18px; border-top: 1px dashed var(--line); font-size: 14px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 8px 18px; }
+.project-meta { margin-top: 18px; padding-top: 14px; border-top: 1px dashed var(--line); font-size: 14px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 8px 18px; }
 .project-meta b { color: var(--text); font-weight: 600; }
 .project-meta a { font-weight: 500; }
 
 /* ---------- the recessed "data" inset that holds an interactive ---------- */
 .viz-panel {
-  margin: 24px 0 6px;
-  padding: 22px 22px 16px;
+  margin: 18px 0 4px;
+  padding: 18px 20px 14px;
   background: rgba(10, 15, 30, 0.022);
   border: 1px solid var(--line);
   border-radius: 14px;
 }
 .viz-panel-title {
   font-family: var(--font-mono); font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase;
-  color: var(--muted); margin-bottom: 14px;
+  color: var(--muted); margin-bottom: 12px;
 }
 .viz { position: relative; width: 100%; }
 .viz-fallback img { width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line); background: var(--card); }
