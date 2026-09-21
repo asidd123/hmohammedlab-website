@@ -112,7 +112,7 @@ const PUBS = [
   {
     year: 2022,
     title: "A Distinct Chromatin State Drives Therapeutic Resistance in Invasive Lobular Breast Cancer",
-    authors: "Nardone A, Qiu X, Spisk S, Nagy Z, Feiglin A, Feit A, Feit GC, Xie Y, Font-Tello A, Guarducci C, Hermida-Prado F, Syamala S, Lim K, Gomez MM, Pun M, Cornwell MG, Liu W, **Ors A**, **Mohammed H**, Cejas P, Brock J, Freedman M, Winer E, Fu X, Schiff R, Long HW, Metzger O, Jeselsohn R",
+    authors: "Nardone A, Qiu X, Spisk S, Nagy Z, Feiglin A, Feit A, Feit GC, Xie Y, Font-Tello A, Guarducci C, Hermida-Prado F, Syamala S, Lim K, Gomez MM, Pun M, Cornwell M, Liu W, **Ors A**, **Mohammed H**, Cejas P, Brock J, Freedman M, Winer E, Fu X, Schiff R, Long HW, Metzger O, Jeselsohn R",
     journal: "bioRxiv",
     url: "https://doi.org/10.1101/2022.03.29.486217",
   },
@@ -254,7 +254,7 @@ const PUBS = [
   {
     year: 2017,
     title: "Embryonic transcription factor SOX9 drives breast cancer endocrine resistance",
-    authors: "Jeselsohn R, Cornwell MG, Pun M, Buchwalter G, Nguyen M, Bango C, Huang Y, Kuang Y, Paweletz C, Fu X, Nardone A, Angelis CD, Detre S, Dodson A, **Mohammed H**, Carroll J, Bowden M, Rao P, Long HW, Li F, Dowsett M, Schiff R, Brown MA",
+    authors: "Jeselsohn R, Cornwell M, Pun M, Buchwalter G, Nguyen M, Bango C, Huang Y, Kuang Y, Paweletz C, Fu X, Nardone A, Angelis CD, Detre S, Dodson A, **Mohammed H**, Carroll J, Bowden M, Rao P, Long HW, Li F, Dowsett M, Schiff R, Brown MA",
     journal: "Proceedings of the National Academy of Sciences of the United States of America",
     url: "https://doi.org/10.1073/pnas.1620993114",
   },
