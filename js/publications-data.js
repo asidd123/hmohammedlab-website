@@ -168,7 +168,7 @@ const PUBS = [
   {
     year: 2020,
     title: "Proteogenomic analysis of Inhibitor of Differentiation 4 (ID4) in basal-like breast cancer",
-    authors: "Baker LA, Holliday H, Roden D, Krisp C, Wu SZ, Junankar S, Serandour AA, **Mohammed H**, Nair R, Sankaranarayanan G, Law AMK, McFarland A, Simpson P, Lakhani S, Dodson E, Selinger C, Anderson L, Samimi G, Hacker N, Lim E, Ormandy C, Naylor MJ, Simpson K, Nikolic I, OToole S, Kaplan W, Cowley M, Carroll J, Molloy M, Swarbrick A",
+    authors: "Baker LA, Holliday H, Roden D, Krisp C, Wu SZ, Junankar S, Serandour AA, **Mohammed H**, Nair R, Sankaranarayanan G, Law AMK, McFarland A, Simpson P, Lakhani S, Dodson E, Selinger C, Anderson L, Samimi G, Hacker N, Lim E, Ormandy C, Naylor MJ, Simpson K, Nikolic I, O'Toole S, Kaplan W, Cowley M, Carroll J, Molloy M, Swarbrick A",
     journal: "Breast Cancer Research",
     url: "https://doi.org/10.1186/s13058-020-01306-6",
   },
@@ -304,7 +304,7 @@ const PUBS = [
   {
     year: 2015,
     title: "Progesterone receptor modulates estrogen receptor-α action in breast cancer",
-    authors: "**Mohammed H**, Russell I, Stark R, Rueda O, Hickey TE, Tarulli G, Serandour AAA, Birrell SN, Bruna A, Saadi A, Menon S, Hadfield J, Pugh M, Raj G, Brown GD, D'Santos C, Robinson JLL, Silva GO, Launchbury R, Perou C, Stingl J, Caldas C, Tilley W, Carroll J",
+    authors: "**Mohammed H**, Russell I, Stark R, Rueda O, Hickey TE, Tarulli G, Serandour AAA, Birrell S, Bruna A, Saadi A, Menon S, Hadfield J, Pugh M, Raj G, Brown GD, D'Santos C, Robinson JLL, Silva GO, Launchbury R, Perou C, Stingl J, Caldas C, Tilley W, Carroll J",
     journal: "Nature",
     url: "https://doi.org/10.1038/nature14583",
   },
@@ -354,7 +354,7 @@ const PUBS = [
   {
     year: 2011,
     title: "p21WAF1 is component of a positive feedback loop that maintains the p53 transcriptional program",
-    authors: "Pang LY, Scott MT, Hayward RL, **Mohammed H**, Whitelaw C, Smith GCM, Hupp TR",
+    authors: "Pang LY, Scott MT, Hayward RL, **Mohammed H**, Whitelaw C, Smith GCM, Hupp T",
     journal: "Cell Cycle",
     url: "https://doi.org/10.4161/cc.10.6.15012",
   },
