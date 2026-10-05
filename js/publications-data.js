@@ -232,7 +232,7 @@ const PUBS = [
   {
     year: 2018,
     title: "Single cell transcriptome analysis of human, marmoset and mouse embryos reveals common and divergent features of preimplantation development",
-    authors: "Boroviak TE, Stirparo G, Dietmann S, Hernando-Herraez I, **Mohammed H**, Reik W, Smith AG, Sasaki E, Nichols J, Bertone P",
+    authors: "Boroviak TE, Stirparo GG, Dietmann S, Hernando-Herraez I, **Mohammed H**, Reik W, Smith AG, Sasaki E, Nichols J, Bertone P",
     journal: "Development",
     url: "https://doi.org/10.1242/dev.167833",
   },
