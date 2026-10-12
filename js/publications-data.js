@@ -20,7 +20,7 @@ const PUBS = [
   {
     year: 2026,
     title: "Serial Spatial Transcriptomics Reveal Divergent Routes to Therapy Resistance in Metastatic Breast Cancer",
-    authors: "**Doe A**, **Ors A**, **Cros H**, Sevim S, Lee J, Creason AL, Zangirolani GM, Rose J, Youm I, Ozmen F, Ozmen T, Dane MA, **Scott W**, Chang M, Chin K, Heiser LM, Stommel JM, Mills GB, **Mohammed H**",
+    authors: "**Doe A**, **Ors A**, **Cros H**, Sevim S, Lee J, Creason AL, Zangirolani GM, Rose J, Youm I, Ozmen F, Ozmen T, Dane MA, **Scott W**, Chang M, Chin K, Heiser LM, Stommel JM, Mills G, **Mohammed H**",
     journal: "Research Square",
     url: "https://doi.org/10.21203/rs.3.rs-9365657/v1",
   },
