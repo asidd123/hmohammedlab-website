@@ -20,7 +20,7 @@ const PUBS = [
   {
     year: 2026,
     title: "Serial Spatial Transcriptomics Reveal Divergent Routes to Therapy Resistance in Metastatic Breast Cancer",
-    authors: "**Doe A**, **Ors A**, **Cros H**, Sevim S, Lee J, Creason AL, Zangirolani GM, Rose J, Youm I, Ozmen F, Ozmen T, Dane MA, **Scott W**, Chang M, Chin K, Heiser LM, Stommel JM, Mills G, **Mohammed H**",
+    authors: "**Doe A**, **Ors A**, **Cros H**, Sevim S, Lee J, Creason AL, Zangirolani GM, Rose J, Youm I, Ozmen F, Ozmen T, Dane MA, **Scott W**, Chang M, Chin K, Heiser LM, Stommel J, Mills G, **Mohammed H**",
     journal: "Research Square",
     url: "https://doi.org/10.21203/rs.3.rs-9365657/v1",
   },
@@ -83,7 +83,7 @@ const PUBS = [
   {
     year: 2023,
     title: "Allele-specific gene regulation, phenotypes, and therapeutic vulnerabilities in estrogen receptor alpha mutant endometrial cancer",
-    authors: "Blanchard Z, Rush CM, Arnesen S, Vahrenkamp JM, Rodriguez AC, Jarboe EA, Brown CT, Chang MEK, Flory M, **Mohammed H**, Modzelewska K, Lum D, Gertz J",
+    authors: "Blanchard Z, Rush CM, Arnesen S, Vahrenkamp JM, Rodriguez AC, Jarboe EA, Brown CT, Chang MEK, Flory M, **Mohammed H**, Modzelewska K, Lum DH, Gertz J",
     journal: "Molecular Cancer Research",
     url: "https://doi.org/10.1158/1541-7786.MCR-22-0848",
   },
@@ -168,7 +168,7 @@ const PUBS = [
   {
     year: 2020,
     title: "Proteogenomic analysis of Inhibitor of Differentiation 4 (ID4) in basal-like breast cancer",
-    authors: "Baker LA, Holliday H, Roden D, Krisp C, Wu SZ, Junankar S, Serandour AA, **Mohammed H**, Nair R, Sankaranarayanan G, Law AMK, McFarland A, Simpson P, Lakhani S, Dodson E, Selinger C, Anderson L, Samimi G, Hacker N, Lim E, Ormandy C, Naylor MJ, Simpson K, Nikolic I, O'Toole S, Kaplan W, Cowley M, Carroll J, Molloy M, Swarbrick A",
+    authors: "Baker LA, Holliday H, Roden D, Krisp C, Wu SZ, Junankar S, Serandour A, **Mohammed H**, Nair R, Sankaranarayanan G, Law AMK, McFarland A, Simpson P, Lakhani S, Dodson E, Selinger C, Anderson L, Samimi G, Hacker N, Lim E, Ormandy C, Naylor MJ, Simpson K, Nikolic I, O'Toole S, Kaplan W, Cowley M, Carroll J, Molloy M, Swarbrick A",
     journal: "Breast Cancer Research",
     url: "https://doi.org/10.1186/s13058-020-01306-6",
   },
@@ -247,7 +247,7 @@ const PUBS = [
   {
     year: 2017,
     title: "A non-catalytic role of TET3 promotes open chromatin and enhances global transcription",
-    authors: "Krueger C, Peat JR, Eckersley-Maslin M, Hore T, **Mohammed H**, Andrews S, Dean W, Reik W",
+    authors: "Krueger C, Peat JR, Eckersley-Maslin M, Hore T, **Mohammed H**, Andrews SR, Dean W, Reik W",
     journal: "bioRxiv",
     url: "https://doi.org/10.1101/177626",
   },
@@ -304,7 +304,7 @@ const PUBS = [
   {
     year: 2015,
     title: "Progesterone receptor modulates estrogen receptor-α action in breast cancer",
-    authors: "**Mohammed H**, Russell I, Stark R, Rueda O, Hickey TE, Tarulli G, Serandour AAA, Birrell S, Bruna A, Saadi A, Menon S, Hadfield J, Pugh M, Raj G, Brown GD, D'Santos C, Robinson JLL, Silva GO, Launchbury R, Perou C, Stingl J, Caldas C, Tilley W, Carroll J",
+    authors: "**Mohammed H**, Russell I, Stark R, Rueda O, Hickey TE, Tarulli G, Serandour A, Birrell S, Bruna A, Saadi A, Menon S, Hadfield J, Pugh M, Raj G, Brown GD, D'Santos C, Robinson JLL, Silva GO, Launchbury R, Perou C, Stingl J, Caldas C, Tilley W, Carroll J",
     journal: "Nature",
     url: "https://doi.org/10.1038/nature14583",
   },
@@ -340,7 +340,7 @@ const PUBS = [
   {
     year: 2013,
     title: "Endogenous purification reveals GREB1 as a key Estrogen Receptor regulatory factor",
-    authors: "**Mohammed H**, D'Santos C, Serandour AA, Ali HR, Brown GD, Atkins AR, Rueda O, Holmes KA, Theodorou V, Robinson JLL, Zwart W, Saadi A, Ross-Innes C, Chin S, Menon S, Stingl J, Palmieri C, Caldas C, Carroll J",
+    authors: "**Mohammed H**, D'Santos C, Serandour A, Ali HR, Brown GD, Atkins AR, Rueda O, Holmes KA, Theodorou V, Robinson JLL, Zwart W, Saadi A, Ross-Innes C, Chin S, Menon S, Stingl J, Palmieri C, Caldas C, Carroll J",
     journal: "Cell Reports",
     url: "https://doi.org/10.1016/j.celrep.2013.01.010",
   },
