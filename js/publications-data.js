@@ -41,7 +41,7 @@ const PUBS = [
   {
     year: 2025,
     title: "Methylation dynamics in the decades preceding acute myeloid leukaemia",
-    authors: "Fonseca AV, Boniface C, Watson CJ, Hackett S, Gabbutt C, Ramos-Yamasaki AD, Tan A, Montoya J, **Strogantsev R**, Hanssen L, Zhang Y, Apostolidou S, Gentry-Maharaj A, Esener S, Spellman P, Graham TA, Menon U, **Mohammed H**, Blundell J",
+    authors: "Fonseca AV, Boniface C, Watson CJ, Hackett S, Gabbutt C, Ramos-Yamasaki AD, Tan A, Montoya J, **Strogantsev R**, Hanssen L, Zhang Y, Apostolidou S, Gentry-Maharaj A, Esener S, Spellman PT, Graham TA, Menon U, **Mohammed H**, Blundell J",
     journal: "bioRxiv",
     url: "https://doi.org/10.1101/2025.06.26.661643",
   },
