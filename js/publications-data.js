@@ -12,6 +12,13 @@ const PUBS = [
   },
   {
     year: 2026,
+    title: "MECHANISMS LINKING BREAST CANCER RISK WITH HORMONAL IUD USE: REVISITING ANDROGENICITY",
+    authors: "Liberty A, Arterberry J, Hwang J, **Mohammed H**, Schedin P",
+    journal: "Contraception",
+    url: "https://doi.org/10.1016/j.contraception.2026.111702",
+  },
+  {
+    year: 2026,
     title: "Robust and generalizable CNV detection for single-cell sequencing assays",
     authors: "Moore TW, **Mohammed H**, Adey AC, Yardmc G",
     journal: "Nucleic Acids Research",
@@ -20,7 +27,7 @@ const PUBS = [
   {
     year: 2026,
     title: "Serial Spatial Transcriptomics Reveal Divergent Routes to Therapy Resistance in Metastatic Breast Cancer",
-    authors: "**Doe A**, **Ors A**, **Cros H**, Sevim S, Lee J, Creason AL, Zangirolani GM, Rose J, Youm I, Ozmen F, Ozmen T, Dane MA, **Scott W**, Chang M, Chin K, Heiser LM, Stommel J, Mills G, **Mohammed H**",
+    authors: "**Doe A**, **Ors A**, **Cros H**, Sevim S, Lee J, Creason A, Zangirolani GM, Rose J, Youm I, Ozmen F, Ozmen T, Dane MA, **Scott W**, Chang M, Chin K, Heiser LM, Stommel J, Mills G, **Mohammed H**",
     journal: "Research Square",
     url: "https://doi.org/10.21203/rs.3.rs-9365657/v1",
   },
@@ -276,7 +283,7 @@ const PUBS = [
   {
     year: 2016,
     title: "Response and resistance to BET bromodomain inhibitors in triple negative breast cancer",
-    authors: "Shu S, Lin CY, He H, Witwicki R, Tabassum D, Roberts JM, Janiszewska M, Huh S, Liang Y, Ryan J, Doherty E, **Mohammed H**, Guo H, Stover D, Ekram MB, Peluffo G, Brown JD, D'Santos C, Krop I, Dillon D, McKeown M, Ott C, Qi J, Ni M, Rao P, Duarte M, Wu S, Chiang C, Anders L, Young R, Winer E, Letai A, Barry W, Carroll J, Long HW, Brown MA, Liu X, Meyer CA, Bradner J, Polyak K",
+    authors: "Shu S, Lin CY, He H, Witwicki R, Tabassum D, Roberts JM, Janiszewska M, Huh SJ, Liang Y, Ryan J, Doherty E, **Mohammed H**, Guo H, Stover D, Ekram MB, Peluffo G, Brown JD, D'Santos C, Krop I, Dillon D, McKeown M, Ott C, Qi J, Ni M, Rao P, Duarte M, Wu S, Chiang C, Anders L, Young R, Winer E, Letai A, Barry W, Carroll J, Long HW, Brown MA, Liu X, Meyer CA, Bradner J, Polyak K",
     journal: "Nature",
     url: "https://doi.org/10.1038/nature16508",
   },
